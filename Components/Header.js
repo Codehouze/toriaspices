@@ -1,17 +1,15 @@
 // IMPORTING APIS
 import React from "react";
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  useMediaQuery,
-  Button,
-  useScrollTrigger,
-  Slide,
-  Menu,
-  MenuItem,
-  MenuIcon
-} from "@material-ui/core";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import Button from "@material-ui/core/Button";
+import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import Slide from "@material-ui/core/Slide";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
+import MenuIcon from "@mui/icons-material/Menu";
 
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { Link } from "next/link";
@@ -19,13 +17,10 @@ import { Link } from "next/link";
 // LOCAL-STYLING
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    backgroundColor: "white",
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
+  links: {
+    color: "orange",
   },
 }));
 
@@ -50,18 +45,15 @@ const Header = (props) => {
     setAnchor(event.currentTarget);
   };
   return (
-    <div className={classes.root}>
+    <div>
       <HideOnScroll {...props}>
-        <AppBar>
+        <AppBar className={classes.root}>
           <Toolbar>
-            <Typography
-              variant="h5"
-              component="p"
-              color="textSecondary"
-              className={classes.title}
-            >
-              ToriaSpices
-            </Typography>
+            <img
+              src="https://res.cloudinary.com/dfsmwu4av/image/upload/v1653419083/91397319_124413692497240_1023076873652928512_n_ln7nx1.png"
+              width="50"
+              height="80"
+            />
             {isMobile ? (
               <>
                 <MenuIcon />
@@ -85,7 +77,10 @@ const Header = (props) => {
                     component={Link}
                     href="/"
                   >
-                    <Typography variant="h6"> Home</Typography>
+                    <Typography variant="h6" className={classes.links}>
+                      {" "}
+                      Home
+                    </Typography>
                   </MenuItem>
                   <MenuItem
                     onClick={() => setAnchor(null)}

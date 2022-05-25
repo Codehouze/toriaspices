@@ -1,13 +1,8 @@
 // import * as React from "react";
-import { styled } from "@mui/material/styles";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
+import { Grid, Paper, Box, Typography, styled, Button } from "@mui/material";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { CssBaseline } from "@material-ui/core";
-import { Button } from "@mui/material";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "../Components/card";
 
@@ -15,7 +10,7 @@ import Card from "../Components/card";
 
 export default function Home() {
   const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+    backgroundColor: "orange",
     ...theme.typography.body2,
     padding: theme.spacing(1),
     textAlign: "center",
@@ -23,6 +18,16 @@ export default function Home() {
     // backgroundImage: `url('https://media.istockphoto.com/photos/variety-of-spices-on-kitchen-table-picture-id537710412')`
   }));
 
+  const useStyles = makeStyles((theme) => ({
+    root: {
+      backgroundColor: "white",
+    },
+    links: {
+      color: "orange",
+    },
+  }));
+
+  const classes = useStyles();
   return (
     <div>
       <Head>
@@ -34,14 +39,11 @@ export default function Home() {
       {/* <Box sx={{ flexGrow: 1 }}> */}
 
       <Grid container>
-      
-
         <img
           src="https://media.istockphoto.com/photos/variety-of-spices-on-kitchen-table-picture-id537710412"
           alt="slide image"
           width="100%"
           marginBottom="15"
-          
         />
         <Box
           sx={{
@@ -110,9 +112,7 @@ export default function Home() {
             <Card />
           </Grid>
         </Grid>
-        
       </Grid>
-  
     </div>
   );
 }

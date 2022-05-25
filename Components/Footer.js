@@ -1,14 +1,13 @@
 import React from "react";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import EmailIcon from "@material-ui/icons/Email";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import YoutubeIcon from "@material-ui/icons/YouTube";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import Typography from "@mui/material/Typography";
-import PersonIcon from "@material-ui/icons/Person";
+import Person from "@material-ui/icons/Person";
+import LinkedIn from "@material-ui/icons/LinkedIn";
+import Facebook from "@material-ui/icons/Facebook";
+import Twitter from "@material-ui/icons/Twitter";
+import Email from "@material-ui/icons/Email";
+import Instagram from "@material-ui/icons/Instagram";
+import YouTube from "@material-ui/icons/YouTube";
 import Grid from "@mui/material/Grid";
-import { Box } from "@material-ui/core";
+import Typography from "@mui/material/Typography";
 
 const Footer = () => {
   return (
@@ -75,31 +74,32 @@ const Footer = () => {
           </Typography>
 
           <Grid>
-            <EmailIcon color="white" fontSize="large" />
+            <Email color="white" fontSize="large" />
 
             <a href="info@toriaspices.com">info@toriaspices.com</a>
           </Grid>
           <Grid sx={{ marginTop: 5, marginBottom: 5 }}>
-            <PersonIcon />
+            <Person />
             +2348030914767
           </Grid>
           <Grid>
             Toriaspices
             <p>
               <a href="#">
-                <FacebookIcon color="primary" fontSize="large" />
+                <Facebook color="primary" fontSize="large" />
               </a>
               <a href="#">
-                <InstagramIcon color="secondary" fontSize="large" />
+                <YouTube color="secondary" fontSize="large" />
+              </a>
+
+              <a href="#">
+                <Twitter color="primary" fontSize="large" />
               </a>
               <a href="#">
-                <YoutubeIcon color="secondary" fontSize="large" />
+                <Instagram color="secondary" fontSize="large" />
               </a>
               <a href="#">
-                <TwitterIcon color="primary" fontSize="large" />
-              </a>
-              <a href="#">
-                <LinkedInIcon color="primary" fontSize="large" />
+                <LinkedIn color="primary" fontSize="large" />
               </a>
             </p>
           </Grid>
@@ -109,20 +109,20 @@ const Footer = () => {
       <footer>
         <p>
           <a href="#">
-            <FacebookIcon color="primary" fontSize="large" />
+            <Facebook color="primary" fontSize="large" />
           </a>
           <a href="#">
-            <YoutubeIcon color="secondary" fontSize="large" />
+            <YouTube color="secondary" fontSize="large" />
           </a>{" "}
           <a href="#">
-            <TwitterIcon color="primary" borderRadius="10" fontSize="large" />
+            <Twitter color="primary" borderRadius="10" fontSize="large" />
           </a>
           <a href="#">
-            <InstagramIcon color="secondary" fontSize="large" />{" "}
+            <Instagram color="secondary" fontSize="large" />{" "}
           </a>
           <a href="#">
             {" "}
-            <LinkedInIcon color="primary" fontSize="large" />
+            <LinkedIn color="primary" fontSize="large" />
           </a>
         </p>
         Copyright 2022 <a href="#">ToriaSpices</a>

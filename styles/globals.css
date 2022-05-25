@@ -41,8 +41,20 @@ footer a{
 }
 
 .not-found {
+  padding: 80px;
   text-align: center;
+  background-color: #fff;
 }
+
+.not-found h1{
+  color:orange;
+  padding-top:25px;
+}
+.not-found h2{
+  padding-top:25px;
+}
+
+
 
 .not-found a{
   color:#4979ff;
