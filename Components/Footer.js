@@ -16,7 +16,7 @@ const Footer = () => {
         container
         sx={{ marginTop: 5, backgroundColor: "Black", color: "white" }}
       >
-        <Grid xs={4} sx={{ p: 5, textAlign: "left" }}>
+        <Grid xs={12} sm={4} lg={4} sx={{ p: 5, textAlign: "left" }}>
           <Typography
             variant="h4"
             component="h6"
@@ -42,7 +42,7 @@ const Footer = () => {
             his first web site for the year 2022{" "}
           </p>
         </Grid>
-        <Grid xs={4} sx={{ p: 5, textAlign: "left" }}>
+        <Grid xs={12} sm={4} lg={4} sx={{ p: 5, textAlign: "left" }}>
           <Typography
             variant="h4"
             component="h6"
@@ -60,7 +60,7 @@ const Footer = () => {
             this blog for toriaspices as his first web site for the year 2022{" "}
           </p>
         </Grid>
-        <Grid xs={4} sx={{ p: 5 }}>
+        <Grid xs={12} sm={4} lg={4} sx={{ p: 5 }}>
           <Typography
             variant="h4"
             component="h6"

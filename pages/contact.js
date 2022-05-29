@@ -1,99 +1,79 @@
-// import { Card, CardContent } from "@material-ui/core";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
-import FormGroup from "@mui/material/FormGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
-import Box from "@mui/material/Box";
-
+import Image from "../image/1000_F_216025598_tfcUYy3HkVJS7Vd4XniGgZAnY7y8XNYH.jpeg";
 import React from "react";
 
 function contact() {
   return (
-    <Box sx={{ margin:15, border:1, borderStyle:"groove",borderRadius:20, padding:5}}>
-      <Typography variant="h4" component="h4" margin="0 auto">
-        Spice 'n Easy Recipe Mixes
-      </Typography>
-      <Box sx={{height: 600, margin: "0 auto",p:5 }}>
-        <FormGroup >
-          <FormControlLabel
-            control={
-              <TextField
-                id="filled-basic"
-                label="First Name"
-                variant="outlined"
-              />
-            }
-          />
-        </FormGroup>
+    <Grid container sx={{ px: 3, mt: 5 }}>
+      <Grid item direction="column" xs={12} sm={6} lg={6} className="contact">
+        <Grid item alignItems="center" justify="center" className="contactCard">
+          <Typography variant="h4" component="h4">
+            We are always hear to serve you...
+          </Typography>
 
-        <FormGroup>
           <Grid item>
-            <FormControlLabel
-              control={
-                <TextField
-                  id="filled-basic"
-                  label="Last Name"
-                  variant="outlined"
-                />
-              }
+            <TextField
+              id="filled-basic"
+              label="First Name"
+              variant="outlined"
+              className="formInput"
+              style={{ width: "50%" }}
+              sx={{ mt: 2 }}
             />
           </Grid>
-        </FormGroup>
-        <FormGroup>
+
           <Grid item>
-            <FormControlLabel
-              control={
-                <TextField
-                  id="filled-basic"
-                  label="Last Name"
-                  variant="outlined"
-                />
-              }
-            />
-          </Grid>
-        </FormGroup>
-        <FormGroup>
-          <Grid item>
-            <FormControlLabel
-              control={
-                <TextField id="filled-basic" label="Email" variant="outlined" />
-              }
-            />
-          </Grid>
-        </FormGroup>
-        <FormGroup>
-          <Grid item>
-            <FormControlLabel
-              control={
-                <TextField
-                  id="filled-basic"
-                  label="Phone Number"
-                  variant="outlined"
-                />
-              }
-            />
-          </Grid>
-        </FormGroup>
-        <FormGroup>
-          <Grid item>
-            <FormControlLabel
-              control={
-                <TextareaAutosize
-                  aria-label="empty textarea"
-                  placeholder="Message"
-                />
-              }
+            <TextField
+              id="filled-basic"
+              label="Last Name"
+              variant="outlined"
+              className="formInput"
+              style={{ width: "50%" }}
+              sx={{ mt: 2 }}
             />
           </Grid>
           <Grid item>
-            <Button variant="contained">Contained</Button>
+            <TextField
+              id="filled-basic"
+              label="Email"
+              variant="outlined"
+              style={{ width: "50%" }}
+              sx={{ mt: 2 }}
+            />
           </Grid>
-        </FormGroup>
-      </Box>
-    </Box>
+          <Grid item>
+            <TextField
+              label="Phone Number"
+              id="margin-none"
+              variant="outlined"
+              style={{ width: "50%" }}
+              sx={{ mt: 2 }}
+            />
+          </Grid>
+          <Grid item>
+            <TextareaAutosize
+              aria-label="maximum height"
+              minRows={9}
+              placeholder="Minimum 3 rows"
+              style={{ width: "50%" }}
+              sx={{ mt: 2 }}
+            />
+          </Grid>
+          <Grid item>
+            <Button variant="contained" style={{ width: "40%" }} sx={{mt:2,mr:"auto" }}>
+              Send Message
+            </Button>
+          </Grid>
+        </Grid>
+      </Grid>
+      <Grid xs={12} sm={6} lg={6}>
+        <img src="https://res.cloudinary.com/dfsmwu4av/image/upload/v1653419083/91397319_124413692497240_1023076873652928512_n_ln7nx1.png" />
+      </Grid>
+    </Grid>
   );
 }
 export default contact;
