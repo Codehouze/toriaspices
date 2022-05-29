@@ -99,16 +99,16 @@ export default function Home() {
             </Grid>
           </Box>
 
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} lg={3}>
             <Card />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} lg={3}>
             <Card image="https://image.shutterstock.com/image-photo/fresh-turmeric-roots-on-wooden-600w-273715592.jpg" />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} lg={3}>
             <Card />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} lg={3}>
             <Card />
           </Grid>
         </Grid>
