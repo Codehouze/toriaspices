@@ -29,17 +29,20 @@ const Footer = () => {
             Blog recent post
           </Typography>
           <p>
-            maxwell emmanuel built this built this blog for toriaspices as his
-            first web site for the year 2022 maxwell emmanuel built this built
-            this blog for toriaspices as his first web site for the year 2022
-            maxwell chijioke emmanuel built this built this blog for toriaspices
-            as his first web site for the year 2022 maxwell emmanuel built this
-            built this blog for toriaspices as his first web site for the year
-            2022 maxwell emmanuel built this built this blog for toriaspices as
-            his first web site for the year 2022 maxwell emmanuel built this
-            built this blog for toriaspices as his first web site for the year
-            2022 maxwell emmanuel built this built this blog for toriaspices as
-            his first web site for the year 2022{" "}
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+            consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+            velit esse molestie consequat, vel illum dolore eu feugiat nulla
+            facilisis at vero eros et accumsan et iusto odio dignissim qui
+            blandit praesent luptatum zzril delenit augue duis dolore te feugait
+            nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing
+            elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+            magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+            nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
+            ex ea commodo consequat. Duis autem vel eum iriure dolor in
+            hendrerit
           </p>
         </Grid>
         <Grid xs={12} sm={4} lg={4} sx={{ p: 5, textAlign: "left" }}>
@@ -55,9 +58,11 @@ const Footer = () => {
             Testimonies
           </Typography>
           <p>
-            maxwell emmanuel built this built this blog for toriaspices as his
-            first web site for the year 2022 maxwell emmanuel built this built
-            this blog for toriaspices as his first web site for the year 2022{" "}
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+            consequat
           </p>
         </Grid>
         <Grid xs={12} sm={4} lg={4} sx={{ p: 5 }}>

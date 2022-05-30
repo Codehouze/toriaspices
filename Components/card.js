@@ -34,7 +34,7 @@ export default function RecipeReviewCard(image) {
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card xs={12} sm={6} lg={12} sx={{ maxWidth: 380,mt:2,p:3}}>
 
       <CardMedia
         component="img"
