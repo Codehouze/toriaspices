@@ -10,6 +10,7 @@ import Slide from "@material-ui/core/Slide";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import MenuIcon from "@mui/icons-material/Menu";
+import DrawerComponent from "./Drawer";
 
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { Link } from "next/link";
@@ -18,9 +19,30 @@ import { Link } from "next/link";
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "white",
+    color:"orange",
   },
-  links: {
-    color: "orange",
+  nav:{
+    alignItem: "right",
+  },navlinks: {
+    marginLeft: theme.spacing(10),
+    display: "flex",
+  },
+ logo: {
+    flexGrow: "1",
+    cursor: "pointer",
+  },
+  link: {
+    textDecoration: "none",
+    color: "white",
+    fontSize: "20px",
+    marginLeft: theme.spacing(20),
+    "&:hover": {
+      color: "yellow",
+      borderBottom: "1px solid white",
+    },
+    menu:{
+      color:"orange"
+    }
   },
 }));
 
@@ -55,79 +77,14 @@ const Header = (props) => {
               height="80"
             />
             {isMobile ? (
-              <>
-                <MenuIcon />
-
-                <Menu
-                  id="menu-appbar"
-                  anchorEl={anchor}
-                  anchorOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                  KeepMounted
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                  open={open}
-                >
-                  <MenuItem
-                    onClick={() => setAnchor(null)}
-                    component={Link}
-                    href="/"
-                  >
-                    <Typography variant="h6" className={classes.links}>
-                      {" "}
-                      Home
-                    </Typography>
-                  </MenuItem>
-                  <MenuItem
-                    onClick={() => setAnchor(null)}
-                    component={Link}
-                    href="/about"
-                  >
-                    <Typography variant="h6"> About</Typography>
-                  </MenuItem>
-                  <MenuItem
-                    onClick={() => setAnchor(null)}
-                    component={Link}
-                    href="/Products"
-                  >
-                    <Typography variant="h6"> Products</Typography>
-                  </MenuItem>
-
-                  <MenuItem
-                    onClick={() => setAnchor(null)}
-                    component={Link}
-                    href="/about"
-                  >
-                    <Typography variant="h6"> About</Typography>
-                  </MenuItem>
-                  <MenuItem
-                    onClick={() => setAnchor(null)}
-                    component={Link}
-                    href="/contact"
-                  >
-                    <Typography variant="h6"> Contact </Typography>
-                  </MenuItem>
-
-                  <MenuItem
-                    onClick={() => setAnchor(null)}
-                    component={Link}
-                    href="/blog"
-                  >
-                    <Typography variant="h6"> Blog </Typography>
-                  </MenuItem>
-                </Menu>
-              </>
-            ) : (
-              <div style={{ marginRight: "2rem" }}>
+              <DrawerComponent />
+               ) : (
+              <div style={{ marginRight: "2rem" }} className={classes.nav}>
                 <Button
                   variant="text"
                   component={Link}
                   href="/"
-                  color="default"
+                  className={classes.link}
                 >
                   Home
                 </Button>
@@ -135,7 +92,7 @@ const Header = (props) => {
                   variant="text"
                   component={Link}
                   href="/about"
-                  color="default"
+                  className={classes.link}
                 >
                   About
                 </Button>
@@ -143,7 +100,7 @@ const Header = (props) => {
                   variant="text"
                   component={Link}
                   href="/products"
-                  color="default"
+                  className={classes.link}
                 >
                   Products
                 </Button>
@@ -151,7 +108,7 @@ const Header = (props) => {
                   variant="text"
                   component={Link}
                   href="/contact"
-                  color="default"
+                  className={classes.link}
                 >
                   Contact
                 </Button>
@@ -159,7 +116,7 @@ const Header = (props) => {
                   variant="text"
                   component={Link}
                   href="/blog"
-                  color="default"
+                  className={classes.link}
                 >
                   Blog
                 </Button>
