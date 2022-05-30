@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
   nav:{
     alignItem: "right",
-  },navlinks: {
+  },navLinks: {
     marginLeft: theme.spacing(10),
     display: "flex",
   },
@@ -33,11 +33,12 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     textDecoration: "none",
-    color: "white",
+    color: "orange",
     fontSize: "20px",
     marginLeft: theme.spacing(20),
     "&:hover": {
-      color: "yellow",
+      color: "white",
+      backgroundColor:"orange",
       borderBottom: "1px solid white",
     },
     menu:{
@@ -79,7 +80,7 @@ const Header = (props) => {
             {isMobile ? (
               <DrawerComponent />
                ) : (
-              <div style={{ marginRight: "2rem" }} className={classes.nav}>
+              <div className={classes.navLinks}>
                 <Button
                   variant="text"
                   component={Link}
