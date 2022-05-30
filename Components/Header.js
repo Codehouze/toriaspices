@@ -35,7 +35,8 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "none",
     color: "orange",
     fontSize: "20px",
-    marginLeft: theme.spacing(20),
+    marginLeft: theme.spacing(5),
+    float: "right",
     "&:hover": {
       color: "white",
       backgroundColor:"orange",
