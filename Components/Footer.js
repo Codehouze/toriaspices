@@ -8,6 +8,11 @@ import Instagram from "@material-ui/icons/Instagram";
 import YouTube from "@material-ui/icons/YouTube";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import TextField from "@mui/material/TextField";
+import Paper from "@mui/material/Paper";
+import InputBase from "@mui/material/InputBase";
+import Divider from "@mui/material/Divider";
+import Button from "@mui/material/Button";
 
 const Footer = () => {
   return (
@@ -55,15 +60,35 @@ const Footer = () => {
             borderRadius={5}
             padding={1}
           >
-            Testimonies
+            Newsletter
           </Typography>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-            consequat
-          </p>
+          <p>Join our newsletter and get up-to-date from us.</p>
+          <Grid></Grid>
+          <Grid sx={{ mr: "auto", marginTop: 2 }}>
+            <Paper
+              component="form"
+              sx={{
+                p: "2px 4px",
+                display: "flex",
+                alignItems: "center",
+                width: 300,
+              }}
+            >
+              <InputBase
+                sx={{ ml: 1, flex: 1 }}
+                placeholder="Your Email"
+                inputProps={{ "aria-label": "search google maps" }}
+              />
+
+              <Divider sx={{ height: 28}} orientation="vertical" />
+              <Button
+                sx={{ backgroundColor:"orange",color:"white" }}
+                aria-label="directions"
+              >
+                SUBSCRIBE
+              </Button>
+            </Paper>
+          </Grid>
         </Grid>
         <Grid xs={12} sm={4} lg={4} sx={{ p: 5 }}>
           <Typography
@@ -90,17 +115,17 @@ const Footer = () => {
           <Grid>
             Toriaspices
             <p>
-              <a href="#">
+              <a href="https://web.facebook.com/toriaspices">
                 <Facebook color="primary" fontSize="large" />
               </a>
-              <a href="#">
+              <a href="https://www.youtube.com/channel/UCg4RXb5wsxPrMSDOEmQuwUA">
                 <YouTube color="secondary" fontSize="large" />
               </a>
 
               <a href="#">
                 <Twitter color="primary" fontSize="large" />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/toriaspices/">
                 <Instagram color="secondary" fontSize="large" />
               </a>
               <a href="#">
@@ -113,20 +138,19 @@ const Footer = () => {
 
       <footer>
         <p>
-          <a href="#">
+          <a href="https://web.facebook.com/toriaspices">
             <Facebook color="primary" fontSize="large" />
           </a>
-          <a href="#">
+          <a href="https://www.youtube.com/channel/UCg4RXb5wsxPrMSDOEmQuwUA">
             <YouTube color="secondary" fontSize="large" />
           </a>{" "}
           <a href="#">
             <Twitter color="primary" borderRadius="10" fontSize="large" />
           </a>
-          <a href="#">
+          <a href="https://www.instagram.com/toriaspices/">
             <Instagram color="secondary" fontSize="large" />{" "}
           </a>
           <a href="#">
-            {" "}
             <LinkedIn color="primary" fontSize="large" />
           </a>
         </p>

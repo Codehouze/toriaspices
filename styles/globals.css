@@ -71,3 +71,14 @@ footer a{
   border-radius: 10px;
   /* margin-bottom: 10px; */
 }
+
+.bannerBadge1{
+  margin-right: 5;
+  padding: 2; 
+  background-color: "orange";
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 20px;
+}
+
