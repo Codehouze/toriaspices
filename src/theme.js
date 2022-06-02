@@ -14,6 +14,12 @@ const theme = createTheme({
       main: colors.red[500],
     },
   },
+  typography:{
+    h1:{
+
+    },
+    h2:{}
+  }
 });
 
 export default theme;
