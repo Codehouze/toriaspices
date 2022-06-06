@@ -1,4 +1,4 @@
-// import * as React from "react";
+
 import { styled } from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -9,6 +9,7 @@ import Paper from "@mui/material/Paper";
 import Head from "next/head";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "../Components/card";
+import Image from 'next/image'
 
 // import Image from "https://media.istockphoto.com/photos/various-spices-a-vintage-spoons-on-stone-table-colorful-herbal-and-picture-id1340677256"
 
@@ -22,16 +23,16 @@ export default function Home() {
     // backgroundImage: `url('https://media.istockphoto.com/photos/variety-of-spices-on-kitchen-table-picture-id537710412')`
   }));
 
-  const useStyles = makeStyles((theme) => ({
-    root: {
-      backgroundColor: "white",
-    },
-    links: {
-      color: "orange",
-    },
-  }));
+  // const useStyles = makeStyles((theme) => ({
+  //   root: {
+  //     backgroundColor: "white",
+  //   },
+  //   links: {
+  //     color: "orange",
+  //   },
+  // }));
 
-  const classes = useStyles();
+  // const classes = useStyles();
   return (
     <div>
       <Head>
@@ -42,7 +43,7 @@ export default function Home() {
       </Head>
 
       <Grid container>
-        <img
+        <Image
           src="https://media.istockphoto.com/photos/variety-of-spices-on-kitchen-table-picture-id537710412"
           alt="slide image"
           width="100%"
@@ -50,7 +51,7 @@ export default function Home() {
         />
 
         <Grid container>
-          <Grid item sx={{ mt: 5, p: 2 }} lg={4} md={2} sm={6} />
+          <Grid Item sx={{ mt: 5, p: 2 }} lg={4} md={2} sm={6} />
           <Grid
             Item
             sx={{ mt: 2, p: 2, backgroundColor: "orange" }}
@@ -70,14 +71,14 @@ export default function Home() {
             md={10}
             lg={10}
             sx={{
-              backgroundImage: `url("https://media.istockphoto.com/photos/various-spices-selection-picture-id480519448")`,
+              backgroundImage: "url(&aposhttps://media.istockphoto.com/photos/various-spices-selection-picture-id480519448&apos)",
               p: 3,
               color: "orange",
               margin: 3,
             }}
           >
             <Typography
-              variant="h4"
+              variant="h6"
               component="h6"
               color="brown"
               borderColor="orange"

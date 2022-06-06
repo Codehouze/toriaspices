@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
 
 body {
   background: #f2f2f2;
@@ -36,7 +36,7 @@ footer {
   border-top: 1px solid #eaeaea;
 }
 
-footer a{
+footer a {
   color: orange;
 }
 
@@ -46,39 +46,35 @@ footer a{
   background-color: #fff;
 }
 
-.not-found h1{
-  color:orange;
-  padding-top:25px;
+.not-found h1 {
+  color: orange;
+  padding-top: 25px;
 }
-.not-found h2{
-  padding-top:25px;
+.not-found h2 {
+  padding-top: 25px;
 }
 
-
-
-.not-found a{
-  color:#4979ff;
+.not-found a {
+  color: #4979ff;
   text-decoration: underline;
 }
 
-.formInput{
-  margin:5;
-
+.formInput {
+  margin: 5;
 }
-.contactCard{
+.contactCard {
   border-bottom-left-radius: groove;
   /* padding: 5; */
   border-radius: 10px;
   /* margin-bottom: 10px; */
 }
 
-.bannerBadge1{
+.bannerBadge1 {
   margin-right: 5;
-  padding: 2; 
+  padding: 2;
   background-color: "orange";
   border-top-left-radius: 20px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 20px;
 }
-

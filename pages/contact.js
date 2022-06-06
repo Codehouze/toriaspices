@@ -3,8 +3,8 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
-import Image from "../image/1000_F_216025598_tfcUYy3HkVJS7Vd4XniGgZAnY7y8XNYH.jpeg";
 import React from "react";
+import Image from 'next/image'
 
 function contact() {
   return (
@@ -64,14 +64,18 @@ function contact() {
             />
           </Grid>
           <Grid item>
-            <Button variant="contained" style={{ width: "40%" }} sx={{mt:2,mr:"auto" }}>
+            <Button
+              variant="contained"
+              style={{ width: "40%" }}
+              sx={{ mt: 2, mr: "auto" }}
+            >
               Send Message
             </Button>
           </Grid>
         </Grid>
       </Grid>
       <Grid xs={12} sm={6} lg={6}>
-        <img src="https://res.cloudinary.com/dfsmwu4av/image/upload/v1653419083/91397319_124413692497240_1023076873652928512_n_ln7nx1.png" />
+        <Image src="https://res.cloudinary.com/dfsmwu4av/image/upload/v1653419083/91397319_124413692497240_1023076873652928512_n_ln7nx1.png"  alt='contact_us' />
       </Grid>
     </Grid>
   );
