@@ -1,4 +1,4 @@
-// import * as React from "react";
+import * as React from "react";
 // import { styled } from "@mui/material/styles";
 // import Card from "@mui/material/Card";
 // // import CardHeader from "@mui/material/CardHeader";
@@ -14,7 +14,7 @@
 // // import MoreVertIcon from "@mui/icons-material/MoreVert";
 // import Grid from "@mui/material/Grid";
 
-// function products() {
+function products() {
 //   const ExpandMore = styled((props) => {
 //     const { expand, ...other } = props;
 //     return <IconButton {...other} />;
@@ -121,5 +121,8 @@
 //     </Grid>
 //   );
 // }
-
-// export default products;
+return(
+  <div>Hello world</div>
+)
+}
+export default products;
