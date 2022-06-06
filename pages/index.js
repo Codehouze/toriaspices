@@ -45,16 +45,16 @@ export default function Index() {
         <Image
           src="/photos/variety-of-spices-on-kitchen-table-picture-id537710412"
           alt="slide image"
-          width="100%"
-          height="20%"
-          marginBottom="15"
+          width={100}
+          height={20}
+          marginBottom={15}
           layout="fill"
         />
 
         <Grid container>
-          <Grid Item sx={{ mt: 5, p: 2 }} lg={4} md={2} sm={6} />
+          <Grid item sx={{ mt: 5, p: 2 }} lg={4} md={6} sm={6} />
           <Grid
-            Item
+            item
             sx={{ mt: 2, p: 2, backgroundColor: "orange" }}
             xs={12}
             sm={4}
@@ -62,8 +62,8 @@ export default function Index() {
             lg={8}
             className="bannerBadge1"
           >
-            <Typography variant="h4" component="h4" color="white">
-              Spice 'n Easy Recipe Mixes
+            <Typography variant="h3" component="h4" color="white">
+             Best Organic Products
             </Typography>
           </Grid>
           <Box
@@ -72,7 +72,7 @@ export default function Index() {
             md={10}
             lg={10}
             sx={{
-              backgroundImage: `url("/photos/various-spices-selection-picture-id480519448")`,
+              backgroundImage: `url("https://media.istockphoto.com/photos/various-spices-selection-picture-id480519448")`,
               p: 3,
               color: "orange",
               margin: 3,
