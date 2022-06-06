@@ -43,10 +43,12 @@ export default function Index() {
 
       <Grid container>
         <Image
-          src="https://media.istockphoto.com/photos/variety-of-spices-on-kitchen-table-picture-id537710412"
+          src="/photos/variety-of-spices-on-kitchen-table-picture-id537710412"
           alt="slide image"
           width="100%"
+          height="20%"
           marginBottom="15"
+          layout="fill"
         />
 
         <Grid container>
@@ -70,8 +72,7 @@ export default function Index() {
             md={10}
             lg={10}
             sx={{
-              backgroundImage:
-                "url(&aposhttps://media.istockphoto.com/photos/various-spices-selection-picture-id480519448&apos)",
+              backgroundImage: `url("/photos/various-spices-selection-picture-id480519448")`,
               p: 3,
               color: "orange",
               margin: 3,
