@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Button from "@mui/material/Button";
 import Image from 'next/image'
+import React from "react";
 
 const NotFound = () => {
   return (
