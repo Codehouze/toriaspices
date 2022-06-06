@@ -13,7 +13,7 @@ import Image from 'next/image'
 
 // import Image from "https://media.istockphoto.com/photos/various-spices-a-vintage-spoons-on-stone-table-colorful-herbal-and-picture-id1340677256"
 
-export default function Home() {
+export default function Index() {
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: "orange",
     ...theme.typography.body2,
