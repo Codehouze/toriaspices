@@ -9,7 +9,7 @@ import Paper from "@mui/material/Paper";
 import Head from "next/head";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "../Components/card";
-import Image from 'next/image'
+import Image from "next/image";
 
 // import Image from "https://media.istockphoto.com/photos/various-spices-a-vintage-spoons-on-stone-table-colorful-herbal-and-picture-id1340677256"
 
@@ -20,7 +20,6 @@ export default function Index() {
     padding: theme.spacing(1),
     textAlign: "center",
     color: theme.palette.text.secondary,
-    // backgroundImage: `url('https://media.istockphoto.com/photos/variety-of-spices-on-kitchen-table-picture-id537710412')`
   }));
 
   // const useStyles = makeStyles((theme) => ({
@@ -71,7 +70,8 @@ export default function Index() {
             md={10}
             lg={10}
             sx={{
-              backgroundImage: "url(&aposhttps://media.istockphoto.com/photos/various-spices-selection-picture-id480519448&apos)",
+              backgroundImage:
+                "url(&aposhttps://media.istockphoto.com/photos/various-spices-selection-picture-id480519448&apos)",
               p: 3,
               color: "orange",
               margin: 3,
