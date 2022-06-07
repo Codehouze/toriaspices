@@ -78,3 +78,46 @@ footer a {
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 20px;
 }
+
+/* Rectangle 705 */
+.shade {
+  /* position: absolute; */
+  /* width: 468px; */
+  /* height: 560px; */
+  /* left: 794px; */
+  background: gray;
+  border-radius: 20px 1400px 20px 20px;
+  padding:10;
+}
+
+.carousel {
+  overflow: hidden;
+}
+
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+
+.carousel-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background-color: green;
+  color: #fff;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+}
+
+.indicators > button {
+  margin: 5px;
+}
+
+.indicators > button.active {
+  background-color: green;
+  color: #fff;
+}

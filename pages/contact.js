@@ -4,13 +4,13 @@ import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
 import React from "react";
-import Image from 'next/image'
+import Image from "next/image";
 
 function contact() {
   return (
     <Grid container sx={{ px: 3, mt: 5 }}>
       <Grid item direction="column" xs={12} sm={6} lg={6} className="contact">
-        <Grid item alignItems="center" justify="center" className="contactCard">
+        <Grid item alignitems="center" justify="center" className="contactCard">
           <Typography variant="h4" component="h4">
             We are always hear to serve you...
           </Typography>
@@ -75,7 +75,10 @@ function contact() {
         </Grid>
       </Grid>
       <Grid xs={12} sm={6} lg={6}>
-        <Image src="https://res.cloudinary.com/dfsmwu4av/image/upload/v1653419083/91397319_124413692497240_1023076873652928512_n_ln7nx1.png"  alt='contact_us' />
+        <Image
+          src="https://res.cloudinary.com/dfsmwu4av/image/upload/v1653419083/91397319_124413692497240_1023076873652928512_n_ln7nx1.png"
+          alt="contact_us"
+        />
       </Grid>
     </Grid>
   );

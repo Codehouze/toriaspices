@@ -70,7 +70,7 @@ const Footer = () => {
               sx={{
                 p: "2px 4px",
                 display: "flex",
-                alignItems: "center",
+                alignitems: "center",
                 width: 300,
               }}
             >

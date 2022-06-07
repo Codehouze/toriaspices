@@ -8,7 +8,7 @@ import Button from "@material-ui/core/Button";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Slide from "@material-ui/core/Slide";
 // import Menu from "@material-ui/core/Menu";
-// import MenuItem from "@material-ui/core/MenuItem";
+// import Menuitem from "@material-ui/core/Menuitem";
 // import MenuIcon from "@mui/icons-material/Menu";
 import DrawerComponent from "./Drawer";
 
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     color: "orange",
   },
   nav: {
-    alignItem: "right",
+    alignitem: "right",
   },
   navLinks: {
     marginLeft: theme.spacing(10),
