@@ -103,8 +103,8 @@ footer a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 200px;
-  background-color: green;
+  height: 100%;
+  /* background-color: green; */
   color: #fff;
 }
 
@@ -120,4 +120,9 @@ footer a {
 .indicators > button.active {
   background-color: green;
   color: #fff;
+}
+
+.slider1 {
+  background-image: url('../image/slider1_1.webp');
+
 }

@@ -13,8 +13,14 @@ import React from "react";
 // import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 // // import MoreVertIcon from "@mui/icons-material/MoreVert";
 // import Grid from "@mui/material/Grid";
+import Paper from "../Components/paper";
 
 function products() {
-  return <div>Hello world</div>;
+  return (
+    <div>
+      Hello world
+      <Paper name="maxwell" title="software engineer" body="products" />
+    </div>
+  );
 }
 export default products;

@@ -12,14 +12,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import Card from "../Components/card";
 import Image from "next/image";
 import ProductImage from "../image/1000_F_128374324_37F3O5wRIgK0QfGt25KKRrbfMbPB96X2.jpeg";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import { Carousel } from "react-responsive-carousel";
+
 import Slider1 from "../image/slider2_1.jpeg";
 import Slider2 from "../image/slider1_1.webp";
 import Slider3 from "../image/slider3_1.jpeg";
-import Slider4 from "../image/spice_1.jpeg";
-import Slider5 from "../image/slider1_1.webp";
-// import Image from "https://media.istockphoto.com/photos/various-spices-a-vintage-spoons-on-stone-table-colorful-herbal-and-picture-id1340677256"
 
 export default function Index() {
   const item = styled(Paper)(({ theme }) => ({
@@ -41,10 +37,10 @@ export default function Index() {
       <Grid container>
         <Carousel>
           <CarouselItem>
-            <Image src={Slider1} alt="image1" />
+            <Image src={Slider2} alt="image1" />
           </CarouselItem>
           <CarouselItem>
-            <Image src={Slider3} alt="image1" />
+            <Image src={Slider1} alt="image1" />
           </CarouselItem>
           <CarouselItem>
             <Image src={Slider3} alt="image1" />
@@ -60,16 +56,28 @@ export default function Index() {
           </Grid>
           <Grid container sx={{ p: 5 }}>
             <Grid xs={12} sm={6} md={3} lg={3}>
-              <Card />
+              <Card
+                imageUrl="https://cdn.shopify.com/s/files/1/0012/3011/0804/files/slider1_1.jpg?v=1621575990"
+                name="Samuel"
+              />
             </Grid>
             <Grid xs={12} sm={6} md={3} lg={3}>
-              <Card />
+              <Card
+                imageUrl="https://i.pinimg.com/564x/8d/38/a4/8d38a482f2cda4e147ca6fe7a8a89bb8.jpg"
+                name="Chijioke"
+              />
             </Grid>
             <Grid xs={12} sm={6} md={3} lg={3}>
-              <Card />
+              <Card
+                imageUrl="https://i.pinimg.com/564x/42/c6/2d/42c62dbb80fe747e90e6dfcd457bc7cd.jpg"
+                name="Ground Cumin"
+              />
             </Grid>
             <Grid xs={12} sm={6} md={3} lg={3}>
-              <Card />
+              <Card
+                imageUrl="https://i.pinimg.com/564x/ea/ad/9c/eaad9c704644c6c4a1fbec32627a3279.jpg"
+                name="Cayenne Pepper"
+              />
             </Grid>
           </Grid>
         </Grid>
@@ -82,15 +90,23 @@ export default function Index() {
           md={12}
           lg={12}
         ></Grid>
-        <Grid item xs={12} sm={8} md={4} lg={4}>
-          <Card />
+        <Grid item sx={{ px: 15 }} xs={12} sm={8} md={4} lg={4}>
+          <Card
+            imageUrl="https://i.pinimg.com/564x/42/c6/2d/42c62dbb80fe747e90e6dfcd457bc7cd.jpg"
+            name="Ground Cumin"
+          />
         </Grid>
-        <Grid item sx={{ p: 5 }} xs={12} sm={8} md={6} lg={6}>
+        <Grid item sx={{ p: 15 }} xs={12} sm={8} md={6} lg={6}>
           <Typography variant="p">Product 1</Typography>
           <Typography variant="h4">Tumeric</Typography>
           <Typography>
-            “If you are going to use a passage of Lorem Ipsum, you need to be
-            sure there isn't anything embarrassing hidden in the middle of text.
+            Rich and warm. Complex, earthy spice flavor. Enticing aroma. True
+            cumin seed color. There's no fake here. Our Ground Cumin is nothing
+            but pure, organic, cumin seed (Cuminum cyminum). Awarded “Best
+            Ground Cumin” by Cook’s Illustrated in 2018. No GMOs. You won’t find
+            cumin like this just anywhere. This is real spice. With real bite.
+            No ETO (considered carcinogenic by the EPA). Not irradiated.
+            Certified Organic by QAI. Kosher Certified by KSA.
           </Typography>
         </Grid>
       </Grid>
@@ -107,8 +123,16 @@ export default function Index() {
           <Typography variant="p">Product 2</Typography>
           <Typography variant="h4">Ginger</Typography>
           <Typography>
-            “If you are going to use a passage of Lorem Ipsum, you need to be
-            sure there isn't anything embarrassing hidden in the middle of text.
+            MAKE ANYTHING TASTE LIKE BACON! Sprinkle over fries, vegetables,
+            popcorn, mac & cheese, corn on the cob and anything else to add
+            delicious bacon flavor to your meal. With Bacon Seasoning you can
+            turn an average meal into an unbelievable deliciousness! Being a
+            plant-based spice mix Deliciou's Bacon Seasoning is made of
+            wholesome ingredients and is GMO free and nautrally Vegan and
+            Kosher. Note: For a limited time the Original and Spicy Bacon
+            Seasoning may come with a different look than what is displayed in
+            the product images because we are transitioning into new packaging
+            designs. The flavor has not changed
           </Typography>
         </Grid>
         <Grid
@@ -120,7 +144,10 @@ export default function Index() {
           lg={4}
           // className="shade"
         >
-          <Card />
+          <Card
+            imageUrl="https://i.pinimg.com/564x/ae/84/49/ae8449bd8197213aee091381fcaa1b67.jpg"
+            name="Bacon Seasoning"
+          />
         </Grid>
       </Grid>
       <Grid container>
@@ -140,7 +167,10 @@ export default function Index() {
           lg={4}
           // className="shade"
         >
-          <Card />
+          <Card
+            imageUrl="https://image.shutterstock.com/image-photo/fresh-turmeric-roots-on-wooden-600w-273715592.jpg"
+            name="maxwell"
+          />
         </Grid>
         <Grid item sx={{ p: 5 }} xs={12} sm={8} md={6} lg={6}>
           <Typography variant="p">Product 3</Typography>
@@ -151,38 +181,7 @@ export default function Index() {
           </Typography>
         </Grid>
       </Grid>
-      <Grid container display="colomn" sx={{ p: 3, justifyContent: "center" }}>
-        <Grid item xs={12} sm={10} md={10} lg={10}>
-          <Typography
-            variant="h3"
-            justify="center"
-            backgroundColor="orange"
-            color="white"
-          >
-            some of our trusted clients
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3} lg={3}>
-          <Typography variant="h3" justify="center">
-            [Google logo]
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3} lg={3}>
-          <Typography variant="h3" justify="center">
-            [Amazon logo]
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3} lg={3}>
-          <Typography variant="h3" justify="center">
-            [Microsoft logo]
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3} lg={3}>
-          <Typography variant="h3" justify="center">
-            [Codehouze Logo]
-          </Typography>
-        </Grid>
-      </Grid>
+
       <Grid container>
         <Grid
           sx={{ justify: "center", ml: "auto", mr: "auto", p: 5 }}
@@ -214,20 +213,27 @@ export default function Index() {
         </Grid>
       </Grid>
       <Grid container>
-        <Grid item lg={2} md={2} xs={2} sm={2} />
+        <Grid item lg={1} md={1} xs={1} sm={1} />
 
         <Grid
+          container
           item
-          xs={8}
-          sm={8}
-          lg={8}
-          sx={{ p: 5, mt: 5, backgroundColor: "orange", borderRadius: 5 }}
+          xs={10}
+          sm={10}
+          lg={10}
+          sx={{
+            p: 5,
+            mt: 5,
+            backgroundColor: "orange",
+            opacity: 3,
+            borderRadius: 5,
+          }}
         >
-          <Grid item justifyContent={"center"} xs={8} md={4} sm={8} lg={4}>
+          <Grid item sx={{ p: 4, pt: 10 }} xs={8} md={4} sm={4} lg={5}>
             <Typography
-              variant="h5"
+              variant="h3"
               component="h5"
-              color="brown"
+              color="white"
               borderColor="orange"
               fontSize="10"
               justify="left"
@@ -237,20 +243,30 @@ export default function Index() {
           </Grid>
           <Grid
             item
-            sx={{ justifyContent: "right" }}
-            xs={8}
-            md={4}
-            sm={8}
+            // sx={{ justifyContent: "right" }}
+            xs={10}
+            md={5}
+            sm={5}
             lg={4}
           >
-            <Grid>
-              <Image src={ProductImage} alt="CTA" width={50} height={20} />
-            </Grid>
-            <Button>Let Start</Button>
+            <Card
+              imageUrl="https://image.shutterstock.com/image-photo/fresh-turmeric-roots-on-wooden-600w-273715592.jpg"
+              name="maxwell"
+            />
+          </Grid>
+          <Grid sx={{ m: "auto" }} xs={8} md={2} sm={2} lg={3}>
+            <Button
+              variant="contained"
+              href="/contact"
+              size="large"
+              color="primary"
+            >
+              Let's Start
+            </Button>
           </Grid>
         </Grid>
         {/* </Box> */}
-        <Grid item lg={2} md={2} sm={2} xs={2} />
+        <Grid item lg={1} md={1} sm={1} xs={1} />
       </Grid>
     </div>
   );

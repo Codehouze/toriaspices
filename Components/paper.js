@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Paper, Box } from "@mui/material";
 
-export default function SimplePaper() {
+export default function SimplePaper({name,title,body}) {
   return (
     <Box
       sx={{

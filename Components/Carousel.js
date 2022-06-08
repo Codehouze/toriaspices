@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSwipeable } from "react-swipeable";
 
-
 export const CarouselItem = ({ children, width }) => {
   return (
     <div className="carousel-item" style={{ width: width }}>
@@ -54,11 +53,12 @@ const Carousel = ({ children }) => {
         className="inner"
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
+        
         {React.Children.map(children, (child, index) => {
           return React.cloneElement(child, { width: "100%" });
         })}
       </div>
-      <div className="indicators">
+      {/* <div className="indicators">
         <button
           onClick={() => {
             updateIndex(activeIndex - 1);
@@ -85,7 +85,7 @@ const Carousel = ({ children }) => {
         >
           Next
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
