@@ -4,14 +4,14 @@ import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
 import Box from "@mui/material/Box";
-import { useForm as UseForm, Controller } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 
-const contact = () => {
+const Contact = () => {
   const {
     control,
     formState: { errors },
     handleSubmit,
-  } = UseForm();
+  } = useForm();
   const onSubmit = (data) => {
     // TODO: create a function that will make a post req..
     console.log(data);
@@ -183,4 +183,4 @@ const contact = () => {
     </form>
   );
 };
-export default contact;
+export default Contact;
