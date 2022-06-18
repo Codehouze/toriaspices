@@ -3,8 +3,8 @@ import Divider from "@material-ui/core/Divider";
 import Drawer from "@material-ui/core/Drawer";
 import IconButton from "@material-ui/core/IconButton";
 import List from "@material-ui/core/List";
-import Listitem from "@material-ui/core/Listitem";
-import ListitemText from "@material-ui/core/ListitemText";
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
 import { makeStyles } from "@material-ui/core/styles";
 
 import Link from "next/link";
@@ -29,37 +29,37 @@ function DrawerComponent() {
     <>
       <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
         <List>
-          <Listitem onClick={() => setOpenDrawer(false)}>
-            <ListitemText>
+          <ListItem onClick={() => setOpenDrawer(false)}>
+            <ListItemText>
               <Link href="/" className={classes.link}>
                 Home
               </Link>
-            </ListitemText>
-          </Listitem>
+            </ListItemText>
+          </ListItem>
           <Divider />
-          <Listitem onClick={() => setOpenDrawer(false)}>
-            <ListitemText>
+          <ListItem onClick={() => setOpenDrawer(false)}>
+            <ListItemText>
               <Link href="/about" className={classes.link}>
                 About
               </Link>
-            </ListitemText>
-          </Listitem>
+            </ListItemText>
+          </ListItem>
           <Divider />
-          <Listitem onClick={() => setOpenDrawer(false)}>
-            <ListitemText>
+          <ListItem onClick={() => setOpenDrawer(false)}>
+            <ListItemText>
               <Link href="/contact" className={classes.link}>
                 Contact
               </Link>
-            </ListitemText>
-          </Listitem>
+            </ListItemText>
+          </ListItem>
           <Divider />
-          <Listitem onClick={() => setOpenDrawer(false)}>
-            <ListitemText>
+          <ListItem onClick={() => setOpenDrawer(false)}>
+            <ListItemText>
               <Link href="/blog" className={classes.link}>
                 Blog
               </Link>
-            </ListitemText>
-          </Listitem>
+            </ListItemText>
+          </ListItem>
           <Divider />
         </List>
       </Drawer>
