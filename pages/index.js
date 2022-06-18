@@ -1,30 +1,29 @@
 import React from "react";
-import { styled } from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Carousel, { CarouselItem } from "../Components/Carousel";
-// import styled from "@mui/material/styled";
-import Paper from "@mui/material/Paper";
 import Head from "next/head";
-import { makeStyles } from "@material-ui/core/styles";
 import Card from "../Components/card";
 import Image from "next/image";
-import ProductImage from "../image/1000_F_128374324_37F3O5wRIgK0QfGt25KKRrbfMbPB96X2.jpeg";
-
+import spiceImage from "../image/kisspng.png";
+import ChefImage from "../image/african_chef-removebg-preview.png";
 import Slider1 from "../image/slider2_1.jpeg";
 import Slider2 from "../image/slider1_1.webp";
 import Slider3 from "../image/slider3_1.jpeg";
+// import MainSlide from "../Components/MainSlide";
+// import { makeStyles } from "@material-ui/core/styles";
+// import Paper from "@mui/material/Paper";
 
 export default function Index() {
-  const item = styled(Paper)(({ theme }) => ({
-    backgroundColor: "orange",
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  }));
+  // const item = styled(Paper)(({ theme }) => ({
+  //   backgroundColor: "orange",
+  //   ...theme.typography.body2,
+  //   padding: theme.spacing(1),
+  //   textAlign: "center",
+  //   color: theme.palette.text.secondary,
+  // }));
 
   return (
     <div>
@@ -35,6 +34,8 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Grid container>
+        {/* <MainSlide /> */}
+
         <Carousel>
           <CarouselItem>
             <Image src={Slider2} alt="image1" />
@@ -46,172 +47,172 @@ export default function Index() {
             <Image src={Slider3} alt="image1" />
           </CarouselItem>
         </Carousel>
-
-        <Grid container>
-          <Grid item sx={{ mt: 5, p: 5 }} lg={4} md={6} sm={6} />
-          <Grid>
-            <Typography variant="h3" component="h4" color="orange">
-              Best Organic Products
-            </Typography>
-          </Grid>
-          <Grid container sx={{ p: 5 }}>
-            <Grid xs={12} sm={6} md={3} lg={3}>
-              <Card
-                imageUrl="https://cdn.shopify.com/s/files/1/0012/3011/0804/files/slider1_1.jpg?v=1621575990"
-                name="Samuel"
-              />
-            </Grid>
-            <Grid xs={12} sm={6} md={3} lg={3}>
-              <Card
-                imageUrl="https://i.pinimg.com/564x/8d/38/a4/8d38a482f2cda4e147ca6fe7a8a89bb8.jpg"
-                name="Chijioke"
-              />
-            </Grid>
-            <Grid xs={12} sm={6} md={3} lg={3}>
-              <Card
-                imageUrl="https://i.pinimg.com/564x/42/c6/2d/42c62dbb80fe747e90e6dfcd457bc7cd.jpg"
-                name="Ground Cumin"
-              />
-            </Grid>
-            <Grid xs={12} sm={6} md={3} lg={3}>
-              <Card
-                imageUrl="https://i.pinimg.com/564x/ea/ad/9c/eaad9c704644c6c4a1fbec32627a3279.jpg"
-                name="Cayenne Pepper"
-              />
-            </Grid>
-          </Grid>
-        </Grid>
       </Grid>
       <Grid container>
-        <Grid
-          sx={{ justify: "center", ml: "auto", mr: "auto", p: 5 }}
-          xs={12}
-          sm={12}
-          md={12}
-          lg={12}
-        ></Grid>
-        <Grid item sx={{ px: 15 }} xs={12} sm={8} md={4} lg={4}>
+        <Grid item sx={{ mt: 5, p: 5 }} lg={4} md={6} sm={6} />
+        <Typography
+          variant="h3"
+          component="h4"
+          color="orange"
+          marginTop="5"
+          padding="5"
+        >
+          Best Organic Products
+        </Typography>
+      </Grid>
+
+      <Grid container spacing={2} sx={{ p: 5, m: 5 }}>
+        <Grid xs={12} sm={5} md={3} lg={3}>
+          <Card
+            imageUrl="https://cdn.shopify.com/s/files/1/0012/3011/0804/files/slider1_1.jpg?v=1621575990"
+            name="Tumeric"
+          />
+        </Grid>
+        <Grid xs={12} sm={5} md={3} lg={3}>
+          <Card
+            imageUrl="https://i.pinimg.com/564x/8d/38/a4/8d38a482f2cda4e147ca6fe7a8a89bb8.jpg"
+            name="Curry Powder"
+          />
+        </Grid>
+        <Grid xs={12} sm={5} md={3} lg={3}>
           <Card
             imageUrl="https://i.pinimg.com/564x/42/c6/2d/42c62dbb80fe747e90e6dfcd457bc7cd.jpg"
             name="Ground Cumin"
           />
         </Grid>
-        <Grid item sx={{ p: 15 }} xs={12} sm={8} md={6} lg={6}>
-          <Typography variant="p">Product 1</Typography>
-          <Typography variant="h4">Tumeric</Typography>
-          <Typography>
-            Rich and warm. Complex, earthy spice flavor. Enticing aroma. True
-            cumin seed color. There's no fake here. Our Ground Cumin is nothing
-            but pure, organic, cumin seed (Cuminum cyminum). Awarded “Best
-            Ground Cumin” by Cook’s Illustrated in 2018. No GMOs. You won’t find
-            cumin like this just anywhere. This is real spice. With real bite.
-            No ETO (considered carcinogenic by the EPA). Not irradiated.
-            Certified Organic by QAI. Kosher Certified by KSA.
-          </Typography>
-        </Grid>
-      </Grid>
-      <Grid container>
-        <Grid
-          sx={{ justify: "center", ml: "auto", mr: "auto", p: 5 }}
-          xs={12}
-          sm={12}
-          md={12}
-          lg={12}
-        ></Grid>
-
-        <Grid item sx={{ p: 5 }} xs={12} sm={8} md={6} lg={6}>
-          <Typography variant="p">Product 2</Typography>
-          <Typography variant="h4">Ginger</Typography>
-          <Typography>
-            MAKE ANYTHING TASTE LIKE BACON! Sprinkle over fries, vegetables,
-            popcorn, mac & cheese, corn on the cob and anything else to add
-            delicious bacon flavor to your meal. With Bacon Seasoning you can
-            turn an average meal into an unbelievable deliciousness! Being a
-            plant-based spice mix Deliciou's Bacon Seasoning is made of
-            wholesome ingredients and is GMO free and nautrally Vegan and
-            Kosher. Note: For a limited time the Original and Spicy Bacon
-            Seasoning may come with a different look than what is displayed in
-            the product images because we are transitioning into new packaging
-            designs. The flavor has not changed
-          </Typography>
-        </Grid>
-        <Grid
-          item
-          sx={{ p: 5, m: 5 }}
-          xs={12}
-          sm={8}
-          md={4}
-          lg={4}
-          // className="shade"
-        >
+        <Grid xs={12} sm={5} md={3} lg={3}>
           <Card
-            imageUrl="https://i.pinimg.com/564x/ae/84/49/ae8449bd8197213aee091381fcaa1b67.jpg"
-            name="Bacon Seasoning"
+            imageUrl="https://i.pinimg.com/564x/ea/ad/9c/eaad9c704644c6c4a1fbec32627a3279.jpg"
+            name="Cayenne Pepper"
           />
         </Grid>
       </Grid>
-      <Grid container>
-        <Grid
-          sx={{ justify: "center", ml: "auto", mr: "auto", p: 5 }}
-          xs={12}
-          sm={12}
-          md={12}
-          lg={12}
-        ></Grid>
-        <Grid
-          item
-          sx={{ p: 5, m: 5 }}
-          xs={12}
-          sm={8}
-          md={4}
-          lg={4}
-          // className="shade"
-        >
-          <Card
-            imageUrl="https://image.shutterstock.com/image-photo/fresh-turmeric-roots-on-wooden-600w-273715592.jpg"
-            name="maxwell"
-          />
-        </Grid>
-        <Grid item sx={{ p: 5 }} xs={12} sm={8} md={6} lg={6}>
-          <Typography variant="p">Product 3</Typography>
-          <Typography variant="h4"> Star Anise</Typography>
-          <Typography>
-            “If you are going to use a passage of Lorem Ipsum, you need to be
-            sure there isn't anything embarrassing hidden in the middle of text.
-          </Typography>
-        </Grid>
-      </Grid>
+      <Box sx={{ mt: 5 }}>
+        <Grid container>
+          <Grid item xs={12} sm={8} md={4} lg={4} justify="flex-start">
+            <Card
+              imageUrl="https://i.pinimg.com/564x/42/c6/2d/42c62dbb80fe747e90e6dfcd457bc7cd.jpg"
+              name="Ground Cumin"
+            />
+          </Grid>
 
-      <Grid container>
-        <Grid
-          sx={{ justify: "center", ml: "auto", mr: "auto", p: 5 }}
-          xs={12}
-          sm={12}
-          md={12}
-          lg={12}
-        >
-          <Typography variant="h3">Customer Story</Typography>
+          <Grid item xs={12} sm={8} md={6} lg={6}>
+            <Typography variant="h4" sx={{ mt: 2, mb: 5, color: "brown" }}>
+              Tumeric
+            </Typography>
+            <Typography sx={{ justifyContent: "center", display: "block" }}>
+              Rich and warm. Complex, earthy spice flavor. Enticing aroma. True
+              cumin seed color. There's no fake here. Our Ground Cumin is
+              nothing but pure, organic, cumin seed (Cuminum cyminum). Awarded
+              “Best Ground Cumin” by Cook’s Illustrated in 2018. No GMOs. You
+              won’t find cumin like this just anywhere. This is real spice. With
+              real bite. No ETO (considered carcinogenic by the EPA). Not
+              irradiated. Certified Organic by QAI. Kosher Certified by KSA.
+            </Typography>
+          </Grid>
         </Grid>
-        <Grid item sx={{ p: 5 }} xs={12} sm={8} md={6} lg={6}>
-          <Typography variant="p">Customer Story</Typography>
-          <Typography variant="h4">Customer Story</Typography>
-          <Typography>
-            “If you are going to use a passage of Lorem Ipsum, you need to be
-            sure there isn't anything embarrassing hidden in the middle of text.
-          </Typography>
+      </Box>
+      <Box sx={{ mt: 5 }}>
+        <Grid container justify="flex-start">
+          <Grid
+            item
+            xs={12}
+            sm={8}
+            md={6}
+            lg={6}
+            order={{ xs: 2, sm: 1, lg: 1 }}
+          >
+            <Typography variant="h4" sx={{ mt: 2, mb: 5, color: "brown" }}>
+              Ginger
+            </Typography>
+            <Typography sx={{ justifyContent: "center", display: "block" }}>
+              MAKE ANYTHING TASTE LIKE BACON! Sprinkle over fries, vegetables,
+              popcorn, mac & cheese, corn on the cob and anything else to add
+              delicious bacon flavor to your meal. With Bacon Seasoning you can
+              turn an average meal into an unbelievable deliciousness! Being a
+              plant-based spice mix Deliciou's Bacon Seasoning is made of
+              wholesome ingredients and is GMO free and nautrally Vegan and
+              Kosher. Note: For a limited time the Original and Spicy Bacon
+              Seasoning may come with a different look than what is displayed in
+              the product images because we are transitioning into new packaging
+              designs. The flavor has not changed
+            </Typography>
+          </Grid>
+          <Grid
+            item
+            sx={{ p: 5 }}
+            xs={12}
+            sm={8}
+            md={4}
+            lg={4}
+            order={{ xs: 1, sm: 2, lg: 1 }}
+          >
+            <Card
+              imageUrl="https://i.pinimg.com/564x/ae/84/49/ae8449bd8197213aee091381fcaa1b67.jpg"
+              name="Bacon Seasoning"
+            />
+          </Grid>
         </Grid>
-        <Grid
-          item
-          sx={{ p: 5, m: 5 }}
-          xs={12}
-          sm={8}
-          md={4}
-          lg={4}
-          className="shade"
-        >
-          <Card />
+      </Box>
+      <Box sx={{ mt: 5 }}>
+        <Grid container>
+          <Grid
+            item
+            xs={12}
+            sm={8}
+            md={4}
+            lg={4}
+            // className="shade"
+          >
+            <Card
+              imageUrl="https://image.shutterstock.com/image-photo/fresh-turmeric-roots-on-wooden-600w-273715592.jpg"
+              name="maxwell"
+            />
+          </Grid>
+          <Grid item xs={12} sm={8} md={6} lg={6}>
+            <Typography variant="h4" sx={{ mt: 2, mb: 5, color: "brown" }}>
+              Star Anise
+            </Typography>
+            <Typography>
+              MAKE ANYTHING TASTE LIKE BACON! Sprinkle over fries, vegetables,
+              popcorn, mac & cheese, corn on the cob and anything else to add
+              delicious bacon flavor to your meal. With Bacon Seasoning you can
+              turn an average meal into an unbelievable deliciousness! Being a
+              plant-based spice mix Deliciou's Bacon Seasoning is made of
+              wholesome ingredients and is GMO free and nautrally Vegan and
+              Kosher. Note: For a limited time the Original and Spicy Bacon
+              Seasoning may come with a different look than what is displayed in
+              the product images because we are transitioning into new packaging
+              designs. The flavor has not changed
+            </Typography>
+          </Grid>
         </Grid>
-      </Grid>
+      </Box>
+      <Box sx={{ marginTop: 5, marginBottom: 5 }}>
+        <Grid container className="offer">
+          <Grid item sx={{ p: 5 }} xs={12} sm={8} md={6} lg={6}>
+            <Typography variant="h4">Customer Story</Typography>
+            <Typography>
+              “If you are going to use a passage of Lorem Ipsum, you need to be
+              sure there isn't anything embarrassing hidden in the middle of
+              text.
+            </Typography>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            sm={8}
+            md={4}
+            lg={4}
+            // className="shade"
+          >
+            <Image
+              src={ChefImage}
+              alt="spice sample" // className="spiceImage"
+            />
+          </Grid>
+        </Grid>
+      </Box>
       <Grid container>
         <Grid item lg={1} md={1} xs={1} sm={1} />
 
@@ -241,17 +242,12 @@ export default function Index() {
               Enough talk, let's make you healthier
             </Typography>
           </Grid>
-          <Grid
-            item
-            // sx={{ justifyContent: "right" }}
-            xs={10}
-            md={5}
-            sm={5}
-            lg={4}
-          >
-            <Card
-              imageUrl="https://image.shutterstock.com/image-photo/fresh-turmeric-roots-on-wooden-600w-273715592.jpg"
-              name="maxwell"
+          <Grid item xs={10} md={5} sm={5} lg={4}>
+            <Image
+              src={spiceImage}
+              alt="spice sample"
+              z-index="-1"
+              className="spiceImage"
             />
           </Grid>
           <Grid sx={{ m: "auto" }} xs={8} md={2} sm={2} lg={3}>
@@ -265,7 +261,7 @@ export default function Index() {
             </Button>
           </Grid>
         </Grid>
-        {/* </Box> */}
+
         <Grid item lg={1} md={1} sm={1} xs={1} />
       </Grid>
     </div>

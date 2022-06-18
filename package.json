@@ -2,7 +2,6 @@
   "name": "toriaspices",
   "version": "0.1.0",
   "private": true,
-
   "scripts": {
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
@@ -25,12 +24,19 @@
     "@mui/styles": "*",
     "@svgr/webpack": "^6.2.1",
     "express": "^4.18.1",
+    "jquery": "^3.6.0",
     "next": "12.1.6",
     "react": "18.1.0",
+    "react-carousel-minimal": "^1.4.1",
     "react-dom": "18.1.0",
+    "react-easy-swipe": "0.0.22",
+    "react-hook-form": "^7.32.1",
+    "react-id-swiper": "^4.0.0",
+    "react-owl-carousel": "^2.3.3",
     "react-responsive-carousel": "^3.2.23",
     "react-swipeable": "^7.0.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "swiper": "^^6.8.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",

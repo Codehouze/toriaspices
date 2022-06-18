@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
 
 body {
+  margin-top: 150;
   background: #f2f2f2;
   color: #333;
   font-family: "Nunito";
@@ -63,10 +64,10 @@ footer a {
   margin: 5;
 }
 .contactCard {
-  border-bottom-left-radius: groove;
-  /* padding: 5; */
-  border-radius: 10px;
-  /* margin-bottom: 10px; */
+  /* border: groove; */
+  /* padding: 5px; */
+  /* border-radius: 10px; */
+  margin-bottom: 10px;
 }
 
 .bannerBadge1 {
@@ -81,13 +82,14 @@ footer a {
 
 /* Rectangle 705 */
 .shade {
-  /* position: absolute; */
+  position: absolute;
   /* width: 468px; */
-  /* height: 560px; */
-  /* left: 794px; */
+  /* height: 360px; */
+  left: 994px;
   background: gray;
-  border-radius: 20px 1400px 20px 20px;
-  padding:10;
+  border-radius: 1200px 0px 0px 0px;
+  padding: 10;
+  z-index: -3;
 }
 
 .carousel {
@@ -123,6 +125,24 @@ footer a {
 }
 
 .slider1 {
-  background-image: url('../image/slider1_1.webp');
+  background-image: url("../image/slider1_1.webp");
+}
+.shade Image {
+  z-index: 1;
+  height: 100%;
+  width: 20666px;
+}
 
+.contentStyle {
+  height: "160px";
+  color: "#fff";
+  lineheight: "160px";
+  textalign: "center";
+  background: "#364d79";
+}
+.carousel {
+  padding: "0 20px";
+}
+.App {
+  margin: auto;
 }

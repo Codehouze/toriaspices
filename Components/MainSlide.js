@@ -1,13 +1,14 @@
 import React from "react";
-import Slider1 from "../image/slider2_1.jpeg";
-import Image from "next/image";
+import Swiper from "react-id-swiper";
 
-function MainSlide(props) {
-  return (
-    <div>
-      <h2>Hello Maxwell</h2>
-    </div>
-  );
-}
+const MainSlider = () => (
+  <Swiper>
+    <div>Slide 1</div>
+    <div>Slide 2</div>
+    <div>Slide 3</div>
+    <div>Slide 4</div>
+    <div>Slide 5</div>
+  </Swiper>
+);
 
-export default MainSlide;
+export default MainSlider;
