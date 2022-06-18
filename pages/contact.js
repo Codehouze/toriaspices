@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
 import Box from "@mui/material/Box";
-import { UseForm, Controller } from "react-hook-form";
+import { useForm as UseForm, Controller } from "react-hook-form";
 
 const contact = () => {
   const {
