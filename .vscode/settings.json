@@ -1,3 +1,7 @@
 {
-    "vscode-ethover.default.apikey": ""
+  "editor.defaultFormatter":"esbenp.prettier-vscode",
+  "editor.codeActionOnSave":{
+    "source.fixAll":true,
+    "source.organizeImports":true
+  }
 }

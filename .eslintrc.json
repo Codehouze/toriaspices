@@ -1,15 +1,10 @@
 {
-  "extends": "next",
-  "rules": {
-    "react/no-unescaped-entities": "off",
-    "@next/next/no-page-custom-font": "off"
-
+  "extends": ["next", "next/core-web-vitals", "eslint:recommended"],
+  "globals": {
+    "React": "readonly"
   },
-  "no-restricted-imports": [
-    "error",
-    {
-      "patterns": ["@mui/*/*/*", "!@mui/material/test-utils/*"]
-    }
-  ]
+  "rules": {
+    "no-unused-vars": [1, { "args": "after-used", "argsIgnorePattern": "^_" }],
+    "react/no-unescaped-entities": 0 
+  }
 }
-

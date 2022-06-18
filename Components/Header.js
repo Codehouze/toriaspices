@@ -2,14 +2,14 @@
 import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
+// import Typography from "@material-ui/core/Typography";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Button from "@material-ui/core/Button";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Slide from "@material-ui/core/Slide";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
-import MenuIcon from "@mui/icons-material/Menu";
+// import Menu from "@material-ui/core/Menu";
+// import Menuitem from "@material-ui/core/Menuitem";
+// import MenuIcon from "@mui/icons-material/Menu";
 import DrawerComponent from "./Drawer";
 
 import { makeStyles, useTheme } from "@material-ui/core/styles";
@@ -19,15 +19,16 @@ import { Link } from "next/link";
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "white",
-    color:"orange",
+    color: "orange",
   },
-  nav:{
-    alignItem: "right",
-  },navLinks: {
+  nav: {
+    alignitem: "right",
+  },
+  navLinks: {
     marginLeft: theme.spacing(10),
     display: "flex",
   },
- logo: {
+  logo: {
     flexGrow: "1",
     cursor: "pointer",
   },
@@ -39,12 +40,12 @@ const useStyles = makeStyles((theme) => ({
     float: "right",
     "&:hover": {
       color: "white",
-      backgroundColor:"orange",
+      backgroundColor: "orange",
       borderBottom: "1px solid white",
     },
-    menu:{
-      color:"orange"
-    }
+    menu: {
+      color: "orange",
+    },
   },
 }));
 
@@ -62,12 +63,12 @@ function HideOnScroll(props) {
 const Header = (props) => {
   const classes = useStyles();
   const [anchor, setAnchor] = React.useState(null);
-  const open = Boolean(anchor);
+  // const open = Boolean(anchor);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  const handleMenu = (event) => {
-    setAnchor(event.currentTarget);
-  };
+  // const handleMenu = (event) => {
+  //   setAnchor(event.currentTarget);
+  // };
   return (
     <div>
       <HideOnScroll {...props}>
@@ -80,7 +81,7 @@ const Header = (props) => {
             />
             {isMobile ? (
               <DrawerComponent />
-               ) : (
+            ) : (
               <div className={classes.navLinks}>
                 <Button
                   variant="text"

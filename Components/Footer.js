@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import Person from "@material-ui/icons/Person";
 import LinkedIn from "@material-ui/icons/LinkedIn";
 import Facebook from "@material-ui/icons/Facebook";
@@ -8,7 +8,7 @@ import Instagram from "@material-ui/icons/Instagram";
 import YouTube from "@material-ui/icons/YouTube";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import TextField from "@mui/material/TextField";
+// import TextField from "@mui/material/TextField";
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import Divider from "@mui/material/Divider";
@@ -70,7 +70,7 @@ const Footer = () => {
               sx={{
                 p: "2px 4px",
                 display: "flex",
-                alignItems: "center",
+                alignitems: "center",
                 width: 300,
               }}
             >
@@ -80,9 +80,9 @@ const Footer = () => {
                 inputProps={{ "aria-label": "search google maps" }}
               />
 
-              <Divider sx={{ height: 28}} orientation="vertical" />
+              <Divider sx={{ height: 28 }} orientation="vertical" />
               <Button
-                sx={{ backgroundColor:"orange",color:"white" }}
+                sx={{ backgroundColor: "orange", color: "white" }}
                 aria-label="directions"
               >
                 SUBSCRIBE

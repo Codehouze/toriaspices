@@ -1,9 +1,9 @@
-import Header from './Header';
-import Footer from './Footer';
-const Layout = ({children}) => {
+import Header from "./Header";
+import Footer from "./Footer";
+const Layout = ({ children }) => {
   return (
     <>
-      <Header />
+      <Header sx={{ marginBottom: 50 }} />
       {children}
       <Footer />
     </>
