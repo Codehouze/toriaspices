@@ -3,8 +3,8 @@ import Divider from "@material-ui/core/Divider";
 import Drawer from "@material-ui/core/Drawer";
 import IconButton from "@material-ui/core/IconButton";
 import List from "@material-ui/core/List";
-import Listitem from "@material-ui/core/Listitem";
-import ListitemText from "@material-ui/core/ListitemText";
+import ListItem from '@mui/material/ListItem';
+import ListitemText from "@mui/material/ListitemText";
 import { makeStyles } from "@material-ui/core/styles";
 
 import Link from "next/link";
