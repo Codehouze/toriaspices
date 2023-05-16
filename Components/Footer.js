@@ -8,7 +8,7 @@ import Instagram from "@material-ui/icons/Instagram";
 import YouTube from "@material-ui/icons/YouTube";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import TextField from "@mui/material/TextField";
+// import TextField from "@mui/material/TextField";
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import Divider from "@mui/material/Divider";
@@ -68,6 +68,7 @@ const Footer = () => {
           >
             Contact Info
           </Typography>
+
           <Grid container alignItems="center" spacing={2}>
             <Grid item>
               <Email color="white" fontSize="large" />
