@@ -21,7 +21,7 @@ const Footer = () => {
         container
         sx={{ marginTop: 5, backgroundColor: "Black", color: "white" }}
       >
-        <Grid xs={12} sm={4} lg={4} sx={{ p: 5 }}>
+        <Grid item xs={12} sm={4} lg={4} sx={{ p: 5 }}>
           <Typography
             variant="h4"
             component="h6"
@@ -56,7 +56,7 @@ const Footer = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid xs={12} sm={4} lg={4} sx={{ p: 5, textAlign: "left" }}>
+        <Grid item xs={12} sm={4} lg={4} sx={{ p: 5, textAlign: "left" }}>
           <Typography
             variant="h4"
             component="h6"
@@ -93,7 +93,7 @@ const Footer = () => {
             <Grid item>No 6 Lucky Nwagwu Street Kapwa, Lugbe Abuja</Grid>
           </Grid>
         </Grid>
-        <Grid xs={12} sm={4} lg={4} sx={{ p: 5 }}>
+        <Grid item xs={12} sm={4} lg={4} sx={{ p: 5 }}>
           <Typography
             variant="h4"
             component="h6"
@@ -189,7 +189,7 @@ const Footer = () => {
           </Grid>
         </Grid> */}
 
-        <Grid xs={12} sm={12} lg={12} sx={{ p: 5, textAlign: "center" }}>
+        <Grid item xs={12} sm={12} lg={12} sx={{ p: 5, textAlign: "center" }}>
           <footer>
             Powered by <a href="#"> Codehouze </a>
           </footer>
