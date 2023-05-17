@@ -74,11 +74,13 @@ function contact() {
           </Grid>
         </Grid>
       </Grid>
-      <Grid xs={12} sm={6} lg={6}>
-        <Image
+      <Grid item xs={12} sm={6} lg={6}>
+        {/* <Image
           src="https://res.cloudinary.com/dfsmwu4av/image/upload/v1653419083/91397319_124413692497240_1023076873652928512_n_ln7nx1.png"
           alt="contact_us"
-        />
+          hight="50px"
+          width="20px"
+        /> */}
       </Grid>
     </Grid>
   );

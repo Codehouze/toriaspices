@@ -5,7 +5,6 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Carousel, { CarouselItem } from "../Components/Carousel";
-// import styled from "@mui/material/styled";
 import Paper from "@mui/material/Paper";
 import Head from "next/head";
 import { makeStyles } from "@material-ui/core/styles";
@@ -13,13 +12,11 @@ import Card from "../Components/card";
 import Image from "next/image";
 import ProductImage from "../image/1000_F_128374324_37F3O5wRIgK0QfGt25KKRrbfMbPB96X2.jpeg";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import { Carousel } from "react-responsive-carousel";
 import Slider1 from "../image/slider2_1.jpeg";
 import Slider2 from "../image/slider1_1.webp";
 import Slider3 from "../image/slider3_1.jpeg";
 import Slider4 from "../image/spice_1.jpeg";
 import Slider5 from "../image/slider1_1.webp";
-// import Image from "https://media.istockphoto.com/photos/various-spices-a-vintage-spoons-on-stone-table-colorful-herbal-and-picture-id1340677256"
 
 export default function Index() {
   const item = styled(Paper)(({ theme }) => ({
@@ -59,16 +56,16 @@ export default function Index() {
             </Typography>
           </Grid>
           <Grid container sx={{ p: 5 }}>
-            <Grid xs={12} sm={6} md={3} lg={3}>
+            <Grid item xs={12} sm={6} md={3} lg={3}>
               <Card />
             </Grid>
-            <Grid xs={12} sm={6} md={3} lg={3}>
+            <Grid item xs={12} sm={6} md={3} lg={3}>
               <Card />
             </Grid>
-            <Grid xs={12} sm={6} md={3} lg={3}>
+            <Grid item xs={12} sm={6} md={3} lg={3}>
               <Card />
             </Grid>
-            <Grid xs={12} sm={6} md={3} lg={3}>
+            <Grid item xs={12} sm={6} md={3} lg={3}>
               <Card />
             </Grid>
           </Grid>
@@ -76,6 +73,7 @@ export default function Index() {
       </Grid>
       <Grid container>
         <Grid
+          item
           sx={{ justify: "center", ml: "auto", mr: "auto", p: 5 }}
           xs={12}
           sm={12}
@@ -96,6 +94,7 @@ export default function Index() {
       </Grid>
       <Grid container>
         <Grid
+          item
           sx={{ justify: "center", ml: "auto", mr: "auto", p: 5 }}
           xs={12}
           sm={12}
@@ -111,20 +110,13 @@ export default function Index() {
             sure there isn't anything embarrassing hidden in the middle of text.
           </Typography>
         </Grid>
-        <Grid
-          item
-          sx={{ p: 5, m: 5 }}
-          xs={12}
-          sm={8}
-          md={4}
-          lg={4}
-          // className="shade"
-        >
+        <Grid item sx={{ p: 5, m: 5 }} xs={12} sm={8} md={4} lg={4}>
           <Card />
         </Grid>
       </Grid>
       <Grid container>
         <Grid
+          item
           sx={{ justify: "center", ml: "auto", mr: "auto", p: 5 }}
           xs={12}
           sm={12}
@@ -185,6 +177,7 @@ export default function Index() {
       </Grid>
       <Grid container>
         <Grid
+          item
           sx={{ justify: "center", ml: "auto", mr: "auto", p: 5 }}
           xs={12}
           sm={12}
@@ -214,43 +207,43 @@ export default function Index() {
         </Grid>
       </Grid>
       <Grid container>
-        <Grid item lg={2} md={2} xs={2} sm={2} />
-
-        <Grid
-          item
-          xs={8}
-          sm={8}
-          lg={8}
-          sx={{ p: 5, mt: 5, backgroundColor: "orange", borderRadius: 5 }}
-        >
-          <Grid item justifyContent={"center"} xs={8} md={4} sm={8} lg={4}>
-            <Typography
-              variant="h5"
-              component="h5"
-              color="brown"
-              borderColor="orange"
-              fontSize="10"
-              justify="left"
-            >
-              Enough talk, let's make you healthier
-            </Typography>
-          </Grid>
+        <Grid item lg={2} md={2} xs={2} sm={2}>
           <Grid
             item
-            sx={{ justifyContent: "right" }}
             xs={8}
-            md={4}
             sm={8}
-            lg={4}
+            lg={8}
+            sx={{ p: 5, mt: 5, backgroundColor: "orange", borderRadius: 5 }}
           >
-            <Grid>
-              <Image src={ProductImage} alt="CTA" width={50} height={20} />
+            <Grid item justifyContent={"center"} xs={8} md={4} sm={8} lg={4}>
+              <Typography
+                variant="h5"
+                component="h5"
+                color="brown"
+                borderColor="orange"
+                fontSize="10"
+                justify="left"
+              >
+                Enough talk, let's make you healthier
+              </Typography>
             </Grid>
-            <Button>Let Start</Button>
+            <Grid
+              item
+              xs={8}
+              md={4}
+              sm={8}
+              lg={4}
+              sx={{ justifyContent: "right" }}
+            >
+              <Grid>
+                <Image src={ProductImage} alt="CTA" width={50} height={20} />
+              </Grid>
+              <Button>Let Start</Button>
+            </Grid>
           </Grid>
+          {/* </Box> */}
+          <Grid item lg={2} md={2} sm={2} xs={2} />
         </Grid>
-        {/* </Box> */}
-        <Grid item lg={2} md={2} sm={2} xs={2} />
       </Grid>
     </div>
   );
