@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
 import React from "react";
-// import Image from "next/image";
+import Image from "next/image";
 
 function contact() {
   return (

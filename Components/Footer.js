@@ -9,12 +9,11 @@ import YouTube from "@material-ui/icons/YouTube";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 // import TextField from "@mui/material/TextField";
-// import Paper from "@mui/material/Paper";
-// import InputBase from "@mui/material/InputBase";
-// import Divider from "@mui/material/Divider";
-// import Button from "@mui/material/Button";
+import Paper from "@mui/material/Paper";
+import InputBase from "@mui/material/InputBase";
+import Divider from "@mui/material/Divider";
+import Button from "@mui/material/Button";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import Link from "next/link";
 const Footer = () => {
   return (
     <>
@@ -36,29 +35,24 @@ const Footer = () => {
           </Typography>
           <Grid container direction="column" spacing={2}>
             <Grid item>
-              <Link href="/" style={{ color: "white" }}>
-                Home
-              </Link>
+              <a href="localhost:3000/about" style={{ color: "white" }}>
+                About Us
+              </a>
             </Grid>
             <Grid item>
-              <Link href="/about" style={{ color: "white" }}>
-                About
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link href="/products" style={{ color: "white" }}>
+              <a href="localhost:3000/about" style={{ color: "white" }}>
                 Products
-              </Link>
+              </a>
             </Grid>
             <Grid item>
-              <Link href="/blog" style={{ color: "white" }}>
+              <a href="localhost:3000/about" style={{ color: "white" }}>
                 Blog
-              </Link>
+              </a>
             </Grid>
             <Grid item>
-              <Link href="/contact" style={{ color: "white" }}>
-                Contact
-              </Link>
+              <a href="localhost:3000/about" style={{ color: "white" }}>
+                Home
+              </a>
             </Grid>
           </Grid>
         </Grid>
@@ -80,12 +74,9 @@ const Footer = () => {
               <Email color="white" fontSize="large" />
             </Grid>
             <Grid item>
-              <Link
-                href="mailto:info@toriaspices.com"
-                style={{ color: "white" }}
-              >
+              <a href="mailto:info@toriaspices.com" style={{ color: "white" }}>
                 info@toriaspices.com
-              </Link>
+              </a>
             </Grid>
           </Grid>
           <Grid container alignItems="center" spacing={2}>

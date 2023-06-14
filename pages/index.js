@@ -1,27 +1,31 @@
 import React from "react";
-// import { styled } from "@mui/material";
+import { styled } from "@mui/material";
 import Box from "@mui/material/Box";
-// import Typography from "@mui/material/Typography";
-// import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
-// import Paper from "@mui/material/Paper";
+import Carousel, { CarouselItem } from "../Components/Carousel";
+import Paper from "@mui/material/Paper";
 import Head from "next/head";
-// import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Card from "../Components/card";
-// import Image from "next/image";
-// import ProductImage from "../public/image/1000_F_128374324_37F3O5wRIgK0QfGt25KKRrbfMbPB96X2.jpeg";
+import Image from "next/image";
+import ProductImage from "../image/1000_F_128374324_37F3O5wRIgK0QfGt25KKRrbfMbPB96X2.jpeg";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import FeaturesCard from "../Components/FeaturesCard";
+import Slider1 from "../image/slider2_1.jpeg";
+import Slider2 from "../image/slider1_1.webp";
+import Slider3 from "../image/slider3_1.jpeg";
+import Slider4 from "../image/spice_1.jpeg";
+import Slider5 from "../image/slider1_1.webp";
 
 export default function Index() {
-  const slider1 = "url(../public/image/slider2_1.jpeg)";
-  // const item = styled(Paper)(({ theme }) => ({
-  //   backgroundColor: "orange",
-  //   ...theme.typography.body2,
-  //   padding: theme.spacing(1),
-  //   textAlign: "center",
-  //   color: theme.palette.text.secondary,
-  // }));
+  const item = styled(Paper)(({ theme }) => ({
+    backgroundColor: "orange",
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: "center",
+    color: theme.palette.text.secondary,
+  }));
 
   return (
     <div>
@@ -32,94 +36,72 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Grid container>
-        {/* an image with bg and write up  */}
+        <Carousel>
+          <CarouselItem>
+            <Image src={Slider1} alt="image1" />
+          </CarouselItem>
+          <CarouselItem>
+            <Image src={Slider3} alt="image1" />
+          </CarouselItem>
+          <CarouselItem>
+            <Image src={Slider3} alt="image1" />
+          </CarouselItem>
+        </Carousel>
 
-        <Box
-          sx={{
-            display: "flex",
-            width: "100%",
-            height: 400,
-            backgroundImage: slider1,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            maxWidth: "100%",
-            mx: "auto", // To center the box horizontally
-            mt: 3,
-          }}
-        >
-          <Grid container spacing={2}>
-            <Box
-              display="flex"
-              // justifyContent="center"
-              alignItems="center"
-              width="100%"
-              height={400}
-              sx={{
-                p: 5,
-                color: "white",
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1564149504298-00c351fd7f16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              {/* <p>Get the best outfit of your life</p> */}
-              <h1>
-                Finding the difference with <br /> ToriaSpices
-              </h1>
-
-              {/* <Button sx={{ background: "green", borderStartEndRadius: 20 }}>
-                Shop now
-              </Button> */}
-            </Box>
+        <Grid container>
+          <Grid item sx={{ mt: 5, p: 5 }} lg={4} md={6} sm={6} />
+          <Grid>
+            <Typography variant="h3" component="h4" color="orange">
+              Best Organic Products
+            </Typography>
           </Grid>
-        </Box>
-        {/* four cards with special attractive point  */}
-        <Grid
-          container
-          spacing={2}
-          justifyContent="center"
-          alignItems="center"
-          sx={{
-            pt: 3,
-            pb: 3,
-          }}
-        >
-          <FeaturesCard />
-          <FeaturesCard /> <FeaturesCard /> <FeaturesCard />
-        </Grid>
-
-        {/* our product with a filter */}
-        <h2 sx={{ mx: "auto" }}>Our Product</h2>
-
-        <Grid container spacing={2} sx={{ pt: 3, px: 3 }}>
-          <Grid item xs={3}>
-            <Card />
-          </Grid>
-          <Grid item xs={3}>
-            <Card />
-          </Grid>
-          <Grid item xs={3}>
-            <Card />
-          </Grid>
-          <Grid item xs={3}>
-            <Card />
+          <Grid container sx={{ p: 5 }}>
+            <Grid item xs={12} sm={6} md={3} lg={3}>
+              <Card />
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} lg={3}>
+              <Card />
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} lg={3}>
+              <Card />
+            </Grid>
+            <Grid item xs={12} sm={6} md={3} lg={3}>
+              <Card />
+            </Grid>
           </Grid>
         </Grid>
-        {/* CTA with two cards */}
-
-        {/* News letter */}
-
-        {/* Testimonial */}
-
-        {/* latest blog */}
-
-        {/* brands that buy our product */}
       </Grid>
+      <Grid container>
+        <Grid
+          item
+          sx={{ justify: "center", ml: "auto", mr: "auto", p: 5 }}
+          xs={12}
+          sm={12}
+          md={12}
+          lg={12}
+        ></Grid>
+        <Grid item xs={12} sm={8} md={4} lg={4}>
+          <Card />
+        </Grid>
+        <Grid item sx={{ p: 5 }} xs={12} sm={8} md={6} lg={6}>
+          <Typography variant="p">Product 1</Typography>
+          <Typography variant="h4">Tumeric</Typography>
+          <Typography>
+            “If you are going to use a passage of Lorem Ipsum, you need to be
+            sure there isn't anything embarrassing hidden in the middle of text.
+          </Typography>
+        </Grid>
+      </Grid>
+      <Grid container>
+        <Grid
+          item
+          sx={{ justify: "center", ml: "auto", mr: "auto", p: 5 }}
+          xs={12}
+          sm={12}
+          md={12}
+          lg={12}
+        ></Grid>
 
-      {/* <Grid container>
-     
         <Grid item sx={{ p: 5 }} xs={12} sm={8} md={6} lg={6}>
           <Typography variant="p">Product 2</Typography>
           <Typography variant="h4">Ginger</Typography>
@@ -131,8 +113,8 @@ export default function Index() {
         <Grid item sx={{ p: 5, m: 5 }} xs={12} sm={8} md={4} lg={4}>
           <Card />
         </Grid>
-      </Grid> */}
-      {/* <Grid container>
+      </Grid>
+      <Grid container>
         <Grid
           item
           sx={{ justify: "center", ml: "auto", mr: "auto", p: 5 }}
@@ -160,8 +142,8 @@ export default function Index() {
             sure there isn't anything embarrassing hidden in the middle of text.
           </Typography>
         </Grid>
-      </Grid> */}
-      {/* <Grid container display="colomn" sx={{ p: 3, justifyContent: "center" }}>
+      </Grid>
+      <Grid container display="colomn" sx={{ p: 3, justifyContent: "center" }}>
         <Grid item xs={12} sm={10} md={10} lg={10}>
           <Typography
             variant="h3"
@@ -192,8 +174,8 @@ export default function Index() {
             [Codehouze Logo]
           </Typography>
         </Grid>
-      </Grid> */}
-      {/* <Grid container>
+      </Grid>
+      <Grid container>
         <Grid
           item
           sx={{ justify: "center", ml: "auto", mr: "auto", p: 5 }}
@@ -223,8 +205,8 @@ export default function Index() {
         >
           <Card />
         </Grid>
-      </Grid> */}
-      {/* <Grid container>
+      </Grid>
+      <Grid container>
         <Grid item lg={2} md={2} xs={2} sm={2}>
           <Grid
             item
@@ -259,9 +241,10 @@ export default function Index() {
               <Button>Let Start</Button>
             </Grid>
           </Grid>
+          {/* </Box> */}
           <Grid item lg={2} md={2} sm={2} xs={2} />
         </Grid>
-      </Grid> */}
+      </Grid>
     </div>
   );
 }
