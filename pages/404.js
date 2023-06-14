@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Button from "@mui/material/Button";
-import Image from 'next/image'
+import Image from "next/image";
 import React from "react";
 
 const NotFound = () => {
@@ -9,6 +9,7 @@ const NotFound = () => {
       <h1>Ooooops ...</h1>
       <h2>That page cannot be found! </h2>
       <Image
+        alt="Page Not Found"
         src="https://res.cloudinary.com/dfsmwu4av/image/upload/v1653490683/404_uzze8l.jpg"
         height="40%"
         width="40%"

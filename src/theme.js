@@ -1,19 +1,22 @@
 import { createTheme } from "@mui/material/styles";
-import { colors } from "@mui/material";
+import { orange,red} from "@mui/material/colors";
+
 
 // Create a theme instance.
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#dfe2f2",
+      main: orange[500],
+      dark:orange[300]
     },
     secondary: {
-      main: "#19857b",
-    },
-    error: {
-      main: colors.red[500],
+      main: orange[500],
     },
   },
+  error: {
+    main: red[500],
+  },
+
   typography: {
     h1: {},
     h2: {},
