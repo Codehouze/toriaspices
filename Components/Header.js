@@ -14,7 +14,7 @@ import Grid from "@mui/material/Grid";
 
 import Link from "next/link";
 
-const pages = ["Home", "About Us", "Products", "Blog", "Contact"];
+const pages = ["Home", "About", "Products", "Blog", "Contact"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Header() {
@@ -167,7 +167,7 @@ function Header() {
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "black", display: "block" }}
                 >
-                  About Us
+                  About
                 </Button>
               </Link>
               <Link href="/products" passHref>
