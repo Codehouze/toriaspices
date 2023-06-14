@@ -8,9 +8,9 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
+// import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import Grid from "@mui/material/Grid";
+// import Grid from "@mui/material/Grid";
 
 import Link from "next/link";
 
@@ -58,46 +58,6 @@ function Header() {
             </Typography>
 
             {/* Mobile Menu */}
-            {/* <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-              <IconButton
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={handleOpenNavMenu}
-                color="primary"
-              >
-                <MenuIcon />
-              </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorElNav}
-                anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-                keepMounted
-                transformOrigin={{ vertical: "top", horizontal: "right" }}
-                open={Boolean(anchorElNav)}
-                onClose={handleCloseNavMenu}
-                sx={{ display: { xs: "block", md: "none" } }}
-              >
-                {
-                pages.map((page) => (
-                   const link = page.toLowerCase().replace(" ", "-");
-                   const href = link === "home" ? "/" : `/${link}`;
-
-                  <Link
-                    key={page}
-                    href={`/${page.toLowerCase().replace(" ", "-")}`}
-                    passHref
-                  >
-                    <MenuItem onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center" sx={{ color: "black" }}>
-                        {page}
-                      </Typography>
-                    </MenuItem>
-                  </Link>
-                ))}
-              </Menu>
-            </Box> */}
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
