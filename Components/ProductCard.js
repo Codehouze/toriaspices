@@ -11,7 +11,8 @@ import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import VisibilityIcon from "@mui/icons-material/Visibility";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -32,7 +33,7 @@ export default function RecipeReviewCard(image) {
   };
 
   return (
-    <Card xs={12} sm={6} lg={12} sx={{ maxWidth: 380, mt: 2, p: 3 }}>
+    <Card xs={12} sm={6} lg={12} sx={{ maxWidth: 380, mt: 2, p: 2 }}>
       <CardMedia
         component="img"
         height="194"
@@ -50,8 +51,14 @@ export default function RecipeReviewCard(image) {
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
         </IconButton>
+        <IconButton aria-label="visibility">
+          <VisibilityIcon />
+        </IconButton>
+        <IconButton aria-label="shopping">
+          <ShoppingCartIcon />
+        </IconButton>
         <IconButton aria-label="share">
-          <ShareIcon />
+          <shareIcon />
         </IconButton>
         <ExpandMore
           expand={expanded}

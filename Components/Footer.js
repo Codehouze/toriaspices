@@ -15,6 +15,7 @@ import Typography from "@mui/material/Typography";
 // import Button from "@mui/material/Button";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Link from "next/link";
+import { Button } from "@mui/material";
 const Footer = () => {
   return (
     <>
@@ -34,30 +35,31 @@ const Footer = () => {
           >
             Links
           </Typography>
-          <Grid container direction="column" spacing={2}>
+          <Grid container direction="column">
             <Grid item>
-              <Link href="/" style={{ color: "white" }}>
-                Home
+              <Link href="/">
+                <Button sx={{ color: "white" }}>Home</Button>
               </Link>
             </Grid>
             <Grid item>
-              <Link href="/about" style={{ color: "white" }}>
-                About
+              <Link href="/about">
+                <Button sx={{ color: "white" }}>About</Button>
+              </Link>
+            </Grid>
+
+            <Grid item>
+              <Link href="/blog">
+                <Button sx={{ color: "white" }}>Blog</Button>
               </Link>
             </Grid>
             <Grid item>
-              <Link href="/products" style={{ color: "white" }}>
-                Products
+              <Link href="/products">
+                <Button sx={{ color: "white" }}>Products</Button>
               </Link>
             </Grid>
             <Grid item>
-              <Link href="/blog" style={{ color: "white" }}>
-                Blog
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link href="/contact" style={{ color: "white" }}>
-                Contact
+              <Link href="/contact" sx={{ color: "white" }}>
+                <Button sx={{ color: "white" }}>Contact</Button>
               </Link>
             </Grid>
           </Grid>
