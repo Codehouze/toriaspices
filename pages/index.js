@@ -1,27 +1,20 @@
 import React from "react";
-// import { styled } from "@mui/material";
 import Box from "@mui/material/Box";
-// import Typography from "@mui/material/Typography";
-// import Button from "@mui/material/Button";
+import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
-// import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
 import Head from "next/head";
-// import { makeStyles } from "@material-ui/core/styles";
-import Card from "../Components/card";
-// import Image from "next/image";
-// import ProductImage from "../public/image/1000_F_128374324_37F3O5wRIgK0QfGt25KKRrbfMbPB96X2.jpeg";
+import Card from "../Components/ProductCard";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import FeaturesCard from "../Components/FeaturesCard";
+import Link from "next/link";
+import InputBase from "@mui/material/InputBase";
+import ProductFilter from "../Components/ProductFilter";
+import EmailIcon from "@mui/icons-material/Email";
+import { BorderAllRounded } from "@material-ui/icons";
 
 export default function Index() {
   const slider1 = "url(../public/image/slider2_1.jpeg)";
-  // const item = styled(Paper)(({ theme }) => ({
-  //   backgroundColor: "orange",
-  //   ...theme.typography.body2,
-  //   padding: theme.spacing(1),
-  //   textAlign: "center",
-  //   color: theme.palette.text.secondary,
-  // }));
 
   return (
     <div>
@@ -38,7 +31,7 @@ export default function Index() {
           sx={{
             display: "flex",
             width: "100%",
-            height: 400,
+            height: 600,
             backgroundImage: slider1,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -54,7 +47,7 @@ export default function Index() {
               // justifyContent="center"
               alignItems="center"
               width="100%"
-              height={400}
+              height={600}
               sx={{
                 p: 5,
                 color: "white",
@@ -69,9 +62,9 @@ export default function Index() {
                 Finding the difference with <br /> ToriaSpices
               </h1>
 
-              {/* <Button sx={{ background: "green", borderStartEndRadius: 20 }}>
+              <Button sx={{ background: "green", borderStartEndRadius: 20 }}>
                 Shop now
-              </Button> */}
+              </Button>
             </Box>
           </Grid>
         </Box>
@@ -80,188 +73,240 @@ export default function Index() {
           container
           spacing={2}
           justifyContent="center"
-          alignItems="center"
+          // alignItems="center"
           sx={{
             pt: 3,
             pb: 3,
           }}
         >
-          <FeaturesCard />
-          <FeaturesCard /> <FeaturesCard /> <FeaturesCard />
+          <Grid item xs={6} lg={2} md={2} sm={6}>
+            <FeaturesCard />
+          </Grid>
+          <Grid item xs={6} lg={2} md={2} sm={6}>
+            <FeaturesCard />
+          </Grid>
+          <Grid item xs={6} lg={2} md={2} sm={6}>
+            <FeaturesCard />
+          </Grid>
+          <Grid item xs={6} lg={2} md={2} sm={6}>
+            <FeaturesCard />
+          </Grid>
         </Grid>
 
         {/* our product with a filter */}
-        <h2 sx={{ mx: "auto" }}>Our Product</h2>
+        <Grid alignItems="center" sx={{ mx: "auto", fontSize: 20 }}>
+          <h2>Our Products</h2>
+        </Grid>
 
+        <ProductFilter />
         <Grid container spacing={2} sx={{ pt: 3, px: 3 }}>
-          <Grid item xs={3}>
+          <Grid item md={2} xs={6}>
             <Card />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item md={2} xs={6}>
             <Card />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item md={2} xs={6}>
             <Card />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item md={2} xs={6}>
+            <Card />
+          </Grid>
+          <Grid item md={2} xs={6}>
+            <Card />
+          </Grid>
+          <Grid item md={2} xs={6}>
             <Card />
           </Grid>
         </Grid>
+
         {/* CTA with two cards */}
-
-        {/* News letter */}
-
-        {/* Testimonial */}
-
-        {/* latest blog */}
-
-        {/* brands that buy our product */}
-      </Grid>
-
-      {/* <Grid container>
-     
-        <Grid item sx={{ p: 5 }} xs={12} sm={8} md={6} lg={6}>
-          <Typography variant="p">Product 2</Typography>
-          <Typography variant="h4">Ginger</Typography>
-          <Typography>
-            “If you are going to use a passage of Lorem Ipsum, you need to be
-            sure there isn't anything embarrassing hidden in the middle of text.
-          </Typography>
-        </Grid>
-        <Grid item sx={{ p: 5, m: 5 }} xs={12} sm={8} md={4} lg={4}>
-          <Card />
-        </Grid>
-      </Grid> */}
-      {/* <Grid container>
         <Grid
-          item
-          sx={{ justify: "center", ml: "auto", mr: "auto", p: 5 }}
-          xs={12}
-          sm={12}
-          md={12}
-          lg={12}
-        ></Grid>
-        <Grid
-          item
-          sx={{ p: 5, m: 5 }}
-          xs={12}
-          sm={8}
-          md={4}
-          lg={4}
-          // className="shade"
+          container
+          spacing={1}
+          alignItems="center"
+          justifyContent="center"
+          md={10}
+          sx={{
+            mx: "auto",
+            px: "auto",
+            // p: 5,
+          }}
         >
-          <Card />
-        </Grid>
-        <Grid item sx={{ p: 5 }} xs={12} sm={8} md={6} lg={6}>
-          <Typography variant="p">Product 3</Typography>
-          <Typography variant="h4"> Star Anise</Typography>
-          <Typography>
-            “If you are going to use a passage of Lorem Ipsum, you need to be
-            sure there isn't anything embarrassing hidden in the middle of text.
-          </Typography>
-        </Grid>
-      </Grid> */}
-      {/* <Grid container display="colomn" sx={{ p: 3, justifyContent: "center" }}>
-        <Grid item xs={12} sm={10} md={10} lg={10}>
-          <Typography
-            variant="h3"
-            justify="center"
-            backgroundColor="orange"
-            color="white"
-          >
-            some of our trusted clients
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3} lg={3}>
-          <Typography variant="h3" justify="center">
-            [Google logo]
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3} lg={3}>
-          <Typography variant="h3" justify="center">
-            [Amazon logo]
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3} lg={3}>
-          <Typography variant="h3" justify="center">
-            [Microsoft logo]
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3} lg={3}>
-          <Typography variant="h3" justify="center">
-            [Codehouze Logo]
-          </Typography>
-        </Grid>
-      </Grid> */}
-      {/* <Grid container>
-        <Grid
-          item
-          sx={{ justify: "center", ml: "auto", mr: "auto", p: 5 }}
-          xs={12}
-          sm={12}
-          md={12}
-          lg={12}
-        >
-          <Typography variant="h3">Customer Story</Typography>
-        </Grid>
-        <Grid item sx={{ p: 5 }} xs={12} sm={8} md={6} lg={6}>
-          <Typography variant="p">Customer Story</Typography>
-          <Typography variant="h4">Customer Story</Typography>
-          <Typography>
-            “If you are going to use a passage of Lorem Ipsum, you need to be
-            sure there isn't anything embarrassing hidden in the middle of text.
-          </Typography>
-        </Grid>
-        <Grid
-          item
-          sx={{ p: 5, m: 5 }}
-          xs={12}
-          sm={8}
-          md={4}
-          lg={4}
-          className="shade"
-        >
-          <Card />
-        </Grid>
-      </Grid> */}
-      {/* <Grid container>
-        <Grid item lg={2} md={2} xs={2} sm={2}>
           <Grid
             item
-            xs={8}
-            sm={8}
-            lg={8}
-            sx={{ p: 5, mt: 5, backgroundColor: "orange", borderRadius: 5 }}
+            md={5}
+            xs={10}
+            alignItems="center"
+            position="relative"
+            height={400}
+            sx={{
+              backgroundImage:
+                "url('https://media.istockphoto.com/id/873964916/photo/spices-on-white-background-isolated-with-place-for-text.jpg?s=1024x1024&w=is&k=20&c=blGNr4E3vCUX1orCuQlOiP2ZTaExAECIDWvdyHa_X8w=')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              mx: 3,
+              mt: 5,
+              borderRadius: 5,
+            }}
           >
-            <Grid item justifyContent={"center"} xs={8} md={4} sm={8} lg={4}>
-              <Typography
-                variant="h5"
-                component="h5"
-                color="brown"
-                borderColor="orange"
-                fontSize="10"
-                justify="left"
+            <Box position="absolute" top={200} left={40}>
+              <h2>THE QUALITY</h2>
+              <p>MADE SPICE</p>
+              <Button
+                sx={{
+                  color: "white",
+                  background: "orange",
+                  borderRadius: 10,
+                  mx: 1,
+                  px: 2,
+                  "&:hover": {
+                    backgroundColor: "black",
+                    color: "white",
+                  },
+                }}
               >
-                Enough talk, let's make you healthier
-              </Typography>
-            </Grid>
-            <Grid
-              item
-              xs={8}
-              md={4}
-              sm={8}
-              lg={4}
-              sx={{ justifyContent: "right" }}
-            >
-              <Grid>
-                <Image src={ProductImage} alt="CTA" width={50} height={20} />
-              </Grid>
-              <Button>Let Start</Button>
-            </Grid>
+                Shop Now
+              </Button>
+            </Box>
           </Grid>
-          <Grid item lg={2} md={2} sm={2} xs={2} />
+          <Grid
+            item
+            height={400}
+            md={5}
+            xs={10}
+            position="relative"
+            sx={{
+              p: 5,
+              color: "black",
+
+              backgroundImage:
+                "url('https://as1.ftcdn.net/v2/jpg/04/87/96/38/1000_F_487963899_wpAa0pW71FK5eoWgIFjywVhFoZhnhZr7.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              mx: 3,
+              mt: 5,
+              borderRadius: 5,
+            }}
+          >
+            <Box position="absolute" top={200} left={400} sx={{}}>
+              <h2>Discover Our</h2>
+              <p>NEW RECIPES</p>
+              <Button
+                sx={{
+                  color: "white",
+                  background: "orange",
+                  borderRadius: 10,
+                  mx: 1,
+                  px: 2,
+                  "&:hover": {
+                    backgroundColor: "black",
+                    color: "white",
+                  },
+                }}
+              >
+                Shop Now
+              </Button>
+            </Box>
+          </Grid>
         </Grid>
-      </Grid> */}
+        {/* News letter */}
+        <Grid
+          container
+          spacing={1}
+          alignItems="center"
+          // justifyContent="center"
+          md={9}
+          xs={10}
+          sx={{
+            mx: "auto",
+            px: "auto",
+            mt: 5,
+            p: 10,
+            background: "lightgrey",
+            borderRadius: 3,
+          }}
+        >
+          <Grid item display="flex" xs={6} md={6}>
+            <Box
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              flexDirection="column"
+              xs={4}
+              sx={{
+                backgroundColor: "orange",
+                color: "white",
+                borderRadius: "100%",
+                p: 3,
+              }}
+            >
+              <EmailIcon fontSize="large" />
+            </Box>
+            <Box>
+              <Typography variant="h3" sx={{ px: 1 }}>
+                Newsletter
+              </Typography>
+
+              <div>
+                <Typography variant="body1" sx={{ px: 1 }}>
+                  Stay updated with our latest news and promotions.
+                </Typography>
+              </div>
+            </Box>
+          </Grid>
+
+          <Grid item xs={12} md={6}>
+            <Box sx={{ pt: 2 }}>
+              <InputBase
+                sx={{
+                  ml: 5,
+                  flex: 10,
+                  background: " white",
+                  borderTopLeftRadius: 10,
+                  borderBottomLeftRadius: 10,
+                  px: 5,
+                  p: 2,
+                }}
+                placeholder="Enter Your E-mail..."
+                inputProps={{ "aria-label": "Enter Your E-mail..." }}
+              />
+              <Button
+                sx={{
+                  color: "white",
+                  backgroundColor: "orange",
+                  borderTopRightRadius: 10,
+                  borderBottomRightRadius: 10,
+                  p: 2,
+                  pt:1,
+                  fontSize: 18,
+                  "&:hover": {
+                    backgroundColor: "black",
+                    color: "white",
+                  },
+                }}
+              >
+                Subscribe
+              </Button>
+            </Box>
+          </Grid>
+        </Grid>
+
+        {/* Testimonial */}
+        <Grid container spacing={1}></Grid>
+
+        <Grid container display="flex">
+          {/* latest blog */}
+          <Grid item>1</Grid>
+          <Grid item>2</Grid>
+          <Grid item>3</Grid>
+        </Grid>
+
+        <Grid container>
+          {/* brands that buy our product */}
+          Carocel
+        </Grid>
+      </Grid>
     </div>
   );
 }
