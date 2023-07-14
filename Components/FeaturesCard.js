@@ -27,7 +27,7 @@ function FeaturesCard() {
         />
       </Box>
 
-      <Box p={1}>
+      <Box p={1} color="primary">
         <item>
           <h4>Free shipping </h4>
           <p>we are here to ser you better </p>
