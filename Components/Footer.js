@@ -14,132 +14,99 @@ import Link from "next/link";
 import { makeStyles } from "@mui/styles";
 import { Button } from "@mui/material";
 
-import { orange } from "@mui/material/colors";
-
-// i need to use theme here to manage the website color and look
-const useStyle = makeStyles((theme) => ({
-  root: {
-    color: orange[500],
-    borderColor: orange[500],
-    py: 2,
-    pb: 2,
-  },
-}));
-
 const Footer = () => {
-  const classes = useStyle();
   return (
     <>
-      <Grid
-        container
-        sx={{ marginTop: 3, backgroundColor: "Black", color: "white" }}
-      >
-        <Grid item xs={12} sm={4} lg={4} sx={{ p: 2 }}>
-          <Typography variant="h4" className={classes.root}>
+      <Grid container backgroundColor="Black" color="white" px={5}>
+        <Grid item xs={12} sm={4} lg={4} p={2}>
+          <Typography variant="h4" py={2} borderColor="primary" color="primary">
             Links
           </Typography>
-          <Grid container direction="column">
+          <Grid container direction="column" alignItems="flex-start">
             <Grid item>
               <Link href="/">
-                <Button sx={{ color: "white" }}>Home</Button>
+                <Button color="secondary">Home</Button>
               </Link>
             </Grid>
             <Grid item>
               <Link href="/about">
-                <Button sx={{ color: "white" }}>About</Button>
+                <Button color="secondary">About</Button>
               </Link>
             </Grid>
-
             <Grid item>
               <Link href="/blog">
-                <Button sx={{ color: "white" }}>Blog</Button>
+                <Button color="secondary">Blog</Button>
               </Link>
             </Grid>
             <Grid item>
               <Link href="/products">
-                <Button sx={{ color: "white" }}>Products</Button>
+                <Button color="secondary">Products</Button>
               </Link>
             </Grid>
             <Grid item>
-              <Link href="/contact" sx={{ color: "white" }}>
-                <Button sx={{ color: "white" }}>Contact</Button>
+              <Link href="/contact">
+                <Button color="secondary">Contact</Button>
               </Link>
             </Grid>
           </Grid>
         </Grid>
         <Grid item xs={12} sm={4} lg={4} sx={{ py: 2, textAlign: "left" }}>
-          <Typography variant="h4" className={classes.root}>
+          <Typography variant="h4" py={2} borderColor="primary" color="primary">
             Contact Info
           </Typography>
 
           <Grid container alignItems="center" spacing={2}>
             <Grid item>
-              <Email color="white" fontSize="large" />
+              <Email color="secondary" fontSize="large" />
             </Grid>
             <Grid item>
-              <Link sx={{ color: "white" }} href="mailto:info@toriaspices.com">
-                info@toriaspices.com
+              <Link color="secondary" href="mailto:info@toriaspices.com">
+                <p>info@toriaspices.com</p>
               </Link>
             </Grid>
           </Grid>
           <Grid container alignItems="center" spacing={2}>
             <Grid item>
-              <Person fontSize="large" />
+              <Person color="secondary" fontSize="large" />
             </Grid>
             <Grid item>+2349158835595</Grid>
           </Grid>
 
           <Grid container alignItems="center" spacing={1}>
             <Grid item>
-              <LocationOnIcon fontSize="large" />
+              <LocationOnIcon color="secondary" fontSize="large" />
             </Grid>
             <Grid item>No 6 Lucky Nwagwu Street Kapwa, Lugbe Abuja</Grid>
           </Grid>
         </Grid>
         <Grid item xs={12} sm={4} lg={4} sx={{ py: 2 }}>
-          <Typography variant="h4" className={classes.root}>
+          <Typography variant="h4" py={2} borderColor="primary" color="primary">
             Find Us
           </Typography>
           <Grid container spacing={2}>
             <Grid item>
               <a href="https://web.facebook.com/toriaspices">
-                <Facebook
-                  color="orange"
-                  fontSize="large"
-                  sx={{ borderRadius: 20, m: 5, p: 5 }}
-                />
+                <Facebook color="secondary" fontSize="large" />
               </a>
             </Grid>
             <Grid item>
               <a href="https://www.youtube.com/channel/UCg4RXb5wsxPrMSDOEmQuwUA">
-                <YouTube
-                  color="orange"
-                  fontSize="large"
-                  sx={{ borderRadius: 20, m: 5, p: 5 }}
-                />
+                <YouTube color="secondary" fontSize="large" />
               </a>
             </Grid>
             <Grid item>
               <a href="#">
-                <Twitter color="orange" fontSize="large" />
+                <Twitter color="secondary" fontSize="large" />
               </a>
             </Grid>
             <Grid item>
               <a href="https://www.instagram.com/toriaspices/">
-                <Instagram
-                  color="orange"
-                  fontSize="large"
-                  sx={{ borderRadius: 20, m: 5, p: 5 }}
-                />
+                <Instagram color="secondary" fontSize="large" />
               </a>
             </Grid>
             <Grid item>
               <a href="#">
-                <LinkedIn
-                  color="orange"
-                  fontSize="large"
-                  sx={{ borderRadius: 20, m: 5, p: 5 }}
-                />
+                <LinkedIn color="secondary" fontSize="large" />
               </a>
             </Grid>
           </Grid>
@@ -147,7 +114,10 @@ const Footer = () => {
 
         <Grid item xs={12} sm={12} lg={12} sx={{ p: 2, textAlign: "center" }}>
           <footer>
-            Powered by <a href="#"> Codehouze </a>
+            Powered by
+            <a color="primary" href="#">
+              Codehouze
+            </a>
           </footer>
         </Grid>
       </Grid>

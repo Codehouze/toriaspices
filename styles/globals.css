@@ -37,7 +37,7 @@ footer {
 }
 
 footer a {
-  color: orange;
+  color: #ff6600;
 }
 
 .not-found {
@@ -47,7 +47,7 @@ footer a {
 }
 
 .not-found h1 {
-  color: orange;
+  color: #ff6600;
   padding-top: 25px;
 }
 .not-found h2 {
@@ -87,7 +87,7 @@ footer a {
   /* left: 794px; */
   background: gray;
   border-radius: 20px 1400px 20px 20px;
-  padding:10;
+  padding: 10;
 }
 
 .carousel {

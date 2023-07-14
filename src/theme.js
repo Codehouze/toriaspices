@@ -4,9 +4,9 @@ import { orange, red } from "@mui/material/colors";
 // Create a theme instance.
 const theme = createTheme({
   palette: {
-    // mode: "dark",
-    custom: {
-      main: orange[500],
+    mode: "dark",
+    primary: {
+      main: "#FF6600",
     },
     secondary: {
       main: "#90C53B",
@@ -15,14 +15,7 @@ const theme = createTheme({
   error: {
     main: red[500],
   },
-
-  typography: {
-    h1: {},
-    h2: {},
-    myVariant:{
-      fontSize:4
-    }
-  },
 });
 
+theme.typography.h1 = {};
 export default theme;
