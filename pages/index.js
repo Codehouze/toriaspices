@@ -12,12 +12,13 @@ import InputBase from "@mui/material/InputBase";
 import ProductFilter from "../Components/ProductFilter";
 import EmailIcon from "@mui/icons-material/Email";
 import { BorderAllRounded } from "@material-ui/icons";
+import { Paper } from "@mui/material";
 
 export default function Index() {
   const slider1 = "url(../public/image/slider2_1.jpeg)";
 
   return (
-    <div>
+    <Paper>
       <Head>
         <title>Toria Spices</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
@@ -278,7 +279,7 @@ export default function Index() {
                   borderTopRightRadius: 10,
                   borderBottomRightRadius: 10,
                   p: 2,
-                  pt:1,
+                  pt: 1,
                   fontSize: 18,
                   "&:hover": {
                     backgroundColor: "black",
@@ -307,6 +308,6 @@ export default function Index() {
           Carocel
         </Grid>
       </Grid>
-    </div>
+    </Paper>
   );
 }

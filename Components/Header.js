@@ -39,7 +39,7 @@ function Header() {
 
   return (
     <>
-      <AppBar position="static" sx={{ background: "white" }}>
+      <AppBar position="static" sx={{ background: "white",py:2}}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             {/* Logo */}

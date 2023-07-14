@@ -1,32 +1,36 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-// import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
-import CardGiftcardSharpIcon from "@mui/icons-material/CardGiftcardSharp";
+import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 
 function FeaturesCard() {
   return (
-    <Grid sx={{ background: "#D3D3D3", borderRadius: 3, mx: 2, p: 5, mb: 2 }}>
+    <Grid display="flex" sx={{ background: "#D3D3D3", borderRadius: 3 }}>
       <Box
         sx={{
-          display: "grid",
-          columnGap: 3,
-          rowGap: 1,
-          gridTemplateColumns: "repeat(2, 1fr)",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "48px",
+          height: "48px",
+          borderRadius: "100%",
+          background: "#FFFFFF",
+          p: 5,
+          my: "auto",
+          mx: 1,
         }}
       >
-        <Box item>
-          <CardGiftcardSharpIcon
-            sx={{
-              background: "#FFFFFF",
-              borderRadius: "100%",
-              p: 3,
-              fontSize: 70,
-            }}
-          />
-        </Box>
+        <CardGiftcardIcon
+          variant="Outlined"
+          color="secondary"
+          fontSize="large"
+        />
+      </Box>
+
+      <Box p={1} color="primary">
         <item>
-          <h1>Free shipping </h1>
+          <h4 color="primary">Free shipping </h4>
+          <p>we are here to ser you better </p>
         </item>
       </Box>
     </Grid>

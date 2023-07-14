@@ -1,208 +1,123 @@
-import React from "react";
-import Person from "@mui/icons-material/Person";
-import LinkedIn from "@material-ui/icons/LinkedIn";
-import Facebook from "@material-ui/icons/Facebook";
-import Twitter from "@material-ui/icons/Twitter";
-import Email from "@material-ui/icons/Email";
-import Instagram from "@material-ui/icons/Instagram";
-import YouTube from "@material-ui/icons/YouTube";
+import {
+  Person,
+  Facebook,
+  Twitter,
+  Email,
+  Instagram,
+  YouTube,
+} from "@mui/icons-material";
+import LinkedIn from "@mui/icons-material/LinkedIn";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-// import TextField from "@mui/material/TextField";
-// import Paper from "@mui/material/Paper";
-// import InputBase from "@mui/material/InputBase";
-// import Divider from "@mui/material/Divider";
-// import Button from "@mui/material/Button";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Link from "next/link";
+import { makeStyles } from "@mui/styles";
 import { Button } from "@mui/material";
+
 const Footer = () => {
   return (
     <>
-      <Grid
-        container
-        sx={{ marginTop: 5, backgroundColor: "Black", color: "white" }}
-      >
-        <Grid item xs={12} sm={4} lg={4} sx={{ p: 5 }}>
-          <Typography
-            variant="h4"
-            component="h6"
-            color="orange"
-            borderColor="orange"
-            fontSize="10"
-            borderRadius={5}
-            pb={1}
-          >
+      <Grid container backgroundColor="Black" color="white" px={5}>
+        <Grid item xs={12} sm={4} lg={4} p={2}>
+          <Typography variant="h4" py={2} borderColor="primary" color="primary">
             Links
           </Typography>
-          <Grid container direction="column">
+          <Grid container direction="column" alignItems="flex-start">
             <Grid item>
               <Link href="/">
-                <Button sx={{ color: "white" }}>Home</Button>
+                <Button color="secondary">Home</Button>
               </Link>
             </Grid>
             <Grid item>
               <Link href="/about">
-                <Button sx={{ color: "white" }}>About</Button>
+                <Button color="secondary">About</Button>
               </Link>
             </Grid>
-
             <Grid item>
               <Link href="/blog">
-                <Button sx={{ color: "white" }}>Blog</Button>
+                <Button color="secondary">Blog</Button>
               </Link>
             </Grid>
             <Grid item>
               <Link href="/products">
-                <Button sx={{ color: "white" }}>Products</Button>
+                <Button color="secondary">Products</Button>
               </Link>
             </Grid>
             <Grid item>
-              <Link href="/contact" sx={{ color: "white" }}>
-                <Button sx={{ color: "white" }}>Contact</Button>
+              <Link href="/contact">
+                <Button color="secondary">Contact</Button>
               </Link>
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={12} sm={4} lg={4} sx={{ p: 5, textAlign: "left" }}>
-          <Typography
-            variant="h4"
-            component="h6"
-            color="orange"
-            borderColor="orange"
-            fontSize="10"
-            borderRadius={5}
-            padding={1}
-          >
+        <Grid item xs={12} sm={4} lg={4} sx={{ py: 2, textAlign: "left" }}>
+          <Typography variant="h4" py={2} borderColor="primary" color="primary">
             Contact Info
           </Typography>
 
           <Grid container alignItems="center" spacing={2}>
             <Grid item>
-              <Email color="white" fontSize="large" />
+              <Email color="secondary" fontSize="large" />
             </Grid>
             <Grid item>
-              <Link
-                href="mailto:info@toriaspices.com"
-                style={{ color: "white" }}
-              >
-                info@toriaspices.com
+              <Link color="secondary" href="mailto:info@toriaspices.com">
+                <p>info@toriaspices.com</p>
               </Link>
             </Grid>
           </Grid>
           <Grid container alignItems="center" spacing={2}>
             <Grid item>
-              <Person fontSize="large" />
+              <Person color="secondary" fontSize="large" />
             </Grid>
             <Grid item>+2349158835595</Grid>
           </Grid>
 
           <Grid container alignItems="center" spacing={1}>
             <Grid item>
-              <LocationOnIcon />
+              <LocationOnIcon color="secondary" fontSize="large" />
             </Grid>
             <Grid item>No 6 Lucky Nwagwu Street Kapwa, Lugbe Abuja</Grid>
           </Grid>
         </Grid>
-        <Grid item xs={12} sm={4} lg={4} sx={{ p: 5 }}>
-          <Typography
-            variant="h4"
-            component="h6"
-            color="orange"
-            borderColor="orange"
-            fontSize="10"
-            borderRadius={5}
-            padding={1}
-          >
+        <Grid item xs={12} sm={4} lg={4} sx={{ py: 2 }}>
+          <Typography variant="h4" py={2} borderColor="primary" color="primary">
             Find Us
           </Typography>
           <Grid container spacing={2}>
             <Grid item>
               <a href="https://web.facebook.com/toriaspices">
-                <Facebook
-                  color="primary"
-                  fontSize="large"
-                  sx={{ borderRadius: 20, m: 5, p: 5 }}
-                />
+                <Facebook color="secondary" fontSize="large" />
               </a>
             </Grid>
             <Grid item>
               <a href="https://www.youtube.com/channel/UCg4RXb5wsxPrMSDOEmQuwUA">
-                <YouTube
-                  color="secondary"
-                  fontSize="large"
-                  sx={{ borderRadius: 20, m: 5, p: 5 }}
-                />
+                <YouTube color="secondary" fontSize="large" />
               </a>
             </Grid>
             <Grid item>
               <a href="#">
-                <Twitter color="primary" fontSize="medium" />
+                <Twitter color="secondary" fontSize="large" />
               </a>
             </Grid>
             <Grid item>
               <a href="https://www.instagram.com/toriaspices/">
-                <Instagram
-                  color="secondary"
-                  fontSize="large"
-                  sx={{ borderRadius: 20, m: 5, p: 5 }}
-                />
+                <Instagram color="secondary" fontSize="large" />
               </a>
             </Grid>
             <Grid item>
               <a href="#">
-                <LinkedIn
-                  color="primary"
-                  fontSize="large"
-                  sx={{ borderRadius: 20, m: 5, p: 5 }}
-                />
+                <LinkedIn color="secondary" fontSize="large" />
               </a>
             </Grid>
           </Grid>
         </Grid>
-        {/* <Grid xs={12} sm={4} lg={3} sx={{ p: 5, textAlign: "left" }}>
-          <Typography
-            variant="h4"
-            component="h6"
-            color="orange"
-            borderColor="orange"
-            fontSize="10"
-            borderRadius={5}
-            padding={1}
-          >
-            News Letter
-          </Typography>
-          <p>Join our newsletter and get up-to-date from us.</p>
-          <Grid sx={{ mr: "auto", marginTop: 2 }}>
-            <Paper
-              component="form"
-              sx={{
-                p: "2px 4px",
-                display: "flex",
-                alignItems: "center",
-                width: 300,
-              }}
-            >
-              <InputBase
-                sx={{ ml: 1, flex: 1 }}
-                placeholder="Your Email"
-                inputProps={{ "aria-label": "search google maps" }}
-              />
 
-              <Divider sx={{ height: 28 }} orientation="vertical" />
-            </Paper>
-            <Button
-              style={{ background: "orange", color: "white", m: "3px" }}
-              aria-label="directions"
-            >
-              SUBSCRIBE
-            </Button>
-          </Grid>
-        </Grid> */}
-
-        <Grid item xs={12} sm={12} lg={12} sx={{ p: 5, textAlign: "center" }}>
+        <Grid item xs={12} sm={12} lg={12} sx={{ p: 2, textAlign: "center" }}>
           <footer>
-            Powered by <a href="#"> Codehouze </a>
+            Powered by
+            <a color="primary" href="#">
+              Codehouze
+            </a>
           </footer>
         </Grid>
       </Grid>
