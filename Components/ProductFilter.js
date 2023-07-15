@@ -16,7 +16,7 @@ function ProductFilter() {
               mx: 1,
               px: 2,
               "&:hover": {
-                backgroundColor: "orange",
+                backgroundColor: "#FF6600",
                 color: "white",
               },
             }}
@@ -35,7 +35,7 @@ function ProductFilter() {
               mx: 1,
               px: 2,
               "&:hover": {
-                backgroundColor: "orange",
+                backgroundColor: "#FF6600",
                 color: "white",
               },
             }}
@@ -54,7 +54,7 @@ function ProductFilter() {
               mx: 1,
               px: 2,
               "&:hover": {
-                backgroundColor: "orange",
+                backgroundColor: "#FF6600",
                 color: "white",
               },
             }}
