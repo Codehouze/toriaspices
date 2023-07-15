@@ -26,12 +26,10 @@ function FeaturesCard() {
           fontSize="large"
         />
       </Box>
-
-      <Box p={1} color="primary">
-        <item>
-          <h4 color="primary">Free shipping </h4>
-          <p>we are here to ser you better </p>
-        </item>
+      {/* make the write up visible*/}
+      <Box p={1}>
+        <h4>Free shipping </h4>
+        <p>we are here to ser you better </p>
       </Box>
     </Grid>
   );
