@@ -1,35 +1,37 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
+import { Typography } from "@mui/material";
 
-function FeaturesCard() {
+function FeaturesCard({ title, description, icon }) {
   return (
-    <Grid display="flex" sx={{ background: "#D3D3D3", borderRadius: 3 }}>
+    <Grid
+      item
+      display="flex"
+      sx={{ background: "#ff7043", borderRadius: 3, py: 2, pr: 15 }}
+    >
       <Box
         sx={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          width: "48px",
-          height: "48px",
           borderRadius: "100%",
           background: "#FFFFFF",
-          p: 5,
+          p: 1,
           my: "auto",
           mx: 1,
         }}
       >
-        <CardGiftcardIcon
-          variant="Outlined"
-          color="secondary"
-          fontSize="large"
-        />
+        {icon}
       </Box>
-      {/* make the write up visible*/}
-      <Box p={1}>
-        <h4>Free shipping </h4>
-        <p>we are here to ser you better </p>
+
+      <Box pr={8}>
+        <Typography variant="h3" pt={2} fontSize={14} noWrap={true}>
+          {title}
+        </Typography>
+        <Typography variant="p" pt={2} pr={4} fontSize={10} noWrap={true}>
+          {description}
+        </Typography>
       </Box>
     </Grid>
   );
