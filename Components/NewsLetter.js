@@ -18,10 +18,10 @@ function NewsLetter() {
       sx={{
         mx: "auto",
         px: "auto",
-        mt: 5,
-        p: 10,
-        background: "lightgrey",
-        borderRadius: 3,
+        //   mt: 5,
+        //   p: 10,
+        //   background: "lightgrey",
+        //   borderRadius: 3,
       }}
     >
       <Grid item display="flex" xs={6} md={6}>
@@ -33,7 +33,7 @@ function NewsLetter() {
           backgroundColor="primary"
           xs={4}
           sx={{
-            // backgroundColor: "orange",
+            backgroundColor: "primary.main",
             color: "white",
             borderRadius: "100%",
             p: 3,
@@ -42,15 +42,13 @@ function NewsLetter() {
           <EmailIcon fontSize="large" />
         </Box>
         <Box>
-          <Typography variant="h3" sx={{ px: 1 }}>
+          <Typography variant="h4" px={1}>
             Newsletter
           </Typography>
 
-          <div>
-            <Typography variant="body1" sx={{ px: 1 }}>
-              Stay updated with our latest news and promotions.
-            </Typography>
-          </div>
+          <Typography variant="body1" px={1}>
+            Stay updated with our latest news and promotions.
+          </Typography>
         </Box>
       </Grid>
 

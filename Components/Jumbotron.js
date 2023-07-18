@@ -1,6 +1,7 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
 
 import Typography from "@mui/material/Typography";
 
@@ -8,7 +9,6 @@ function Jumbotron() {
   return (
     <Box
       display="flex"
-      // justifyContent="center"
       alignItems="center"
       width="100%"
       height={600}
@@ -22,7 +22,11 @@ function Jumbotron() {
       }}
     >
       {/* <p>Get the best outfit of your life</p> */}
+      {/* <Grid container> */}
       <Box
+        md={5}
+        lg={5}
+        xs={12}
         sx={{
           backgroundColor: "white",
           opacity: 0.8,
@@ -30,17 +34,19 @@ function Jumbotron() {
           borderRadius: 5,
         }}
       >
-        <Typography variant="h3" color="secondary">
-          Finding the difference with <br /> ToriaSpices
+        <Typography variant="h3" color="secondary" fontWeight="bold" m={5}>
+          Finding the Difference With <br /> ToriaSpices
         </Typography>
+        <Button
+          variant="contained"
+          color="primary"
+          sx={{ borderStartEndRadius: 20, mx: 5 }}
+        >
+          Get Started
+        </Button>
       </Box>
-      <Button
-        variant="contained"
-        color="primary"
-        sx={{ borderStartEndRadius: 20, mx: 5 }}
-      >
-        Shop now
-      </Button>
+
+      {/* </Grid> */}
     </Box>
   );
 }
