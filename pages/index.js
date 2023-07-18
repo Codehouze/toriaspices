@@ -1,6 +1,6 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
@@ -15,6 +15,8 @@ import { Paper, Typography } from "@mui/material";
 import NewsLetter from "../Components/NewsLetter";
 import ShopNowBanner from "../Components/ShopNowBanner";
 import Jumbotron from "../Components/Jumbotron";
+import Testimonial from "../Components/Testimonial";
+import BlogCard from "../Components/BlogCard";
 
 export default function Index() {
   const slider1 = "url(../public/image/slider2_1.jpeg)";
@@ -147,17 +149,17 @@ export default function Index() {
           sx={{
             mx: "auto",
             px: "auto",
-            p: 5,
+            py: 5,
           }}
         >
-          <Grid item md={5} lg={5} sx={12} px={3}>
+          <Grid item md={5} lg={5} xs={12} px={3}>
             <ShopNowBanner
               backgroundImage={backgroundImageUrl1}
               title={title}
               description={description}
             />
           </Grid>
-          <Grid item md={5} lg={5} sx={12} px={3}>
+          <Grid item md={5} lg={5} xs={12} px={3}>
             <ShopNowBanner
               backgroundImage={backgroundImageUrl2}
               title={title1}
@@ -167,15 +169,38 @@ export default function Index() {
         </Grid>
 
         {/* News letter */}
-        <NewsLetter />
-        {/* Testimonial */}
-        <Grid container spacing={1}></Grid>
+        <Grid container spacing={1} p={4}>
+          <NewsLetter />
+        </Grid>
 
-        <Grid container display="flex">
+        {/* Testimonial */}
+        <Grid container spacing={1} py={4}>
+          <Testimonial />
+        </Grid>
+
+        <Grid alignItems="center" sx={{ mx: "auto", py: 3 }}>
+          <Typography variant="h3">Latest Blog</Typography>
+        </Grid>
+
+        <Grid
+          container
+          display="flex"
+          py={4}
+          px={5}
+          // spacing={1}
+          justifyItems="center"
+        >
           {/* latest blog */}
-          <Grid item>1</Grid>
-          <Grid item>2</Grid>
-          <Grid item>3</Grid>
+          <Grid item lg={4} md={4} xs={12}>
+            <BlogCard />
+          </Grid>
+          <Grid item lg={4} md={4} xs={12}>
+            {" "}
+            <BlogCard />
+          </Grid>
+          <Grid item lg={4} md={4} xs={12}>
+            <BlogCard />
+          </Grid>
         </Grid>
 
         <Grid container>
