@@ -10,33 +10,32 @@ function NewsLetter() {
   return (
     <Grid
       container
-      spacing={1}
+      spacing={2}
       alignItems="center"
-      // justifyContent="center"
+      justifyContent="center"
       md={9}
-      xs={10}
+      xs={12}
       sx={{
         mx: "auto",
         px: "auto",
-        //   mt: 5,
-        //   p: 10,
-        //   background: "lightgrey",
-        //   borderRadius: 3,
+        p: 5,
+        background: "lightgrey",
+        borderRadius: 3,
       }}
     >
-      <Grid item display="flex" xs={6} md={6}>
+      <Grid item display="flex" xs={12} md={6}>
         <Box
           display="flex"
           alignItems="center"
           justifyContent="center"
           flexDirection="column"
           backgroundColor="primary"
-          xs={4}
+          // xs={4}
           sx={{
             backgroundColor: "primary.main",
             color: "white",
             borderRadius: "100%",
-            p: 3,
+            p: 2,
           }}
         >
           <EmailIcon fontSize="large" />
@@ -52,30 +51,28 @@ function NewsLetter() {
         </Box>
       </Grid>
 
-      <Grid item xs={12} md={6}>
-        <Box sx={{ pt: 2 }}>
+      <Grid item xs={10} md={6}>
+        <Box sx={{ pt: 1 }}>
           <InputBase
+            size="medium"
             sx={{
-              ml: 5,
-              flex: 10,
-              background: " white",
-              borderTopLeftRadius: 10,
-              borderBottomLeftRadius: 10,
-              px: 5,
-              p: 2,
+              background: "white",
+              borderTopLeftRadius: 20,
+              borderBottomLeftRadius: 20,
+              px: 10,
+              py: 1.4,
             }}
             placeholder="Enter Your E-mail..."
             inputProps={{ "aria-label": "Enter Your E-mail..." }}
           />
           <Button
+            xs={3}
             sx={{
               color: "white",
-              backgroundColor: "orange",
-              borderTopRightRadius: 10,
-              borderBottomRightRadius: 10,
+              background: "#FF6600",
+              borderTopRightRadius: 20,
+              borderBottomRightRadius: 20,
               p: 2,
-              pt: 1,
-              fontSize: 18,
               "&:hover": {
                 backgroundColor: "black",
                 color: "white",
