@@ -1,40 +1,65 @@
 import React from "react";
-import Grid from "@mui/material/Grid";
+
 import Box from "@mui/material/Box";
-import { Typography } from "@mui/material";
+import { Typography, styled } from "@mui/material";
+
+const IconContainer = styled(Box)({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  borderRadius: "50%",
+  background: "#FFFFFF",
+  width: 64,
+  height: 64,
+  marginBottom: 2,
+  transition: "transform 0.2s", // Add a transition for the rotation animation
+  "&:hover": {
+    transform: "rotateY(180deg)", // Apply the rotation animation on hover
+  },
+});
 
 function FeaturesCard({ title, description, icon }) {
   return (
-    <Grid
-      item
+    <Box
       display="flex"
-      sx={{ background: "#ff7043", borderRadius: 3, py: 2, pr: 15 }}
+      flexDirection="column"
+      alignItems="center"
+      justifyContent="center"
+      textAlign="center"
+      bgcolor="#ff7043"
+      borderRadius={3}
+      p={2}
     >
       <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          borderRadius: "100%",
-          background: "#FFFFFF",
-          p: 1,
-          my: "auto",
-          mx: 1,
-        }}
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        borderRadius="50%"
+        bgcolor="#FFFFFF"
+        width={64}
+        height={64}
+        marginBottom={2}
       >
-        {icon}
+        <IconContainer> {icon}</IconContainer>
       </Box>
 
-      <Box pr={8}>
-        <Typography variant="h3" pt={2} fontSize={14} noWrap={true}>
-          {title}
-        </Typography>
-        <Typography variant="p" pt={2} pr={4} fontSize={10} noWrap={true}>
-          {description}
-        </Typography>
-      </Box>
-    </Grid>
+      <Typography
+        variant="h2"
+        fontWeight="bold"
+        pt={2}
+        fontSize={20}
+        noWrap={true}
+      >
+        {title}
+      </Typography>
+
+      <Typography variant="body1" pt={2} px="auto" fontSize={14} noWrap={true}>
+        {description}
+      </Typography>
+    </Box>
   );
 }
 
 export default FeaturesCard;
+
+//

@@ -5,6 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import Link from "next/link";
 
 export default function ImgMediaCard() {
   return (
@@ -17,16 +18,22 @@ export default function ImgMediaCard() {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          Where Can I Get Some?
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          Turmeric (Curcuma longa) is a bright yellow-orange spice commonly used
+          in cooking, especially in South Asian and Indian cuisines. It is
+          well-known for its unique flavor and vibrant color, but it also offers
+          various potential health benefits due to its active compound called
+          curcumin. Some of the advantages of turmeric include:
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button variant="contain" sx={{ background: "#FF6600" }} size="small">
+          <Link color="white" href="/blog">
+            Read More
+          </Link>
+        </Button>
       </CardActions>
     </Card>
   );
