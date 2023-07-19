@@ -4,7 +4,7 @@ import { orange, red } from "@mui/material/colors";
 // Create a theme instance.
 const theme = createTheme({
   palette: {
-    mode: "dark",
+    // mode: "dark",
     primary: {
       main: "#FF6600",
     },

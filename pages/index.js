@@ -133,8 +133,13 @@ export default function Index() {
         </Grid>
 
         {/* our product with a filter */}
-        <Grid alignItems="center" sx={{ mx: "auto", fontSize: 20 }}>
-          <h2>Our Products</h2>
+        <Grid
+          alignItems="center"
+          sx={{ mx: "auto", fontSize: 20, color: "#90C53B" }}
+        >
+          <Typography variant="h2" pb={5} fontWeight="bold">
+            Our Products
+          </Typography>
         </Grid>
 
         <ProductFilter />
@@ -174,12 +179,14 @@ export default function Index() {
         </Grid>
 
         {/* Testimonial */}
-        <Grid container spacing={1} py={4}>
+        {/* <Grid container spacing={1} py={4}>
           <Testimonial />
-        </Grid>
+        </Grid> */}
 
-        <Grid alignItems="center" sx={{ mx: "auto", py: 3 }}>
-          <Typography variant="h3">Latest Blog</Typography>
+        <Grid alignItems="center" sx={{ mx: "auto", py: 3, color: "#90C53B" }}>
+          <Typography variant="h3" fontWeight="bold">
+            Latest Blog
+          </Typography>
         </Grid>
 
         <Grid
@@ -195,7 +202,6 @@ export default function Index() {
             <BlogCard />
           </Grid>
           <Grid item lg={4} md={4} xs={12}>
-            {" "}
             <BlogCard />
           </Grid>
           <Grid item lg={4} md={4} xs={12}>
@@ -205,7 +211,7 @@ export default function Index() {
 
         <Grid container>
           {/* brands that buy our product */}
-          Carocel
+          {/* Carocel */}
         </Grid>
       </Grid>
     </Paper>
