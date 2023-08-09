@@ -3,6 +3,7 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import { makeStyles } from "@material-ui/core/styles";
+import { Typography } from "@mui/material";
 const useStyles = makeStyles({
   banner: {
     backgroundSize: "cover",
@@ -27,12 +28,14 @@ function ShopNowBanner({ backgroundImage, title, description }) {
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <Box position="absolute" top={200} left={40}>
-        <h2>{title}</h2>
+        <Typography variant="h3" fontFamily="Playfair">
+          {title}
+        </Typography>
         <p>{description}</p>
         <Button
           sx={{
             color: "white",
-            background: "orange",
+            background: "#FF6600",
             borderRadius: 10,
             mx: 1,
             px: 2,
