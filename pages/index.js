@@ -17,7 +17,6 @@ import ShopNowBanner from "../Components/ShopNowBanner";
 import Jumbotron from "../Components/Jumbotron";
 import Testimonial from "../Components/Testimonial";
 import BlogCard from "../Components/BlogCard";
-import Carousel from "../Components/Carousel";
 
 export default function Index() {
   const slider1 = "url(../public/image/slider2_1.jpeg)";
