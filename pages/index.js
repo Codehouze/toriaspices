@@ -17,17 +17,18 @@ import ShopNowBanner from "../Components/ShopNowBanner";
 import Jumbotron from "../Components/Jumbotron";
 import Testimonial from "../Components/Testimonial";
 import BlogCard from "../Components/BlogCard";
+import Carousel from "../Components/Carousel";
 
 export default function Index() {
   const slider1 = "url(../public/image/slider2_1.jpeg)";
   const backgroundImageUrl1 =
-    "https://media.istockphoto.com/id/873964916/photo/spices-on-white-background-isolated-with-place-for-text.jpg?s=1024x1024&w=is&k=20&c=blGNr4E3vCUX1orCuQlOiP2ZTaExAECIDWvdyHa_X8w=";
+    "https://res.cloudinary.com/codehouseinc/image/upload/v1690237349/toriaspices/banner1_csymte.png";
   const backgroundImageUrl2 =
-    "https://as1.ftcdn.net/v2/jpg/04/87/96/38/1000_F_487963899_wpAa0pW71FK5eoWgIFjywVhFoZhnhZr7.jpg";
-  const title = "I am good";
-  const description = "We are testing out props";
-  const title1 = "Testing Props";
-  const description1 = "We are testing out props here with the CEO her self..";
+    "https://res.cloudinary.com/codehouseinc/image/upload/v1690237857/toriaspices/banner2_hww6mq.png";
+  const title = "THE QUALITY";
+  const description = "MADE SPICE";
+  const title1 = "Discover Our";
+  const description1 = "NEW RECIPES";
 
   // feature card input
   const featuresCardTitle1 = "FREE DELIVERY";
@@ -45,7 +46,10 @@ export default function Index() {
         <title>Toria Spices</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <meta name="description" content="Spicing to Healthy living" />
-        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="icon"
+          href="https://res.cloudinary.com/codehouseinc/image/upload/v1684271913/toriaspices/TORIA_Spices_logo11_vxsspd.png"
+        />
       </Head>
       <Grid container>
         <Box
@@ -179,9 +183,9 @@ export default function Index() {
         </Grid>
 
         {/* Testimonial */}
-        {/* <Grid container spacing={1} py={4}>
+        <Grid container spacing={1} sx={{ mx: "auto", py: 4 }}>
           <Testimonial />
-        </Grid> */}
+        </Grid>
 
         <Grid alignItems="center" sx={{ mx: "auto", py: 3, color: "#90C53B" }}>
           <Typography variant="h3" fontWeight="bold">

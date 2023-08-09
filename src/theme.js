@@ -12,6 +12,23 @@ const theme = createTheme({
       main: "#90C53B",
     },
   },
+  typography: {
+    fontFamily: [
+      "Playfair",
+      "Raleway",
+      "Arial",
+      "-apple-system",
+      "BlinkMacSystemFont",
+      "Segoe UI",
+      "Roboto",
+      "Helvetica Neue",
+      "Arial",
+      "sans-serif",
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      "Segoe UI Symbol",
+    ].join(","),
+  },
   error: {
     main: red[500],
   },
