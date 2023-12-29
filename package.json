@@ -3,9 +3,7 @@
   "version": "0.1.0",
   "private": true,
 
-  "engines": {
-    "node": ">=20.0.0"
-  },
+  "engines": { "node": "18.x" },
   "scripts": {
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
