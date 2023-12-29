@@ -2,6 +2,9 @@
   "name": "toriaspices",
   "version": "0.1.0",
   "private": true,
+
+  "engine":{
+  "node":"18.*"  },
   "scripts": {
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
@@ -9,6 +12,7 @@
     "lint": "next lint",
     "prettier": "prettier --write .",
     "prepare": "husky install"
+
   },
   "dependencies": {
     "@emotion/cache": "^11.7.1",
