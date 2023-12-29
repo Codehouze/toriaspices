@@ -29,20 +29,29 @@ export default function ImgMediaCard() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button
-          //   variant="contain"
-          sx={{
-            color: "white",
-            background: "#FF6600",
-            "&:hover": {
-              color: "#FF6600",
-              background: "black",
-            },
-          }}
-          size="small"
-        >
-          <Link href="/blog">Read More</Link>
-        </Button>
+      <Button
+  size="small"
+  sx={{
+    background: '#FF6600',
+    '&:hover': {
+      background: '#90C53B',
+    },
+  }}
+>
+  <Link href="/blog">
+    <Typography
+      variant="body2"
+      sx={{
+        color: '#FFFFFF',
+        '&:hover': {
+          color: '#FFFFFF',
+        },
+      }}
+    >
+      Read More
+    </Typography>
+  </Link>
+</Button>
       </CardActions>
     </Card>
   );

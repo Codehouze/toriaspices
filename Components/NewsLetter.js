@@ -91,7 +91,7 @@ function NewsLetter() {
               p: 2,
               pl: 3,
               "&:hover": {
-                backgroundColor: "black",
+                backgroundColor: "#90C53B",
                 color: "white",
               },
             }}

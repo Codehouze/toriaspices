@@ -7,7 +7,7 @@ import React from "react";
 import Link from "next/link";
 import { Formik } from "formik";
 // import Image from "next/image";
-import Breadcrumb from "../Components/BreadCrumb";
+// import Breadcrumb from "../../../Components/BreadCrumb";
 
 function contact() {
   const initialValue = {

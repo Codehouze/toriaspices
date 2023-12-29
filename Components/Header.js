@@ -8,6 +8,7 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
+import {useTheme}  from '@mui/material'
 // import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 // import Grid from "@mui/material/Grid";
@@ -37,6 +38,7 @@ function Header() {
     setAnchorElUser(null);
   };
 
+  const theme = useTheme();
   return (
     <>
       <AppBar position="static" sx={{ background: "white",py:2}}>
@@ -113,45 +115,73 @@ function Header() {
             </Typography>
 
             {/* Desktop Menu */}
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex",justifyContent: 'flex-end' }}}>
               <Link href="/" passHref>
                 <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "black", display: "block" }}
+                  sx={{ px:2,my:2, mx:1, color: theme.palette.primary.contrastText, display: "block", background: theme.palette.secondary.main, borderRadius:10,   '&:hover': {
+                    background: theme.palette.primary.contrastText,
+                    color: theme.palette.primary.main } }}
                 >
                   Home
                 </Button>
               </Link>
               <Link href="/about" passHref>
-                <Button
+              <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "black", display: "block" }}
+                  sx={{ px:2, my: 2, mx:1, color: theme.palette.primary.contrastText, display: "block", background: theme.palette.secondary.main, borderRadius:10,
+                  '&:hover': {
+                    background: theme.palette.primary.contrastText,
+                    color: theme.palette.primary.main  }}}
                 >
                   About
                 </Button>
               </Link>
               <Link href="/products" passHref>
-                <Button
+              <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "black", display: "block" }}
+                  sx={{ px:2, my: 2,mx:1, color: theme.palette.primary.contrastText, display: "block",background: theme.palette.secondary.main, borderRadius:10,   '&:hover': {
+                    background: theme.palette.primary.contrastText,
+                    color: theme.palette.primary.main } }}
                 >
                   Products
                 </Button>
               </Link>
               <Link href="/blog" passHref>
-                <Button
+              <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "black", display: "block" }}
+                  sx={{ px:2,my: 2,mx:1, color: theme.palette.primary.contrastText, display: "block", background: theme.palette.secondary.main, borderRadius:10, 
+                  '&:hover': {
+                    background: theme.palette.primary.contrastText,
+                    color: theme.palette.primary.main 
+                  }
+                }}
                 >
                   Blog
                 </Button>
-              </Link>{" "}
+              </Link>
               <Link href="/contact" passHref>
-                <Button
+              <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "black", display: "block" }}
+                  sx={{ px:2, my: 2,mx:1, color: theme.palette.primary.contrastText, display: "block", background: theme.palette.secondary.main, borderRadius:10,
+                  '&:hover': {
+                    background: theme.palette.primary.contrastText,
+                    color: theme.palette.primary.main 
+                  },}}
                 >
                   Contact
+                </Button>
+              </Link>
+              <Link href="/contact" passHref>
+              <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{ px:2,my: 2,mx:1, color: theme.palette.primary.contrastText, display: "block",background: theme.palette.secondary.main, borderRadius:10,
+                  '&:hover': {
+                    background: theme.palette.primary.contrastText,
+                    color: theme.palette.primary.main 
+                  },}}
+                >
+                  Login
                 </Button>
               </Link>
               {/* Render other menu items */}

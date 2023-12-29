@@ -3,6 +3,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import { Typography, styled } from "@mui/material";
 
+
 const IconContainer = styled(Box)({
   display: "flex",
   justifyContent: "center",
@@ -28,6 +29,7 @@ function FeaturesCard({ title, description, icon }) {
       textAlign="center"
       bgcolor="#ff7043"
       borderRadius={3}
+      color="#ffffff"
       p={2}
     >
       <Box

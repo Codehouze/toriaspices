@@ -40,7 +40,7 @@ function ShopNowBanner({ backgroundImage, title, description }) {
             mx: 1,
             px: 2,
             "&:hover": {
-              backgroundColor: "black",
+              backgroundColor: "#90C53B",
               color: "white",
             },
           }}
