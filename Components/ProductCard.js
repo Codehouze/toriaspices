@@ -9,7 +9,7 @@ import Collapse from "@mui/material/Collapse";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-// import ShareIcon from "@mui/icons-material/Share";
+import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import VisibilityIcon from "@mui/icons-material/Visibility";
@@ -52,7 +52,7 @@ export default function RecipeReviewCard(image) {
           <ShoppingCartIcon />
         </IconButton>
         <IconButton aria-label="share">
-          <shareIcon />
+          <ShareIcon />
         </IconButton>
       </CardActions>
     </Card>
