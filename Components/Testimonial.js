@@ -42,7 +42,7 @@ function Testimonial({ Testimony }) {
         >
           Our Testimonials
         </Typography>
-        <Carousel autoPlay interval="5000" transitionTime="5000">
+        <Carousel autoPlay interval="5000" transitionTime="5000" showThumbs={false}>
           <TestimonyBox image={image} Description={description} />
           <TestimonyBox image={image} Description={description2} />
           <TestimonyBox image={image} Description={description3} />

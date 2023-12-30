@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function ImgMediaCard() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, mx:2 }}>
       <CardMedia
         component="img"
         alt="green iguana"
@@ -39,7 +39,7 @@ export default function ImgMediaCard() {
     },
   }}
 >
-  <Link href="/blog">
+  <Link href="/slug/blog">
     <Typography
       variant="body2"
       sx={{

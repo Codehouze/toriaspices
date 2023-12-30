@@ -15,6 +15,8 @@ import ContactPageIcon from '@mui/icons-material/ContactPage';
 import LoginIcon from '@mui/icons-material/Login';
 import EditNoteIcon from '@mui/icons-material/EditNote';
 import InfoIcon from '@mui/icons-material/Info';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ViewCompactIcon from '@mui/icons-material/ViewCompact';
 // import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 // import Grid from "@mui/material/Grid";
@@ -144,7 +146,7 @@ function Header() {
                     color: theme.palette.primary.main  }}}
                 >
                   <InfoIcon sx={{height: "1em", width: "1em",mr:1}} />
-                  About
+                  About Us
                 </Button>
               </Link>
               <Link href="/products" passHref>
@@ -154,8 +156,8 @@ function Header() {
                     background: theme.palette.primary.contrastText,
                     color: theme.palette.primary.main } }}
                 >
-                  <InventoryIcon sx={{height: "1em", width: "1em",mr:1}} />
-                  Products
+                  <ViewCompactIcon sx={{height: "1em", width: "1em",mr:1}} />
+                  Our Products
                 </Button>
               </Link>
               <Link href="/blog" passHref>
@@ -194,8 +196,8 @@ function Header() {
                     color: theme.palette.primary.main 
                   },}}
                 >
-                  <LoginIcon sx={{mr:1}} />
-                  Login
+                  <ShoppingCartIcon sx={{mr:1}} />
+                  SignIn
                 </Button>
               </Link>
               {/* Render other menu items */}
