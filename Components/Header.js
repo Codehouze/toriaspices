@@ -9,6 +9,12 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import {useTheme}  from '@mui/material'
+import HomeIcon from '@mui/icons-material/Home';
+import InventoryIcon from '@mui/icons-material/Inventory';
+import ContactPageIcon from '@mui/icons-material/ContactPage';
+import LoginIcon from '@mui/icons-material/Login';
+import EditNoteIcon from '@mui/icons-material/EditNote';
+import InfoIcon from '@mui/icons-material/Info';
 // import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 // import Grid from "@mui/material/Grid";
@@ -117,70 +123,78 @@ function Header() {
             {/* Desktop Menu */}
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex",justifyContent: 'flex-end' }}}>
               <Link href="/" passHref>
+             
                 <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ px:2,my:2, mx:1, color: theme.palette.primary.contrastText, display: "block", background: theme.palette.secondary.main, borderRadius:10,   '&:hover': {
+                  sx={{
+                  display:"flex",alignItems: "center", px:2,my:2, mx:1, color: theme.palette.primary.contrastText, background: theme.palette.secondary.main, borderRadius:10,'&:hover': {
                     background: theme.palette.primary.contrastText,
                     color: theme.palette.primary.main } }}
                 >
+                   <HomeIcon sx={{ height: "1em", width: "1em", mr: 1 }}/> 
                   Home
                 </Button>
               </Link>
               <Link href="/about" passHref>
               <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ px:2, my: 2, mx:1, color: theme.palette.primary.contrastText, display: "block", background: theme.palette.secondary.main, borderRadius:10,
+                  sx={{display:"flex",alignItems:"center",px:2, my: 2, mx:1, color: theme.palette.primary.contrastText, background: theme.palette.secondary.main, borderRadius:10,
                   '&:hover': {
                     background: theme.palette.primary.contrastText,
                     color: theme.palette.primary.main  }}}
                 >
+                  <InfoIcon sx={{height: "1em", width: "1em",mr:1}} />
                   About
                 </Button>
               </Link>
               <Link href="/products" passHref>
               <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ px:2, my: 2,mx:1, color: theme.palette.primary.contrastText, display: "block",background: theme.palette.secondary.main, borderRadius:10,   '&:hover': {
+                  sx={{ display:"flex",alignItems: "center", px:2, my: 2,mx:1, color: theme.palette.primary.contrastText,background: theme.palette.secondary.main, borderRadius:10,   '&:hover': {
                     background: theme.palette.primary.contrastText,
                     color: theme.palette.primary.main } }}
                 >
+                  <InventoryIcon sx={{height: "1em", width: "1em",mr:1}} />
                   Products
                 </Button>
               </Link>
               <Link href="/blog" passHref>
               <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ px:2,my: 2,mx:1, color: theme.palette.primary.contrastText, display: "block", background: theme.palette.secondary.main, borderRadius:10, 
+                  sx={{display:"flex",alignItems: "center",px:2,my: 2,mx:1, color: theme.palette.primary.contrastText, background: theme.palette.secondary.main, borderRadius:10, 
                   '&:hover': {
                     background: theme.palette.primary.contrastText,
                     color: theme.palette.primary.main 
                   }
                 }}
                 >
+                  <EditNoteIcon sx={{mr:1}}/>
                   Blog
                 </Button>
               </Link>
               <Link href="/contact" passHref>
               <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ px:2, my: 2,mx:1, color: theme.palette.primary.contrastText, display: "block", background: theme.palette.secondary.main, borderRadius:10,
+                  sx={{display:"flex",alignItems: "center",px:2, my: 2,mx:1, color: theme.palette.primary.contrastText, background: theme.palette.secondary.main, borderRadius:10,
                   '&:hover': {
                     background: theme.palette.primary.contrastText,
                     color: theme.palette.primary.main 
                   },}}
                 >
+                  <ContactPageIcon sx={{mr:1}}/>
                   Contact
                 </Button>
               </Link>
               <Link href="/contact" passHref>
               <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ px:2,my: 2,mx:1, color: theme.palette.primary.contrastText, display: "block",background: theme.palette.secondary.main, borderRadius:10,
+                  sx={{ px:2,my: 2,mx:1, color: theme.palette.primary.contrastText,background: theme.palette.secondary.main, borderRadius:10,
                   '&:hover': {
                     background: theme.palette.primary.contrastText,
                     color: theme.palette.primary.main 
                   },}}
                 >
+                  <LoginIcon sx={{mr:1}} />
                   Login
                 </Button>
               </Link>
