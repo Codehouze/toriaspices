@@ -3,6 +3,7 @@ import { Grid, Box, Typography } from "@mui/material";
 // import BootstrapCarousel from "../carousels/Bootstrap";
 // import ResponsiveCarousel from "../carousels/Responsive";
 import { Carousel } from "react-responsive-carousel";
+import Image from 'next/image'
 import { Description } from "@mui/icons-material";
 
 function Testimonial({ Testimony }) {
@@ -56,18 +57,25 @@ function Testimonial({ Testimony }) {
 // { image, testimony } pass this into this function
 export function TestimonyBox({ image, Description }) {
   return (
+    <Grid container display="flex">
     <Box display="flex" sx={{ p: 5 }}>
-      <img
+      <Grid item lg={6} md={6} xs={12}>
+      <Image
         src={image}
         alt="Testimonial"
         width="100"
         height="200"
         style={{ borderRadius: "100%", mx: 3 }}
+        lg={6} md={6} xs={12}
       />
+      </Grid>
+      <Grid item lg={6} md={6} xs={12}>
       <Box sx={{ color: "white", fontSize: "25px", fontWeight: "bold", px: 5 }}>
         {Description}
       </Box>
+      </Grid>
     </Box>
+    </Grid>
   );
 }
 

@@ -1,69 +1,19 @@
-// import React from "react";
-// import Box from "@mui/material/Box";
-// import Button from "@mui/material/Button";
-// import Grid from "@mui/material/Grid";
-
-// import Typography from "@mui/material/Typography";
-
-// function Jumbotron() {
-//   return (
-//     <Box
-//       display="flex-column"
-//       alignItems="center"
-//       width="100%"
-//       height={600}
-//       sx={{
-//         p: 5,
-//         color: "white",
-//         backgroundImage:
-//           "url('https://images.unsplash.com/photo-1564149504298-00c351fd7f16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80')",
-//         backgroundSize: "cover",
-//         backgroundPosition: "center",
-//         // opacity: 15,
-//       }}
-//     >
-//       {/* <p>Get the best outfit of your life</p> */}
-//       {/* <Grid container> */}
-//       <Box
-//         md={5}
-//         lg={5}
-//         xs={12}
-//         sx={{
-//           // backgroundColor: "black",
-//           // opacity: 0.6,
-//           p: 3,
-//           borderRadius: 5,
-//         }}
-//       >
-//         <Typography variant="h2" color="secondary" fontWeight="bold" m={5}>
-//           Finding the Difference With <br /> ToriaSpices
-//         </Typography>
-//       </Box>
-//       <Button
-//         variant="contained"
-//         color="primary"
-//         sx={{ borderStartEndRadius: 20, mx: 5 }}
-//       >
-//         Get Started
-//       </Button>
-//       {/* </Grid> */}
-//     </Box>
-//   );
-// }
-
-// export default Jumbotron;
-
 import React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import {useTheme}  from '@mui/material'
+import Link from "next/link";
+
 
 function Jumbotron() {
+  const theme = useTheme();
   return (
     <Box
       display="flex"
+      flexDirection="column"
       alignItems="center"
+      justifyContent="center"
       width="100%"
       height={600}
       sx={{
@@ -76,6 +26,7 @@ function Jumbotron() {
         opacity: 0.8, // Adjust the opacity to make the background slightly transparent
       }}
     >
+       
       <Box
         md={5}
         lg={5}
@@ -86,17 +37,30 @@ function Jumbotron() {
           backgroundColor: "rgba(0, 0, 0, 0.7)", // Add a semi-transparent background to the box
         }}
       >
-        <Typography variant="h2" color="primary" fontWeight="bold" m={5}>
-          Finding the Difference With <br /> ToriaSpices
+        <Typography variant="h4" component="h1" sx={{color:theme.palette.primary.contrastText}} fontWeight="bold">
+        Elevate Your Culinary Experience <br /> with Our Exquisite Spice Collections.
         </Typography>
+        </Box>
+        <Box>
+        <Link href="/blog" passHref>
         <Button
           variant="contained"
           color="secondary"
-          sx={{ borderStartEndRadius: 20, mt: 3, fontWeight: "bold" }} // Increase font weight for the button
+          sx={{ borderRadius:'16px' , mt: 3, fontWeight: "bold", color:"white",p:2}} 
         >
-          Get Started
+         Learn more 
         </Button>
-      </Box>
+        </Link>
+        <Link href="/products" passHref>
+        <Button
+          variant="contained"
+          color="primary"
+          sx={{ borderRadius: '16px', mt: 3, fontWeight: "bold", mx:3, p:2 }} 
+        >
+         Shop now 
+        </Button>
+        </Link>
+        </Box>
     </Box>
   );
 }

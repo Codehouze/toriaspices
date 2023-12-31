@@ -1,6 +1,5 @@
 import React from "react";
 import Box from "@mui/material/Box";
-// import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
@@ -40,7 +39,7 @@ export default function Index() {
   const featuresDescription4 = "Call Us on +2348030914767";
 
   return (
-    <Paper>
+    <Paper container>
       <Head>
         <title>Toria Spices</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
@@ -50,12 +49,12 @@ export default function Index() {
           href="https://res.cloudinary.com/codehouseinc/image/upload/v1684271913/toriaspices/TORIA_Spices_logo11_vxsspd.png"
         />
       </Head>
-      <Grid container>
+      <Grid container >
         <Box
           sx={{
             display: "flex",
             width: "100%",
-            height: 600,
+            height: { xs: 600, md: 600 },
             backgroundImage: slider1,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -72,13 +71,12 @@ export default function Index() {
         {/* four cards with special attractive point  */}
         <Grid
           container
-          display="flex"
+          // display="flex"
           spacing={2}
           justifyContent="center"
           alignItems="center"
           sx={{
-            py: 3,
-            px: "auto",
+            py: { xs: 2, md: 3 },
           }}
         >
           <Grid item xs={6} lg={2} md={6} sm={6}>
