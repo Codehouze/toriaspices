@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function ImgMediaCard() {
   return (
-    <Card sx={{ maxWidth: 345, mx:2 }}>
+    <Card sx={{ maxWidth: 345, mx:2, my:3}}>
       <CardMedia
         component="img"
         alt="green iguana"
@@ -32,7 +32,7 @@ export default function ImgMediaCard() {
    
       <Button
   size="small"
-  sx={{
+  sx={{alignItems:"center",
     background: '#FF6600',
     '&:hover': {
       background: '#90C53B',

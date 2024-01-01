@@ -33,7 +33,7 @@ export default function RecipeReviewCard(image) {
   };
 
   return (
-    <Card xs={12} sm={6} lg={12} sx={{ maxWidth: 380, mt: 2, p: 2 }}>
+    <Card xs={12} sm={6} lg={12} sx={{ maxWidth: 480, mt: 2, p: 2 }}>
       <CardMedia
         component="img"
         height="194"
@@ -48,9 +48,9 @@ export default function RecipeReviewCard(image) {
         <IconButton aria-label="visibility">
           <VisibilityIcon />
         </IconButton>
-        <IconButton aria-label="shopping">
+        {/* <IconButton aria-label="shopping">
           <ShoppingCartIcon />
-        </IconButton>
+        </IconButton> */}
         <IconButton aria-label="share">
           <ShareIcon />
         </IconButton>

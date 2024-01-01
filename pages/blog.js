@@ -12,16 +12,21 @@ import InputAdornment from '@mui/material/InputAdornment';
 function blog() {
   return (
     <>
-      <Grid
-        container
-        display="flex"
-        justifyContent="center"
-        sx={{ p: 5, background: "black", color: "white" }}
-      >
-        <Typography variant="h1" component="h2">
-          Blog
-        </Typography>
-      </Grid>
+   <Grid
+  container
+  justifyContent="center"
+  sx={{
+    p: 5,
+    backgroundImage: "url('https://res.cloudinary.com/codehouseinc/image/upload/v1690241424/toriaspices/slider1_1_d9cd5n.webp')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    color: "white",
+  }}
+>
+  <Typography variant="h1" component="h2">
+    About Toria Spices
+  </Typography>
+</Grid>
       <Grid container display="flex">
         <Grid item lg={4} md={4}>
           <Box sx={{p:3}}>

@@ -8,24 +8,24 @@ import Paper from '@mui/material/Paper';
 
 export function TestimonyBox({ images, Descriptions }) {
   return (
-    <Grid container display="flex" sx={{ p: 3, justifyContent: "space-around" }}>
+    <Grid container display="flex" sx={{ p: 3, justifyContent: "space-evenly" }}>
       {Descriptions.map((Description, index) => (
         <Grid key={index} item lg={5} md={5} xs={10} sx={{ my: 2 }}>
-          <Paper elevation={10} sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, backgroundColor: 'rgba(255, 255, 255, 0.9)', p: 3, justifyContent: "space-evenly", width: "100%" }}>
+          <Paper elevation={150} sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, backgroundColor: 'rgba(255, 255, 255, 0.9)', p:2, justifyContent: "space-evenly", width: "100%" }}>
             <Image
               src={images[index]} 
               alt={`Testimonial ${index + 1}`}
               width={500}
               height={500}
               objectFit="cover"
-              style={{ borderRadius: "50%" }}
+              style={{ borderRadius: "50%",margin:15 }}
             />
             <Typography
               variant="h1"
               fontWeight="bold"
               fontFamily="Playfair"
               component="p"
-              sx={{ textAlign: "center", marginRight: "13px" }}
+              sx={{ textAlign: "block" }}
             >
               {Description}
             </Typography>
@@ -71,10 +71,12 @@ function Testimonial() {
     >
       <Grid item lg={12} md={12} xs={12} alignItems="center" sx={{ color: "white", p: 4 }}>
         <Typography
-          variant="h3"
+          variant="h1"
           fontWeight="bold"
           fontFamily="Playfair"
           component="h1"
+          fontSize="40px"
+          color="secondary"
           mx="auto"
           sx={{ textAlign: "center", m: 1 }}
         >
@@ -88,6 +90,8 @@ function Testimonial() {
     </Grid>
   );
 }
+
+
 
 export default Testimonial;
 

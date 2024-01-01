@@ -81,6 +81,7 @@ export default function Index() {
         >
           <Grid item xs={6} lg={2} md={6} sm={6}>
             <FeaturesCard
+            display="flex"
               title={featuresCardTitle1}
               description={featuresDescription1}
               icon={
@@ -138,7 +139,7 @@ export default function Index() {
           alignItems="center"
           sx={{ mx: "auto", fontSize: 20, color: "#90C53B" }}
         >
-          <Typography variant="h2" pb={5} fontWeight="bold">
+          <Typography variant="h1" component="h1" pb={5} fontWeight="bold" fontSize="40px">
             Our Products
           </Typography>
         </Grid>
@@ -185,7 +186,7 @@ export default function Index() {
         </Grid>
 
         <Grid alignItems="center" sx={{ mx: "auto", py: 3, color: "#90C53B" }}>
-          <Typography variant="h3" fontWeight="bold">
+          <Typography variant="h1" component="h1" fontWeight="bold" fontSize="40px">
             Latest Blog
           </Typography>
         </Grid>
@@ -196,10 +197,11 @@ export default function Index() {
           py={4}
           px={5}
           // spacing={1}
-          justifyItems="center"
+          justifyItems='space-between'
+
         >
           {/* latest blog */}
-          <Grid item lg={4} md={4} xs={12}>
+          <Grid item lg={4} md={4} xs={12} >
             <BlogCard />
           </Grid>
           <Grid item lg={4} md={4} xs={12}>
