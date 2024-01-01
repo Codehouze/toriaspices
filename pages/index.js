@@ -35,7 +35,7 @@ export default function Index() {
   const featuresDescription2 = "100% Money Back Guarantee";
   const featuresCardTitle3 = "SPECIAL GIFT CARD";
   const featuresDescription3 = "Offer Special bonuses with gift";
-  const featuresCardTitle4 = "24/7 Customer SERVICE";
+  const featuresCardTitle4 = "24/7 Customer Service";
   const featuresDescription4 = "Call Us on +2348030914767";
 
   return (

@@ -49,7 +49,7 @@ function FeaturesCard({ title, description, icon }) {
         variant="h2"
         fontWeight="bold"
         pt={2}
-        fontSize={20}
+        fontSize={18}
         noWrap={true}
       >
         {title}
