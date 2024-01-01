@@ -180,7 +180,7 @@ export default function Index() {
         </Grid>
 
         {/* Testimonial */}
-        <Grid container spacing={1} sx={{ mx: "auto", py: 4 }}>
+        <Grid container lg={12} md={12} xs={12} spacing={1} sx={{ mx: "auto", py: 4 }}>
           <Testimonial />
         </Grid>
 

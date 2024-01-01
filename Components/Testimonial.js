@@ -1,10 +1,10 @@
 import React from "react";
-import { Grid, Box, Typography } from "@mui/material";
-// import BootstrapCarousel from "../carousels/Bootstrap";
-// import ResponsiveCarousel from "../carousels/Responsive";
+import { Grid, Typography } from "@mui/material";
 import { Carousel } from "react-responsive-carousel";
 import Image from 'next/image'
-import { Description } from "@mui/icons-material";
+import Paper from '@mui/material/Paper';
+
+
 
 function Testimonial({ Testimony }) {
   const image =
@@ -23,7 +23,8 @@ function Testimonial({ Testimony }) {
       container
       alignItems="center"
       width="100%"
-      height={600}
+      lg={12} md={12} xs={12}
+      
       sx={{
         backgroundImage:
           "url('https://res.cloudinary.com/codehouseinc/image/upload/v1690241845/toriaspices/slider3_1_jwagwm.jpg')",
@@ -32,22 +33,22 @@ function Testimonial({ Testimony }) {
         // opacity: 0.7,
       }}
     >
-      <Grid alignItems="center" sx={{ color: "white", p: 4 }}>
+      <Grid item lg={12} md={12} xs={12} alignItems="center" sx={{ color: "white", p: 4 }}>
         <Typography
           variant="h3"
           fontWeight="bold"
           fontFamily="Playfair"
-          px="auto"
+          component="h1"
           mx="auto"
           sx={{ textAlign: "center", m: 1 }}
         >
-          Our Testimonials
+         Happy Clients
         </Typography>
         <Carousel autoPlay interval="5000" transitionTime="5000" showThumbs={false}>
           <TestimonyBox image={image} Description={description} />
           <TestimonyBox image={image} Description={description2} />
           <TestimonyBox image={image} Description={description3} />
-          <TestimonyBox image={image} Description={description} />
+          <TestimonyBox image={image} Description={description4} />
         </Carousel>
       </Grid>
     </Grid>
@@ -57,26 +58,35 @@ function Testimonial({ Testimony }) {
 // { image, testimony } pass this into this function
 export function TestimonyBox({ image, Description }) {
   return (
-    <Grid container display="flex">
-    <Box display="flex" sx={{ p: 5 }}>
-      <Grid item lg={6} md={6} xs={12}>
-      <Image
-        src={image}
-        alt="Testimonial"
-        width="100"
-        height="200"
-        style={{ borderRadius: "100%", mx: 3 }}
-        lg={6} md={6} xs={12}
-      />
-      </Grid>
-      <Grid item lg={6} md={6} xs={12}>
-      <Box sx={{ color: "white", fontSize: "25px", fontWeight: "bold", px: 5 }}>
-        {Description}
-      </Box>
-      </Grid>
-    </Box>
+    <Grid container display="flex" sx={{ p: 3, justifyContent: "space-around" }}>
+  {[1, 2].map((item) => (
+    <Grid key={item} item lg={5} md={5} xs={10} sx={{m:2}}>
+      <Paper elevation={10} sx={{ display: "flex",flexDirection: { xs: "column", md: "row"}, backgroundColor: 'rgba(255, 255, 255, 0.2)',p:5,justifyContent: "space-evenly", width:"100%" }}>
+        <Image
+          src={image}
+          alt={`Testimonial ${item}`}
+          width={500}
+          height={150}
+          objectFit="cover"
+          style={{ borderRadius:"100%", padding:"5px" }}
+        />
+        <Typography
+          variant="h1"
+          fontWeight="bold"
+          fontFamily="Playfair"
+          component="p"
+          color="white"
+          sx={{ textAlign:"center", mx:3 }}
+        >
+          {Description}
+        </Typography>
+      </Paper>
     </Grid>
+  ))}
+</Grid>
   );
 }
+
+
 
 export default Testimonial;

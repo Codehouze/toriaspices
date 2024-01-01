@@ -3,5 +3,8 @@
   "editor.codeActionOnSave":{
     "source.fixAll":true,
     "source.organizeImports":true
-  }
+  },
+  "cSpell.words": [
+    "flexdirection"
+  ]
 }

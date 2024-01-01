@@ -133,7 +133,7 @@ const Footer = () => {
             <Grid item>
               <LocationOnIcon color="secondary" fontSize="large" />
             </Grid>
-            <Grid item>No 6 Lucky Nwagwu Street Kapwa, Lugbe Abuja</Grid>
+            <Grid item>No 6 Lucky Nwagwu Street Kapwa,<br/> Lugbe Abuja</Grid>
           </Grid>
         </Grid>
        
@@ -141,7 +141,7 @@ const Footer = () => {
         <Grid item xs={12} sm={12} lg={12} sx={{ p: 2, textAlign: "center" }}>
           <footer display="flex">
             Powered by
-            <a color="primary" href="#">
+            <a color="primary" href="#" style={{marginLeft:5}}>
               Codehouze
             </a>
             <ScrollToTopButton sx={{background:theme.palette.primary.main}}/>
