@@ -60,23 +60,23 @@ export function TestimonyBox({ image, Description }) {
   return (
     <Grid container display="flex" sx={{ p: 3, justifyContent: "space-around" }}>
   {[1, 2].map((item) => (
-    <Grid key={item} item lg={5} md={5} xs={10} sx={{m:2}}>
-      <Paper elevation={10} sx={{ display: "flex",flexDirection: { xs: "column", md: "row"}, backgroundColor: 'rgba(255, 255, 255, 0.2)',p:5,justifyContent: "space-evenly", width:"100%" }}>
+    <Grid key={item} item lg={5} md={5} xs={10} sx={{my:2}}>
+      <Paper elevation={10} sx={{ display: "flex",flexDirection: { xs: "column", md: "row"}, backgroundColor: 'rgba(255, 255, 255, 0.9)',p:3,justifyContent: "space-evenly", width:"100%" }}>
         <Image
           src={image}
           alt={`Testimonial ${item}`}
           width={500}
           height={150}
           objectFit="cover"
-          style={{ borderRadius:"100%", padding:"5px" }}
+          style={{ borderRadius:"50%" }}
         />
         <Typography
           variant="h1"
           fontWeight="bold"
           fontFamily="Playfair"
           component="p"
-          color="white"
-          sx={{ textAlign:"center", mx:3 }}
+          // color="white"
+          sx={{ textAlign:"center", marginRight:"13px"}}
         >
           {Description}
         </Typography>
