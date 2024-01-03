@@ -1,6 +1,6 @@
 import BlogCard from "./BlogCard";
 import Breadcrumb from "./BreadCrumb";
-import Drawer from "./Drawer";
+import NavDrawer from "./NavDrawer";
 import Footer from "./Footer";
 import Header from "./Header";
 import FeaturesCard from "./FeaturesCard";
@@ -18,4 +18,4 @@ import Testimonial from "./Testimonial";
 
 
 
-export{BlogCard,Breadcrumb,Drawer,Footer,Header,FeaturesCard,Jumbotron,Layout,NewsLetter,ProductList,ProductFilter,ScrollToTopButton,ShopNowBanner,Testimonial}
+export{BlogCard,Breadcrumb,NavDrawer,Footer,Header,FeaturesCard,Jumbotron,Layout,NewsLetter,ProductList,ProductFilter,ScrollToTopButton,ShopNowBanner,Testimonial}

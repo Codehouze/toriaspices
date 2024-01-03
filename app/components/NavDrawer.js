@@ -22,7 +22,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-function Drawer() {
+function NavDrawer() {
   const classes = useStyles();
   const [openDrawer, setOpenDrawer] = useState(false);
   return (
@@ -72,4 +72,4 @@ function Drawer() {
     </>
   );
 }
-export default Drawer;
+export default NavDrawer;
