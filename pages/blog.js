@@ -1,12 +1,9 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import {BlogCard} from "../app/components";
-import { Typography } from "@mui/material";
+import { Typography,Paper,InputAdornment,Input} from "@mui/material";
 import Box from "@mui/material/Box";
 import SearchIcon from '@mui/icons-material/Search';
-import Paper from '@mui/material/Paper';
-import Input from '@mui/material/Input';
-import InputAdornment from '@mui/material/InputAdornment';
 
 
 function blog() {

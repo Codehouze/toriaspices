@@ -17,7 +17,7 @@ function contact() {
     message: "",
   };
 
-  const formValidation = {};
+  // const formValidation = {};
 
   const handleSubmit = (values, helpers) => {
     console.log(values);
