@@ -22,7 +22,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-function DrawerComponent() {
+function Drawer() {
   const classes = useStyles();
   const [openDrawer, setOpenDrawer] = useState(false);
   return (

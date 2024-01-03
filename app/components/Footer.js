@@ -5,14 +5,10 @@ import {
   Email,
   Instagram,
   YouTube,
+  LinkedIn,LocationOnIcon
 } from "@mui/icons-material";
-import LinkedIn from "@mui/icons-material/LinkedIn";
-import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Link from "next/link";
-import {useTheme}  from '@mui/material'
-import { Button } from "@mui/material";
+import {useTheme,Button, Typography,Grid }  from '@mui/material'
 import Image from 'next/image'
 import ScrollToTopButton from './ScrollToTopButton';
 

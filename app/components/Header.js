@@ -10,42 +10,32 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import {useTheme}  from '@mui/material'
 import HomeIcon from '@mui/icons-material/Home';
-import InventoryIcon from '@mui/icons-material/Inventory';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
-import LoginIcon from '@mui/icons-material/Login';
 import EditNoteIcon from '@mui/icons-material/EditNote';
 import InfoIcon from '@mui/icons-material/Info';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ViewCompactIcon from '@mui/icons-material/ViewCompact';
 import Image from 'next/image'
-// import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-// import Grid from "@mui/material/Grid";
 
 import Link from "next/link";
 
 const pages = ["Home", "About", "Products", "Blog", "Contact"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
 
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
 
   const theme = useTheme();
   return (
@@ -117,8 +107,8 @@ function Header() {
               href="/"
               sx={{ mr: 2, display: { xs: "flex", md: "none" }, flexGrow: 1 }}
             >
-              <img
-                app="https://res.cloudinary.com/codehouseinc/image/upload/v1684271913/toriaspices/TORIA_Spices_logo11_vxsspd.png"
+              <Image
+                src="https://res.cloudinary.com/codehouseinc/image/upload/v1684271913/toriaspices/TORIA_Spices_logo11_vxsspd.png"
                 width="100"
                 height="80"
               />
