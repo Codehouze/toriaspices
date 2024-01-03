@@ -7,15 +7,8 @@ import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import Head from "next/head";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import FeaturesCard from "../Components/FeaturesCard";
-import ProductFilter from "../Components/ProductFilter";
-import ProductList from "../Components/ProductList";
 import { Paper, Typography } from "@mui/material";
-import NewsLetter from "../Components/NewsLetter";
-import ShopNowBanner from "../Components/ShopNowBanner";
-import Jumbotron from "../Components/Jumbotron";
-import Testimonial from "../Components/Testimonial";
-import BlogCard from "../Components/BlogCard";
+import {FeaturesCard,ProductFilter,ProductList,NewsLetter,ShopNowBanner,Jumbotron,Testimonial,BlogCard } from "../app/components";
 
 export default function Index() {
   const slider1 = "url(../public/image/slider2_1.jpeg)";
