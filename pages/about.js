@@ -14,7 +14,7 @@ function about() {
     color: "white",
   }}
 >
-  <Typography variant="h1" component="h2" sx={{pb:5}}>
+  <Typography variant="h1" component="h2">
     About Toria Spices
   </Typography>
 </Grid>
@@ -29,7 +29,7 @@ function about() {
       
       />
     </Grid>
-    <Grid item lg={6} md={6} xs={12} sx={{ px: 3, pb:4 }}>
+    <Grid item lg={7} md={6} xs={12} sx={{ px: 3, pb:4 }}>
     <Typography variant="h1" component="h2" color="secondary" sx={{mt:3,fontSize:36}}>Who We Are</Typography>
     <Typography mt={2} variant="h1" component="body1" mb={5}>
     Join us on a journey through the flavors at Toria Spices. Born from a love for bold tastes and a desire to break free from the ordinary, our story began in Abuja in 2018. In 2020, we officially launched our spice collection, crafting a unique experience that transforms every meal. Picture this – our pursuit of top-notch, fresh spices was like finding a culinary treasure in a vast landscape, making every dish a rare and delightful find.
