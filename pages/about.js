@@ -14,36 +14,42 @@ function about() {
     color: "white",
   }}
 >
-  <Typography variant="h1" component="h2">
+  <Typography variant="h1" component="h2" sx={{pb:5}}>
     About Toria Spices
   </Typography>
 </Grid>
   <Grid container>
-    <Grid item lg={4} md={6} xs={12} sx={{ mx:4, my:4 }}>
+    <Grid item lg={4} md={6} xs={12} sx={{mt:5, mr:3, m:{xs:3}}}>
       <Image
-      src="https://res.cloudinary.com/codehouseinc/image/upload/v1704315869/toriaspices/376728378_802567008539680_8541064942510008908_n.jpg_t5bgkk.jpg"
-      width="400%"
-      height="400"
+      src="https://res.cloudinary.com/codehouseinc/image/upload/v1704370350/toriaspices/website/IMG_6766_1_pwwchb.png"
+      width="600"
+      height="900"
       objectFit="cover"
 
       
       />
     </Grid>
-    <Grid item lg={6} md={6} xs={12} sx={{ px: 3 }}>
+    <Grid item lg={6} md={6} xs={12} sx={{ px: 3, pb:4 }}>
     <Typography variant="h1" component="h2" color="secondary" sx={{mt:3,fontSize:36}}>Who We Are</Typography>
-    <Typography mt={2} variant="h1" component="body1">
-    Embark on a Flavorful Journey with Toria Spices.
-    Step into the vibrant world of Toria Spices, where our culinary adventure was ignited by a blend of passion and a rebellion against mundane meals! Originating in the heart of Abuja, our spice odyssey commenced in 2018, reaching its pinnacle with an official launch in 2020. Picture this – the quest for exceptional, fresh spices was akin to searching for a unicorn in a vast culinary landscape; a rare and elusive treasure.
-   </Typography>
-   </Grid>
-   </Grid>
+    <Typography mt={2} variant="h1" component="body1" mb={5}>
+    Join us on a journey through the flavors at Toria Spices. Born from a love for bold tastes and a desire to break free from the ordinary, our story began in Abuja in 2018. In 2020, we officially launched our spice collection, crafting a unique experience that transforms every meal. Picture this – our pursuit of top-notch, fresh spices was like finding a culinary treasure in a vast landscape, making every dish a rare and delightful find.
 
-   <Typography variant="h1" component="h2" color="secondary" sx={{ mt:3, mx:3, fontSize:36, }}>
+   </Typography>
+   <Image
+      src="https://res.cloudinary.com/codehouseinc/image/upload/v1704310998/toriaspices/342843828_619383376405272_7667897796973873245_n.jpg_vvsvcz.jpg"
+      width="900"
+      height="600"
+      objectFit="cover"
+      mt={5}
+      mb={5}
+      sx={{p:5, m:50}}
+      
+      />
+   <Typography variant="h1" component="h2" color="secondary" sx={{ mt:3, fontSize:36, }}>
   Our Mission
 </Typography>
-   <Grid container>
-   <Grid item lg={6} md={6} xs={12} sx={{p:3, order: { xs: 2, md: 1 } }}>
-  <Typography mt={2} variant="h1" component="body1">
+   {/* <Grid item lg={6} md={6} xs={12} sx={{p:3, order: { xs: 2, md: 1 } }}> */}
+  <Typography mt={2} variant="h1" component="body1" mb={5} pb={5}>
     To make healthy living as exciting as a rollercoaster ride (minus the calories). Who says being fit can't be flavorful and fabulous? At Toria Spices, we're not just a spice brand;
      we're spice matchmakers, bringing families and individuals together with our chemical-free spice blends, real flavors, and herbs that pack a punch of nutrients. Because why settle for a dull meal when you can have a taste explosion? 
     Don't just take our word for it – our clients are raving about how Toria Spices turned their meals from "meh" to "OMG!" We've got the convenience game on lock, delivering our goodies straight to your doorstep. Currently, 
@@ -53,18 +59,11 @@ function about() {
     Join us, spice up your life, and let's make healthy living the hottest trend since sliced bread (with a sprinkle of our secret spice blend, of course).
    </Typography>
    </Grid>
-   <Grid item lg={4} md={6} xs={12} sx={{mx:4, order: { xs: 1, md: 2 } }}>
-    <Image
-      src="https://res.cloudinary.com/codehouseinc/image/upload/v1704310998/toriaspices/342843828_619383376405272_7667897796973873245_n.jpg_vvsvcz.jpg"
-      width="600"
-      height="400"
-      objectFit="cover"
-      
-      />
     </Grid>
-    
 
-   </Grid>
+  
+   
+
 
   </>
 }
