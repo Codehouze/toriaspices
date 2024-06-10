@@ -4,26 +4,14 @@ import {BlogCard} from "../app/components";
 import { Typography,Paper,InputAdornment,Input} from "@mui/material";
 import Box from "@mui/material/Box";
 import SearchIcon from '@mui/icons-material/Search';
+import Banner from "../app/components/Banner";
 
 
 function blog() {
   return (
     <>
-   <Grid
-  container
-  justifyContent="center"
-  sx={{
-    p: 5,
-    backgroundImage: "url('https://res.cloudinary.com/codehouseinc/image/upload/v1690241424/toriaspices/slider1_1_d9cd5n.webp')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    color: "white",
-  }}
->
-  <Typography variant="h1" component="h2">
-    About Toria Spices
-  </Typography>
-</Grid>
+    <Banner title="BLOG" />
+  
       <Grid container display="flex">
         <Grid item lg={4} md={4}>
           <Box sx={{p:3}}>

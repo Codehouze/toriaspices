@@ -6,8 +6,7 @@ import TextareaAutosize from "@mui/material/TextareaAutosize";
 import React from "react";
 import Link from "next/link";
 import { Formik } from "formik";
-// import Image from "next/image";
-// import Breadcrumb from "../../../app/components/BreadCrumb";
+import Banner from "../app/components/Banner";
 
 function contact() {
   const initialValue = {
@@ -29,6 +28,7 @@ function contact() {
 
   return (
     <>
+    <Banner title="Contact Us" />
       <Grid container sx={{ px: 3, mt: 5 }}>
         <Grid item xs={12} sm={6} lg={6} sx={{ p: 10 }}>
           <Typography variant="h3" component="h3">
@@ -66,7 +66,7 @@ function contact() {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item direction="column" xs={12} sm={6} lg={6} className="contact">
+        <Grid item xs={12} sm={6} lg={6} className="contact">
           <Formik initialValues={initialValue} onSubmit={handleSubmit}>
             {(props) => (
               <form onSubmit={props.handleSubmit}>
