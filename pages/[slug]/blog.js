@@ -1,7 +1,6 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import { BlogCard } from "../../app/components";
-import { Typography } from "@mui/material";
 import Banner from "../../app/components/Banner"
 
 function blog() {
