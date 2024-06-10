@@ -1,7 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import Banner from "../app/components/Banner";
-import { RoundedCorner } from "@mui/icons-material";
 
 function about() {
   return (
@@ -15,6 +14,7 @@ function about() {
             width="600"
             height="900"
             objectFit="cover"
+            alt="about toria spices"
           />
         </Grid>
         <Grid item lg={7} md={6} xs={12} sx={{ px: 3, pb: 4 }}>
