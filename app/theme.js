@@ -7,12 +7,18 @@ const theme = createTheme({
     // mode: "dark",
     primary: {
       main: "#FF6600",
-      contrastText: '#FFFFFF'
-
+      contrastText: '#FFFFFF',
+      
     },
     secondary: {
       main: "#90C53B",
     },
+    socials:{
+      facebook:"#1877F2",
+      instagram:"#E1306C",
+      youtube:"#FF0000"
+
+    }
   },
   typography: {
     fontFamily: [

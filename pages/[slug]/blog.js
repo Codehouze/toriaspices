@@ -30,7 +30,6 @@ function blog() {
           </Grid>
         </Grid>
       </Grid>
-      ;
     </>
   );
 }
