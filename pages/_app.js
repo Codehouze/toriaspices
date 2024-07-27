@@ -23,11 +23,11 @@ export default function MyApp(props) {
         <Head>
           <meta name="viewport" content="initial-scale=1, width=device-width" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-          <link
+          {/* FIXME: move this style some where else*/}
+          {/* <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin /> <link
             href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Playfair+Display:wght@700&display=swap"
             rel="stylesheet"
-          ></link>
+          ></link> */}
         </Head>
 
         <CssBaseline />

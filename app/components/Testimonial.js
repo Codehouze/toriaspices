@@ -11,7 +11,7 @@ export function TestimonyBox({ images, Descriptions }) {
     <Grid container display="flex" sx={{ p: 3, justifyContent: "space-evenly" }}>
       {Descriptions.map((Description, index) => (
         <Grid key={index} item lg={5} md={5} xs={10} sx={{ my: 2 }}>
-          <Paper elevation={150} sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, backgroundColor: 'rgba(255, 255, 255, 0.9)', p:2, justifyContent: "space-evenly", width: "100%" }}>
+          <Paper elevation={20} sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, backgroundColor: 'rgba(255, 255, 255, 0.9)', p:2, justifyContent: "space-evenly", width: "100%" }}>
             <Image
               src={images[index]} 
               alt={`Testimonial ${index + 1}`}
@@ -82,7 +82,7 @@ function Testimonial() {
         >
           Happy Clients
         </Typography>
-        <Carousel autoPlay interval="5000" transitionTime="5000" showThumbs={true}>
+        <Carousel autoPlay interval="5000" transitionTime="5000" showThumbs={false}>
           <TestimonyBox images={imageArray1} Descriptions={descriptionsArray1} />
           <TestimonyBox images={imageArray2} Descriptions={descriptionsArray2} />
         </Carousel>
