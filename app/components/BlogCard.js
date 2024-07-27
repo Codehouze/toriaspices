@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
 
-export default function BlogCard() {
+export default function BlogCard({categories}) {
   return (
     <Card sx={{ maxWidth: 345, mx:2, my:3}}>
       <CardMedia
@@ -17,6 +17,7 @@ export default function BlogCard() {
         image="https://images.unsplash.com/photo-1606914469725-e398d2f1d7ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
       />
       <CardContent>
+        <p className="card-badge">{categories}</p>
         <Typography gutterBottom variant="h5" component="div">
           Where Can I Get Some?
         </Typography>
@@ -27,6 +28,7 @@ export default function BlogCard() {
           various potential health benefits due to its active compound called
           curcumin. Some of the advantages of turmeric include:
         </Typography>
+        <p>timestamp of post</p>
       </CardContent>
       <CardActions>
    

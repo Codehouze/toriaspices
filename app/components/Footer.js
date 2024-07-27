@@ -7,8 +7,7 @@ import {
   YouTube,
 } from "@mui/icons-material";
 import LinkedIn from "@mui/icons-material/LinkedIn";
-import Grid from "@mui/material/Grid";
-
+import Grid from "@mui/material/Grid"; 
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Link from "next/link";
 import {useTheme,Button, Typography }  from '@mui/material'

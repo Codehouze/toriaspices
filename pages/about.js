@@ -26,7 +26,7 @@ const About = () => {
             variant="h1"
             component="h2"
             color="primary"
-            sx={{ mt: 3, fontSize: 36, mb: 3 }}
+            sx={{ mt: 3, fontSize: 36, mb: 3, textAlign: "center", mx: "auto" }}
           >
             Who We Are
           </Typography>
@@ -36,7 +36,6 @@ const About = () => {
             pb={15}
             mb={5}
             sx={{ fontSize: 18, lineHeight: "1.5" }}
-
           >
             Join us on a journey through the flavors at Toria Spices. Born from
             a love for bold tastes and a desire to break free from the ordinary,
@@ -48,52 +47,54 @@ const About = () => {
           </Typography>
           <Image
             src={Image2}
-            width="700"
+            width="900"
             height="420"
             objectFit="cover"
             alt="about toria spices"
-            sx={{ pt: 5 }}
+            sx={{ p: 5, mx: "auto",mt: 5, mb: 3 }}
           />
+          <Typography
+            variant="h1"
+            component="h2"
+            color="primary"
+            sx={{ mt: 3, fontSize: 36, textAlign: "center", mx: "auto" }}
+          >
+            Our Mission
+          </Typography>
+          <Typography
+            mt={2}
+            variant="h1"
+            component="body1"
+            mb={5}
+            pb={5}
+            style={{
+              fontSize: 20,
+              lineHeight: "1.5",
+              fontFamily: "Roboto mono",
+            }}
+          >
+            At Toria Spices, we believe healthy living should be as thrilling as
+            a rollercoaster ride (minus the calories). Who says being fit can't
+            be flavorful and fabulous? We're not just a spice brand; we're spice
+            matchmakers, bringing families and individuals together with our
+            chemical-free spice blends, real flavors, and herbs that pack a
+            punch of nutrients. Why settle for a dull meal when you can have a
+            taste explosion? Our clients rave about how Toria Spices has
+            transformed their meals from "meh" to "OMG!" Convenience is our game
+            – we deliver our goodies straight to your doorstep. With four major
+            spice blends and a whopping 12 herbs and spices, we make your taste
+            buds dance. Our products don't just make your meals memorable; they
+            turn every dish into a nutrient-packed party for your body. We
+            source our spices with the utmost care, ensuring each product is a
+            symphony of freshness and goodness. Quality is our love language.
+            What started as a quest for healthier living turned into Toria
+            Spices, a flavor-packed revolution. Join us, spice up your life, and
+            let's make healthy living the hottest trend since sliced bread (with
+            a sprinkle of our secret spice blend, of course).
+          </Typography>
         </Grid>
       </Grid>
-      <Grid container sx={{ px: 3, pb: 4 }}>
-        <Typography
-          variant="h1"
-          component="h2"
-          color="primary"
-          sx={{ mt: 3, fontSize: 36, textAlign: "center", mx: "auto" }}
-        >
-          Our Mission
-        </Typography>
-        {/* <Grid item lg={6} md={6} xs={12} sx={{p:3, order: { xs: 2, md: 1 } }}> */}
-        <Typography
-          mt={2}
-          variant="h1"
-          component="body1"
-          mb={5}
-          pb={5}
-          style={{ fontSize: 20, lineHeight: "1.5", fontFamily: "Roboto mono" }}
-        >
-          At Toria Spices, we believe healthy living should be as thrilling as a
-          rollercoaster ride (minus the calories). Who says being fit can't be
-          flavorful and fabulous? We're not just a spice brand; we're spice
-          matchmakers, bringing families and individuals together with our
-          chemical-free spice blends, real flavors, and herbs that pack a punch
-          of nutrients. Why settle for a dull meal when you can have a taste
-          explosion? Our clients rave about how Toria Spices has transformed
-          their meals from "meh" to "OMG!" Convenience is our game – we deliver
-          our goodies straight to your doorstep. With four major spice blends
-          and a whopping 12 herbs and spices, we make your taste buds dance. Our
-          products don't just make your meals memorable; they turn every dish
-          into a nutrient-packed party for your body. We source our spices with
-          the utmost care, ensuring each product is a symphony of freshness and
-          goodness. Quality is our love language. What started as a quest for
-          healthier living turned into Toria Spices, a flavor-packed revolution.
-          Join us, spice up your life, and let's make healthy living the hottest
-          trend since sliced bread (with a sprinkle of our secret spice blend,
-          of course).
-        </Typography>
-      </Grid>
+      <Grid container sx={{ px: 3, pb: 4 }}></Grid>
     </>
   );
 };

@@ -8,7 +8,16 @@ import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import Head from "next/head";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Paper, Typography } from "@mui/material";
-import {FeaturesCard,ProductFilter,ProductList,NewsLetter,ShopNowBanner,Jumbotron,Testimonial,BlogCard } from "../app/components";
+import {
+  FeaturesCard,
+  ProductFilter,
+  ProductList,
+  NewsLetter,
+  ShopNowBanner,
+  Jumbotron,
+  Testimonial,
+  BlogCard,
+} from "../app/components";
 
 export default function Index() {
   const slider1 = "url(../public/image/slider2_1.jpeg)";
@@ -42,7 +51,7 @@ export default function Index() {
           href="https://res.cloudinary.com/codehouseinc/image/upload/v1684271913/toriaspices/TORIA_Spices_logo11_vxsspd.png"
         />
       </Head>
-      <Grid container >
+      <Grid container>
         <Box
           sx={{
             display: "flex",
@@ -74,7 +83,7 @@ export default function Index() {
         >
           <Grid item xs={6} lg={2} md={6} sm={6}>
             <FeaturesCard
-            display="flex"
+              display="flex"
               title={featuresCardTitle1}
               description={featuresDescription1}
               icon={
@@ -132,14 +141,23 @@ export default function Index() {
           alignItems="center"
           sx={{ mx: "auto", fontSize: 20, color: "#90C53B" }}
         >
-          <Typography variant="h1" component="h1" pb={5} fontWeight="bold" fontSize="40px">
+          <Typography
+            variant="h1"
+            component="h1"
+            pb={5}
+            fontWeight="bold"
+            fontSize="40px"
+          >
             Our Products
           </Typography>
         </Grid>
 
         <ProductFilter />
         <ProductList />
-
+        {/* News letter */}
+        <Grid container spacing={1} p={4} mt={5}>
+          <NewsLetter />
+        </Grid>
         {/* CTA with two cards */}
         <Grid
           container
@@ -168,18 +186,25 @@ export default function Index() {
           </Grid>
         </Grid>
 
-        {/* News letter */}
-        <Grid container spacing={1} p={4}>
-          <NewsLetter />
-        </Grid>
-
         {/* Testimonial */}
-        <Grid container lg={12} md={12} xs={12} spacing={1} sx={{ mx: "auto", py: 4 }}>
+        <Grid
+          container
+          lg={12}
+          md={12}
+          xs={12}
+          spacing={1}
+          sx={{ mx: "auto", py: 4 }}
+        >
           <Testimonial />
         </Grid>
 
         <Grid alignItems="center" sx={{ mx: "auto", py: 3, color: "#90C53B" }}>
-          <Typography variant="h1" component="h1" fontWeight="bold" fontSize="40px">
+          <Typography
+            variant="h1"
+            component="h1"
+            fontWeight="bold"
+            fontSize="40px"
+          >
             Latest Blog
           </Typography>
         </Grid>
@@ -190,18 +215,17 @@ export default function Index() {
           py={4}
           px={5}
           // spacing={1}
-          justifyItems='space-between'
-
+          justifyItems="space-between"
         >
           {/* latest blog */}
-          <Grid item lg={4} md={4} xs={12} >
-            <BlogCard />
+          <Grid item lg={4} md={4} xs={12}>
+            <BlogCard categories="Spices" />
           </Grid>
           <Grid item lg={4} md={4} xs={12}>
-            <BlogCard />
+            <BlogCard categories="Cooking" />
           </Grid>
           <Grid item lg={4} md={4} xs={12}>
-            <BlogCard />
+            <BlogCard categories="Food" />
           </Grid>
         </Grid>
 
