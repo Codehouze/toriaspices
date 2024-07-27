@@ -121,3 +121,14 @@ footer a {
   background-color: green;
   color: #fff;
 }
+
+.card-badge{
+  background-color:#90c53b;
+  display: inline-block;
+  color:white;
+  padding: 4px 8px; /* Optional: Adjust the padding to your preference */
+  border-radius: 4px; 
+}
+
+
+/* SHOP NOW BANNER */

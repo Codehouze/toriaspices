@@ -10,7 +10,7 @@ const NotFound = () => {
       <h2>That page cannot be found! </h2>
       <Image
         alt="Page Not Found"
-        app="https://res.cloudinary.com/dfsmwu4av/image/upload/v1653490683/404_uzze8l.jpg"
+        src="https://res.cloudinary.com/dfsmwu4av/image/upload/v1653490683/404_uzze8l.jpg"
         height="40%"
         width="40%"
       />
