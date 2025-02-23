@@ -17,7 +17,7 @@ import {
   Jumbotron,
   Testimonial,
   BlogCard,
-} from "../app/components";
+} from "../components";
 
 export default function Index() {
   const slider1 = "url(../public/image/slider2_1.jpeg)";
@@ -73,12 +73,11 @@ export default function Index() {
         {/* four cards with special attractive point  */}
         <Grid
           container
-          // display="flex"
           spacing={2}
           justifyContent="center"
           alignItems="center"
           sx={{
-            py: { xs: 2, md: 3 },
+            p: { xs: 2, md: 3 },
           }}
         >
           <Grid item xs={6} lg={2} md={6} sm={6}>
@@ -189,13 +188,13 @@ export default function Index() {
         {/* Testimonial */}
         <Grid
           container
-          lg={12}
-          md={12}
-          xs={12}
           spacing={1}
+          justifyContent={"center"}
           sx={{ mx: "auto", py: 4 }}
         >
-          <Testimonial />
+          <Grid item xs={12} md={12} lg={12}>
+            <Testimonial />
+          </Grid>
         </Grid>
 
         <Grid alignItems="center" sx={{ mx: "auto", py: 3, color: "#90C53B" }}>

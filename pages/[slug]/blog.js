@@ -1,7 +1,7 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import { BlogCard } from "../../app/components";
-import Banner from "../../app/components/Banner"
+import { BlogCard } from "../../components";
+import Banner from "../../components/Banner";
 
 function blog() {
   return (

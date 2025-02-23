@@ -1,6 +1,7 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
 import Image from "next/image";
-import Banner from "../app/components/Banner";
+import Banner from "../components/Banner";
+
 const Image1 =
   "https://res.cloudinary.com/codehouseinc/image/upload/v1704370350/toriaspices/website/IMG_6766_1_pwwchb.png";
 const Image2 =
@@ -11,31 +12,40 @@ const About = () => {
     <>
       <Banner title="About Toria Spices" />
 
-      <Grid container>
-        <Grid item lg={4} md={6} xs={12} sx={{ mt: 5, mr: 3, m: { xs: 3 } }}>
-          <Image
-            src={Image1}
-            width="600"
-            height="900"
-            objectFit="cover"
-            alt="about toria spices"
-          />
+      <Grid container spacing={4} sx={{ px: { xs: 2, md: 5 }, py: 4 }}>
+        {/* Left Section - Image */}
+        <Grid
+          item
+          lg={4}
+          md={5}
+          xs={12}
+          sx={{ display: "flex", justifyContent: "center" }}
+        >
+          <Box sx={{ width: "100%", maxWidth: 600 }}>
+            <Image
+              src={Image1}
+              layout="responsive"
+              width={600}
+              height={900}
+              objectFit="cover"
+              alt="about toria spices"
+              style={{ borderRadius: "10px" }}
+            />
+          </Box>
         </Grid>
-        <Grid item lg={7} md={6} xs={12} sx={{ px: 3, pb: 4 }}>
+
+        {/* Right Section - Text */}
+        <Grid item lg={7} md={7} xs={12}>
           <Typography
-            variant="h1"
-            component="h2"
+            variant="h4"
             color="primary"
-            sx={{ mt: 3, fontSize: 36, mb: 3, textAlign: "center", mx: "auto" }}
+            sx={{ textAlign: "center", mb: 3 }}
           >
             Who We Are
           </Typography>
           <Typography
-            variant="h1"
-            component="body1"
-            pb={15}
-            mb={5}
-            sx={{ fontSize: 18, lineHeight: "1.5" }}
+            variant="body1"
+            sx={{ fontSize: 18, lineHeight: 1.6, textAlign: "justify" }}
           >
             Join us on a journey through the flavors at Toria Spices. Born from
             a love for bold tastes and a desire to break free from the ordinary,
@@ -45,32 +55,34 @@ const About = () => {
             was like finding a culinary treasure in a vast landscape, making
             every dish a rare and delightful find.
           </Typography>
-          <Image
-            src={Image2}
-            width="900"
-            height="420"
-            objectFit="cover"
-            alt="about toria spices"
-            sx={{ p: 5, mx: "auto",mt: 5, mb: 3 }}
-          />
+
+          {/* Image inside text area */}
+          <Box sx={{ mt: 5, textAlign: "center" }}>
+            <Image
+              src={Image2}
+              layout="responsive"
+              width={900}
+              height={420}
+              objectFit="cover"
+              alt="about toria spices"
+              style={{ borderRadius: "10px" }}
+            />
+          </Box>
+
           <Typography
-            variant="h1"
-            component="h2"
+            variant="h4"
             color="primary"
-            sx={{ mt: 3, fontSize: 36, textAlign: "center", mx: "auto" }}
+            sx={{ textAlign: "center", mt: 5, mb: 3 }}
           >
             Our Mission
           </Typography>
           <Typography
-            mt={2}
-            variant="h1"
-            component="body1"
-            mb={5}
-            pb={5}
-            style={{
-              fontSize: 20,
-              lineHeight: "1.5",
-              fontFamily: "Roboto mono",
+            variant="body1"
+            sx={{
+              fontSize: 18,
+              lineHeight: 1.6,
+              fontFamily: "Roboto Mono",
+              textAlign: "justify",
             }}
           >
             At Toria Spices, we believe healthy living should be as thrilling as

@@ -1,6 +1,6 @@
 import React from "react";
-import { ProductList } from "../app/components";
-import Banner from "../app/components/Banner";
+import { ProductList } from "../components";
+import Banner from "../components/Banner";
 
 function products() {
   return (

@@ -3,7 +3,6 @@ import React from "react";
 import Box from "@mui/material/Box";
 import { Typography, styled } from "@mui/material";
 
-
 const IconContainer = styled(Box)({
   display: "flex",
   justifyContent: "center",
@@ -36,7 +35,7 @@ function FeaturesCard({ title, description, icon }) {
         display="flex"
         justifyContent="center"
         alignItems="center"
-        borderRadius="50%"
+        borderRadius="100%"
         bgcolor="#FFFFFF"
         width={64}
         height={64}
@@ -45,17 +44,11 @@ function FeaturesCard({ title, description, icon }) {
         <IconContainer> {icon}</IconContainer>
       </Box>
 
-      <Typography
-        variant="h2"
-        fontWeight="bold"
-        pt={2}
-        fontSize={18}
-        noWrap={true}
-      >
+      <Typography variant="h2" fontWeight="bold" fontSize={15} noWrap={true}>
         {title}
       </Typography>
 
-      <Typography variant="body1" pt={2} px="auto" fontSize={14} noWrap={true}>
+      <Typography variant="body1" pt={2} px="auto" fontSize={10} noWrap={true}>
         {description}
       </Typography>
     </Box>

@@ -7,7 +7,7 @@ import { ThemeProvider, CssBaseline } from "@mui/material";
 import theme from "../app/theme";
 import "../styles/globals.css";
 import createEmotionCache from "../app/createEmotionCache";
-import Layout from "../app/components/layout";
+import Layout from "../components/layout";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
