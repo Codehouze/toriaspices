@@ -1,0 +1,10 @@
+{
+    "build": {
+      "env": {
+        "NODE_ENV": "production",
+        "NODE_OPTIONS": "--max_old_space_size=4096",
+        "CXX": "g++-10",
+        "CC": "gcc-10"
+      }
+    }
+  }
