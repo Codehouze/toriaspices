@@ -40,7 +40,6 @@
     "passport": "^0.6.0",
     "passport-facebook": "^3.0.0",
     "passport-google-oauth2": "^0.2.0",
-    "re2": "^1.21.4",
     "react": "18.1.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "18.1.0",
@@ -48,6 +47,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-swipeable": "^7.0.0",
     "styled-components": "^5.3.5",
+    "xregexp": "^5.1.2",
     "zustand": "^4.4.7"
   },
   "devDependencies": {
