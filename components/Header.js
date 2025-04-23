@@ -6,8 +6,10 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
+import Drawer from "@mui/material/Drawer";
 import { useTheme } from '@mui/material/styles';
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import HomeIcon from '@mui/icons-material/Home';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import EditNoteIcon from '@mui/icons-material/EditNote';
@@ -16,20 +18,84 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ViewCompactIcon from '@mui/icons-material/ViewCompact';
 import Image from 'next/image';
 import Link from "next/link";
+import { useRouter } from 'next/router';
 
-const pages = ["Home", "About", "Products", "Blog", "Contact"];
+// Navigation configuration
+const navigationItems = [
+  { label: "Home", path: "/", icon: HomeIcon },
+  { label: "About", path: "/about", icon: InfoIcon },
+  { label: "Products", path: "/products", icon: ViewCompactIcon },
+  { label: "Blog", path: "/blog", icon: EditNoteIcon },
+  { label: "Contact", path: "/contact", icon: ContactPageIcon },
+];
+
+// Reusable styles
+const buttonStyles = (theme) => ({
+  display: "flex",
+  alignItems: "center",
+  px: 2,
+  my: 1,
+  mx: 1,
+  color: theme.palette.primary.contrastText,
+  background: theme.palette.secondary.main,
+  borderRadius: 10,
+  '&:hover': {
+    background: theme.palette.primary.contrastText,
+    color: theme.palette.primary.main
+  }
+});
+
+const mobileButtonStyles = (theme) => ({
+  display: "block",
+  width: "100%",
+  textAlign: "left",
+  p: 2,
+  color: theme.palette.primary.main,
+  borderBottom: `1px solid ${theme.palette.divider}`,
+  '&:hover': {
+    backgroundColor: theme.palette.action.hover
+  }
+});
 
 function Header() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [mobileOpen, setMobileOpen] = React.useState(false);
   const theme = useTheme();
+  const router = useRouter();
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
   };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+  const isActive = (path) => {
+    return router.pathname === path;
   };
+
+  const drawer = (
+    <Box sx={{ width: 250, p: 2 }} role="presentation">
+      <Box sx={{ display: 'flex', justifyContent: 'flex-end', mb: 2 }}>
+        <IconButton
+          onClick={handleDrawerToggle}
+          aria-label="close menu"
+          color="primary"
+        >
+          <CloseIcon />
+        </IconButton>
+      </Box>
+      {navigationItems.map((item) => (
+        <Link key={item.label} href={item.path} passHref>
+          <Button
+            onClick={handleDrawerToggle}
+            sx={{
+              ...mobileButtonStyles(theme),
+              backgroundColor: isActive(item.path) ? theme.palette.action.selected : 'transparent'
+            }}
+          >
+            {item.label}
+          </Button>
+        </Link>
+      ))}
+    </Box>
+  );
 
   return (
     <>
@@ -48,7 +114,8 @@ function Header() {
                 src="https://res.cloudinary.com/codehouseinc/image/upload/v1684271913/toriaspices/TORIA_Spices_logo11_vxsspd.png"
                 width={100}
                 height={80}
-                alt="ToriaSpices_logo"
+                alt="Toria Spices Logo"
+                priority
               />
             </Typography>
 
@@ -59,7 +126,7 @@ function Header() {
                 aria-label="open menu"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
-                onClick={handleOpenNavMenu}
+                onClick={handleDrawerToggle}
                 color="primary"
               >
                 <MenuIcon />
@@ -68,139 +135,56 @@ function Header() {
 
             {/* Desktop Menu */}
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, justifyContent: 'flex-end' }}>
-              {pages.map((page, index) => {
-                const link = page.toLowerCase().replace(" ", "-");
-                const href = link === "home" ? "/" : `/${link}`;
-                let Icon;
-                
-                switch (page) {
-                  case "Home":
-                    Icon = HomeIcon;
-                    break;
-                  case "About":
-                    Icon = InfoIcon;
-                    break;
-                  case "Products":
-                    Icon = ViewCompactIcon;
-                    break;
-                  case "Blog":
-                    Icon = EditNoteIcon;
-                    break;
-                  case "Contact":
-                    Icon = ContactPageIcon;
-                    break;
-                  default:
-                    Icon = null;
-                }
-
+              {navigationItems.map((item) => {
+                const Icon = item.icon;
                 return (
-                  <Link key={page} href={href} passHref>
+                  <Link key={item.label} href={item.path} passHref>
                     <Button
-                      onClick={handleCloseNavMenu}
                       sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        px: 2,
-                        my: 1,
-                        mx: 1,
-                        color: theme.palette.primary.contrastText,
-                        background: theme.palette.secondary.main,
-                        borderRadius: 10,
-                        '&:hover': {
-                          background: theme.palette.primary.contrastText,
-                          color: theme.palette.primary.main
-                        }
+                        ...buttonStyles(theme),
+                        backgroundColor: isActive(item.path) 
+                          ? theme.palette.primary.contrastText 
+                          : theme.palette.secondary.main,
+                        color: isActive(item.path)
+                          ? theme.palette.primary.main
+                          : theme.palette.primary.contrastText
                       }}
                     >
-                      {Icon && <Icon sx={{ height: "1em", width: "1em", mr: 1 }} />}
-                      {page}
+                      <Icon sx={{ height: "1em", width: "1em", mr: 1 }} />
+                      {item.label}
                     </Button>
                   </Link>
                 );
               })}
-              <Link href="/cart" passHref>
+              {/* <Link href="/cart" passHref>
                 <Button
-                  onClick={handleCloseNavMenu}
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    px: 2,
-                    my: 1,
-                    mx: 1,
-                    color: theme.palette.primary.contrastText,
-                    background: theme.palette.secondary.main,
-                    borderRadius: 10,
-                    '&:hover': {
-                      background: theme.palette.primary.contrastText,
-                      color: theme.palette.primary.main
-                    }
-                  }}
+                  sx={buttonStyles(theme)}
                 >
                   <ShoppingCartIcon sx={{ height: "1em", width: "1em", mr: 1 }} />
-                  Sign In
+                  Cart
                 </Button>
-              </Link>
+              </Link> */}
             </Box>
           </Toolbar>
         </Container>
       </AppBar>
 
       {/* Mobile Menu Drawer */}
-      <Box
-        id="mobile-menu"
+      <Drawer
+        variant="temporary"
+        anchor="left"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        ModalProps={{
+          keepMounted: true, // Better open performance on mobile
+        }}
         sx={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "50%",
-          height: "100%",
-          backgroundColor: "white",
-          boxShadow: "2px 0 5px rgba(0, 0, 0, 0.3)",
-          transform: anchorElNav ? "translateX(0)" : "translateX(-100%)",
-          transition: "transform 0.3s ease",
-          zIndex: 1200, // Ensure it's above the AppBar
-          overflow: "auto"
+          display: { xs: 'block', md: 'none' },
+          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 250 },
         }}
       >
-        <Box sx={{ p: 2 }}>
-          <IconButton
-            size="large"
-            aria-label="close menu"
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
-            onClick={handleCloseNavMenu}
-            color="primary"
-            sx={{ mb: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          {pages.map((page) => {
-            const link = page.toLowerCase().replace(" ", "-");
-            const href = link === "home" ? "/" : `/${link}`;
-
-            return (
-              <Link key={page} href={href} passHref>
-                <Button
-                  onClick={handleCloseNavMenu}
-                  sx={{
-                    display: "block",
-                    width: "100%",
-                    textAlign: "left",
-                    p: 2,
-                    color: theme.palette.primary.main,
-                    borderBottom: `1px solid ${theme.palette.divider}`,
-                    '&:hover': {
-                      backgroundColor: theme.palette.action.hover
-                    }
-                  }}
-                >
-                  {page}
-                </Button>
-              </Link>
-            );
-          })}
-        </Box>
-      </Box>
+        {drawer}
+      </Drawer>
     </>
   );
 }

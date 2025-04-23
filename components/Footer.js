@@ -7,100 +7,189 @@ import {
   YouTube,
 } from "@mui/icons-material";
 import LinkedIn from "@mui/icons-material/LinkedIn";
-import Grid from "@mui/material/Grid"; 
+import Grid from "@mui/material/Grid";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Link from "next/link";
-import {useTheme,Button, Typography }  from '@mui/material'
-import Image from 'next/image'
-import ScrollToTopButton from './ScrollToTopButton';
+import { useTheme, Button, Typography } from "@mui/material";
+import Image from "next/image";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 const Footer = () => {
-
   const theme = useTheme();
   return (
     <>
       <Grid container backgroundColor="Black" color="white" px={5}>
-      <Grid item xs={12} sm={4} lg={4} sx={{ py: 2 }} >
-      <Grid item>
-     <Image
-      src="https://res.cloudinary.com/codehouseinc/image/upload/v1684271913/toriaspices/TORIA_Spices_logo11_vxsspd.png"
-      width="100"
-      height="80"
-      alt="Logo"
-    />
-  </Grid>
-  <Grid item>
-    <Typography variant="h5" component="div" sx={{ py: 2, color: theme.palette.primary.contrastText, borderColor: theme.palette.primary.main }}>
-      We Provide Organic Spices For Healthy Living.
-    </Typography>
-  </Grid>
-          
+        <Grid item xs={12} sm={4} lg={4} sx={{ py: 2 }}>
+          <Grid item>
+            <Image
+              src="https://res.cloudinary.com/codehouseinc/image/upload/v1684271913/toriaspices/TORIA_Spices_logo11_vxsspd.png"
+              width="100"
+              height="80"
+              alt="Logo"
+            />
+          </Grid>
+          <Grid item>
+            <Typography
+              variant="h5"
+              component="div"
+              sx={{
+                py: 2,
+                color: theme.palette.primary.contrastText,
+                borderColor: theme.palette.primary.main,
+              }}
+            >
+              We Provide Organic Spices For Healthy Living.
+            </Typography>
+          </Grid>
+
           <Grid container spacing={2}>
             <Grid item>
               <a href="https://web.facebook.com/toriaspices">
-                <Facebook sx={{color:theme.palette.secondary.main,'&:hover': {
-                    color: theme.palette.primary.main } }} fontSize="large" />
+                <Facebook
+                  sx={{
+                    color: theme.palette.secondary.main,
+                    "&:hover": {
+                      color: theme.palette.primary.main,
+                    },
+                  }}
+                  fontSize="large"
+                />
               </a>
             </Grid>
             <Grid item>
               <a href="https://www.youtube.com/channel/UCg4RXb5wsxPrMSDOEmQuwUA">
-                <YouTube sx={{color:theme.palette.secondary.main,'&:hover': {
-                    color: theme.palette.primary.main } }} fontSize="large" />
+                <YouTube
+                  sx={{
+                    color: theme.palette.secondary.main,
+                    "&:hover": {
+                      color: theme.palette.primary.main,
+                    },
+                  }}
+                  fontSize="large"
+                />
               </a>
             </Grid>
             <Grid item>
               <a href="#">
-                <Twitter sx={{color:theme.palette.secondary.main,'&:hover': {
-                    color: theme.palette.primary.main } }}fontSize="large" />
+                <Twitter
+                  sx={{
+                    color: theme.palette.secondary.main,
+                    "&:hover": {
+                      color: theme.palette.primary.main,
+                    },
+                  }}
+                  fontSize="large"
+                />
               </a>
             </Grid>
             <Grid item>
               <a href="https://www.instagram.com/toriaspices/">
-                <Instagram sx={{color:theme.palette.secondary.main,'&:hover': {
-                    color: theme.palette.primary.main } }} fontSize="large" />
+                <Instagram
+                  sx={{
+                    color: theme.palette.secondary.main,
+                    "&:hover": {
+                      color: theme.palette.primary.main,
+                    },
+                  }}
+                  fontSize="large"
+                />
               </a>
             </Grid>
             <Grid item>
-              <a href="#">
-                <LinkedIn sx={{color:theme.palette.secondary.main,'&:hover': {
-                    color: theme.palette.primary.main } }} fontSize="large" />
+              <a href="https://www.linkedin.com/company/toria-spices/posts/?feedView=all">
+                <LinkedIn
+                  sx={{
+                    color: theme.palette.secondary.main,
+                    "&:hover": {
+                      color: theme.palette.primary.main,
+                    },
+                  }}
+                  fontSize="large"
+                />
               </a>
             </Grid>
           </Grid>
         </Grid>
         <Grid item xs={12} sm={4} lg={4} p={2}>
-          <Typography variant="h4" sx={{ py:2, color:theme.palette.primary.main,borderColor:theme.palette.primary.main}}>
+          <Typography
+            variant="h4"
+            sx={{
+              py: 2,
+              color: theme.palette.primary.main,
+              borderColor: theme.palette.primary.main,
+            }}
+          >
             Explore
           </Typography>
           <Grid container direction="column" alignItems="flex-start">
             <Grid item>
               <Link href="/">
-                <Button sx={{color:theme.palette.secondary.main,'&:hover': {
-                    color: theme.palette.primary.main } }}>Home</Button>
+                <Button
+                  sx={{
+                    color: theme.palette.secondary.main,
+                    "&:hover": {
+                      color: theme.palette.primary.main,
+                    },
+                  }}
+                >
+                  Home
+                </Button>
               </Link>
             </Grid>
             <Grid item>
               <Link href="/about">
-                <Button sx={{color:theme.palette.secondary.main,'&:hover': {
-                    color: theme.palette.primary.main } }}>About Toria Spices</Button>
+                <Button
+                  sx={{
+                    color: theme.palette.secondary.main,
+                    "&:hover": {
+                      color: theme.palette.primary.main,
+                    },
+                  }}
+                >
+                  About Toria Spices
+                </Button>
               </Link>
             </Grid>
             <Grid item>
               <Link href="/blog">
-                <Button sx={{color:theme.palette.secondary.main,'&:hover': {
-                    color: theme.palette.primary.main } }}>Blog</Button>
+                <Button
+                  sx={{
+                    color: theme.palette.secondary.main,
+                    "&:hover": {
+                      color: theme.palette.primary.main,
+                    },
+                  }}
+                >
+                  Blog
+                </Button>
               </Link>
             </Grid>
             <Grid item>
               <Link href="/products">
-                <Button sx={{color:theme.palette.secondary.main,'&:hover': {
-                    color: theme.palette.primary.main } }}>Our Products</Button>
+                <Button
+                  sx={{
+                    color: theme.palette.secondary.main,
+                    "&:hover": {
+                      color: theme.palette.primary.main,
+                    },
+                  }}
+                >
+                  Our Products
+                </Button>
               </Link>
             </Grid>
             <Grid item>
               <Link href="/contact">
-                <Button sx={{color:theme.palette.secondary.main,'&:hover': {
-                    color: theme.palette.primary.main } }}>Contact Us</Button>
+                <Button
+                  sx={{
+                    color: theme.palette.secondary.main,
+                    "&:hover": {
+                      color: theme.palette.primary.main,
+                    },
+                  }}
+                >
+                  Contact Us
+                </Button>
               </Link>
             </Grid>
           </Grid>
@@ -131,18 +220,26 @@ const Footer = () => {
             <Grid item>
               <LocationOnIcon color="secondary" fontSize="large" />
             </Grid>
-            <Grid item>No 6 Lucky Nwagwu Street Kapwa,<br/> Lugbe Abuja</Grid>
+            <Grid item>
+              No 6 Lucky Nwagwu Street Kapwa,
+              <br /> Lugbe Abuja
+            </Grid>
           </Grid>
         </Grid>
-       
 
         <Grid item xs={12} sm={12} lg={12} sx={{ p: 2, textAlign: "center" }}>
           <footer display="flex">
             Powered by
-            <a color="primary" href="#" style={{marginLeft:5}}>
+            <a
+              color="primary"
+              href="https://www.codehouze.dev/"
+              style={{ marginLeft: 5 }}
+            >
               Codehouze
             </a>
-            <ScrollToTopButton sx={{background:theme.palette.primary.main}}/>
+            <ScrollToTopButton
+              sx={{ background: theme.palette.primary.main }}
+            />
           </footer>
         </Grid>
       </Grid>

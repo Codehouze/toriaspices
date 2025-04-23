@@ -7,7 +7,7 @@ import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import Head from "next/head";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Paper, Typography } from "@mui/material";
+import { Paper, Typography, Container } from "@mui/material";
 import {
   FeaturesCard,
   ProductFilter,
@@ -32,16 +32,16 @@ export default function Index() {
 
   // feature card input
   const featuresCardTitle1 = "FREE DELIVERY";
-  const featuresDescription1 = "On order over N15,000";
+  const featuresDescription1 = "On order over ₦80,000";
   const featuresCardTitle2 = "CASH ON DELIVERY";
   const featuresDescription2 = "100% Money Back Guarantee";
   const featuresCardTitle3 = "SPECIAL GIFT CARD";
   const featuresDescription3 = "Offer Special bonuses with gift";
   const featuresCardTitle4 = "24/7 Customer Service";
-  const featuresDescription4 = "Call Us on +2348030914767";
+  const featuresDescription4 = "Call Us on +2349158835595";
 
   return (
-    <Paper container>
+    <Paper elevation={0} sx={{ overflow: 'hidden' }}>
       <Head>
         <title>Toria Spices</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
@@ -51,38 +51,39 @@ export default function Index() {
           href="https://res.cloudinary.com/codehouseinc/image/upload/v1684271913/toriaspices/TORIA_Spices_logo11_vxsspd.png"
         />
       </Head>
-      <Grid container>
-        <Box
-          sx={{
-            display: "flex",
-            width: "100%",
-            height: { xs: 600, md: 600 },
-            backgroundImage: slider1,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            maxWidth: "100%",
-            mx: "auto",
-            mt: 3,
-          }}
-        >
-          <Grid container spacing={2}>
-            <Jumbotron />
-          </Grid>
-        </Box>
-        {/* four cards with special attractive point  */}
+      
+      {/* Hero Section */}
+      <Box
+        sx={{
+          position: 'relative',
+          width: "100%",
+          height: { xs: 600, md: 600 },
+          backgroundImage: slider1,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          maxWidth: "100%",
+          mx: "auto",
+          mb: 4,
+        }}
+      >
+        <Jumbotron />
+      </Box>
+
+      {/* Features Section */}
+      <Container maxWidth="lg">
         <Grid
           container
-          spacing={2}
+          spacing={3}
           justifyContent="center"
           alignItems="center"
           sx={{
-            p: { xs: 2, md: 3 },
+            py: 4,
+            px: { xs: 2, md: 3 },
           }}
         >
-          <Grid item xs={6} lg={2} md={6} sm={6}>
+          <Grid item xs={12} sm={6} md={3}>
             <FeaturesCard
-              display="flex"
               title={featuresCardTitle1}
               description={featuresDescription1}
               icon={
@@ -94,7 +95,7 @@ export default function Index() {
               }
             />
           </Grid>
-          <Grid item xs={6} lg={2} md={6} sm={6}>
+          <Grid item xs={12} sm={6} md={3}>
             <FeaturesCard
               title={featuresCardTitle2}
               description={featuresDescription2}
@@ -107,7 +108,7 @@ export default function Index() {
               }
             />
           </Grid>
-          <Grid item xs={6} lg={2} md={6} sm={6}>
+          <Grid item xs={12} sm={6} md={3}>
             <FeaturesCard
               title={featuresCardTitle3}
               description={featuresDescription3}
@@ -120,7 +121,7 @@ export default function Index() {
               }
             />
           </Grid>
-          <Grid item xs={6} lg={2} md={6} sm={6}>
+          <Grid item xs={12} sm={6} md={3}>
             <FeaturesCard
               title={featuresCardTitle4}
               description={featuresDescription4}
@@ -135,48 +136,46 @@ export default function Index() {
           </Grid>
         </Grid>
 
-        {/* our product with a filter */}
-        <Grid
-          alignItems="center"
-          sx={{ mx: "auto", fontSize: 20, color: "#90C53B" }}
-        >
+        {/* Products Section */}
+        <Box sx={{ py: 6 }}>
           <Typography
-            variant="h1"
+            variant="h2"
             component="h1"
-            pb={5}
-            fontWeight="bold"
-            fontSize="40px"
+            align="center"
+            sx={{
+              fontWeight: "bold",
+              fontSize: { xs: "2rem", md: "3rem" },
+              color: "#90C53B",
+              mb: 4,
+            }}
           >
             Our Products
           </Typography>
-        </Grid>
+          <ProductFilter />
+          <ProductList />
+        </Box>
 
-        <ProductFilter />
-        <ProductList />
-        {/* News letter */}
-        <Grid container spacing={1} p={4} mt={5}>
+        {/* Newsletter Section */}
+        <Box sx={{ py: 6 }}>
           <NewsLetter />
-        </Grid>
-        {/* CTA with two cards */}
+        </Box>
+
+        {/* Shop Now Banners */}
         <Grid
           container
-          spacing={1}
+          spacing={3}
           alignItems="center"
           justifyContent="center"
-          sx={{
-            mx: "auto",
-            px: "auto",
-            py: 5,
-          }}
+          sx={{ py: 6 }}
         >
-          <Grid item md={5} lg={5} xs={12} px={3}>
+          <Grid item xs={12} md={6}>
             <ShopNowBanner
               backgroundImage={backgroundImageUrl1}
               title={title}
               description={description}
             />
           </Grid>
-          <Grid item md={5} lg={5} xs={12} px={3}>
+          <Grid item xs={12} md={6}>
             <ShopNowBanner
               backgroundImage={backgroundImageUrl2}
               title={title1}
@@ -185,54 +184,43 @@ export default function Index() {
           </Grid>
         </Grid>
 
-        {/* Testimonial */}
-        <Grid
-          container
-          spacing={1}
-          justifyContent={"center"}
-          sx={{ mx: "auto", py: 4 }}
-        >
-          <Grid item xs={12} md={12} lg={12}>
-            <Testimonial />
-          </Grid>
-        </Grid>
+        {/* Testimonials Section */}
+        <Box sx={{ py: 6 }}>
+          <Testimonial />
+        </Box>
 
-        <Grid alignItems="center" sx={{ mx: "auto", py: 3, color: "#90C53B" }}>
+        {/* Blog Section */}
+        <Box sx={{ py: 6 }}>
           <Typography
-            variant="h1"
+            variant="h2"
             component="h1"
-            fontWeight="bold"
-            fontSize="40px"
+            align="center"
+            sx={{
+              fontWeight: "bold",
+              fontSize: { xs: "2rem", md: "3rem" },
+              color: "#90C53B",
+              mb: 4,
+            }}
           >
             Latest Blog
           </Typography>
-        </Grid>
-
-        <Grid
-          container
-          display="flex"
-          py={4}
-          px={5}
-          // spacing={1}
-          justifyItems="space-between"
-        >
-          {/* latest blog */}
-          <Grid item lg={4} md={4} xs={12}>
-            <BlogCard categories="Spices" />
+          <Grid
+            container
+            spacing={3}
+            sx={{ px: { xs: 2, md: 5 } }}
+          >
+            <Grid item xs={12} md={4}>
+              <BlogCard categories="Spices" />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <BlogCard categories="Cooking" />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <BlogCard categories="Food" />
+            </Grid>
           </Grid>
-          <Grid item lg={4} md={4} xs={12}>
-            <BlogCard categories="Cooking" />
-          </Grid>
-          <Grid item lg={4} md={4} xs={12}>
-            <BlogCard categories="Food" />
-          </Grid>
-        </Grid>
-
-        <Grid container>
-          {/* brands that buy our product */}
-          {/* Carocel */}
-        </Grid>
-      </Grid>
+        </Box>
+      </Container>
     </Paper>
   );
 }

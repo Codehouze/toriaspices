@@ -3,7 +3,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import { Typography, styled } from "@mui/material";
 
-const IconContainer = styled(Box)({
+const IconContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -12,46 +12,61 @@ const IconContainer = styled(Box)({
   width: 64,
   height: 64,
   marginBottom: 2,
-  transition: "transform 0.2s", // Add a transition for the rotation animation
+  transition: "all 0.3s ease",
   "&:hover": {
-    transform: "rotateY(180deg)", // Apply the rotation animation on hover
+    transform: "scale(1.1)",
+    background: theme.palette.primary.main,
+    "& svg": {
+      color: "#FFFFFF",
+    },
   },
-});
+}));
+
+const CardContainer = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  textAlign: "center",
+  background: theme.palette.primary.main,
+  borderRadius: 16,
+  color: "#ffffff",
+  padding: theme.spacing(3),
+  height: "100%",
+  transition: "all 0.3s ease",
+  boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
+  "&:hover": {
+    transform: "translateY(-5px)",
+    boxShadow: "0 8px 30px rgba(0, 0, 0, 0.2)",
+  },
+}));
 
 function FeaturesCard({ title, description, icon }) {
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-      justifyContent="center"
-      textAlign="center"
-      bgcolor="#ff7043"
-      borderRadius={3}
-      color="#ffffff"
-      p={2}
-    >
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        borderRadius="100%"
-        bgcolor="#FFFFFF"
-        width={64}
-        height={64}
-        marginBottom={2}
+    <CardContainer>
+      <IconContainer>{icon}</IconContainer>
+      <Typography
+        variant="h6"
+        fontWeight="bold"
+        sx={{
+          fontSize: { xs: "0.9rem", sm: "1rem" },
+          mb: 1,
+          textTransform: "uppercase",
+        }}
       >
-        <IconContainer> {icon}</IconContainer>
-      </Box>
-
-      <Typography variant="h2" fontWeight="bold" fontSize={15} noWrap={true}>
         {title}
       </Typography>
-
-      <Typography variant="body1" pt={2} px="auto" fontSize={10} noWrap={true}>
+      <Typography
+        variant="body2"
+        sx={{
+          fontSize: { xs: "0.8rem", sm: "0.9rem" },
+          opacity: 0.9,
+          lineHeight: 1.4,
+        }}
+      >
         {description}
       </Typography>
-    </Box>
+    </CardContainer>
   );
 }
 
