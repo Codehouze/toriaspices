@@ -21,6 +21,7 @@ function NewsLetter() {
   return (
     <Grid
       container
+      item
       spacing={2}
       alignItems="center"
       justifyContent="center"
