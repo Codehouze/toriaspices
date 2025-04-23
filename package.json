@@ -11,7 +11,8 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "preinstall": "npm install --ignore-scripts re2"
   },
   "dependencies": {
     "@emotion/cache": "^11.7.1",
@@ -35,9 +36,11 @@
     "framer-motion": "^12.7.4",
     "link": "^1.5.1",
     "next": "12.2.0",
+    "node-gyp": "^11.2.0",
     "passport": "^0.6.0",
     "passport-facebook": "^3.0.0",
     "passport-google-oauth2": "^0.2.0",
+    "re2": "^1.21.4",
     "react": "18.1.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "18.1.0",
