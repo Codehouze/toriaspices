@@ -1,15 +1,10 @@
-
 {
     "build": {
       "env": {
         "NODE_ENV": "production",
         "NODE_OPTIONS": "--max_old_space_size=4096",
-        "PYTHON": "/usr/bin/python3"
-      },
-      "commands": [
-        "apt-get install python3-distutils -y",
-        "npm install --force",
-        "npm rebuild"
-      ]
+        "CXX": "g++-10",
+        "CC": "gcc-10"
+      }
     }
   }
