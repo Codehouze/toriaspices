@@ -12,7 +12,7 @@
     "lint": "next lint",
     "prettier": "prettier --write .",
     "prepare": "husky install",
-    "preinstall": "npm install --ignore-scripts re2"
+    "preinstall": "yarn add --ignore-scripts re2"
   },
   "dependencies": {
     "@emotion/cache": "^11.7.1",
